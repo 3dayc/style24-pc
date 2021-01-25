@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>STYLE24 | default | Publishing</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+
+<!-- <link rel="stylesheet" type="text/css" href="css/test-common.css" /> -->
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/common-ui.js"></script>
+</head>
+
+<body>
+
+	<div class="skipComment">
+		<a href="#content">본문 바로가기</a>
+		<a href="#gnb">주메뉴 바로가기</a>
+		<a href="#footer">하단메뉴 바로가기</a>
+	</div>
+
+	<header id="header"></header>
+	<!--  container -->
+	<div id="container" class="container mb">
+		<div class="wrap">
+			<div class="content non_mb_oder"> <!-- 페이지특정 클래스 = non_mb_oder -->
+				<div class="cont_head">
+                    <div>
+                        <h3>style24</h3>
+                    </div>
+				</div>
+				<div class="cont_body">
+                    <form class="form_wrap form_col_c form_full" role="form">
+						<div class="form_head">
+							<h4>비회원 주문 조회</h4>
+						</div>
+                        <div class="form_info">
+							<span class="ico_content_order"></span>
+							<!--<p>비회원으로 구매 건의 주문/배송조회만 가능합니다.</p>-->
+							<p>고객님의 주문 확인을 위해 주문번호 와 비밀번호를 입력하여 주세요.</p>
+                        </div>
+                        <div class="form_field mt40">
+							<label class="input_label sr-only">이름(주문자명)</label>
+							<div class="ui_col_12">
+								<div class="input_wrap"> 
+									<input type="text" name="userName" placeholder="주문자 이름" id="txtName">
+								</div>
+							</div>
+                        </div>	
+                        <div class="form_field">
+							<label class="input_label sr-only">휴대폰 번호</label>
+							<div class="ui_col_12">
+								<div class="input_wrap"> 
+									<input type="text" name="userPhone" placeholder="휴대폰 번호" id="userPhone">
+								</div>
+							</div>
+                        </div>	
+                        <div class="form_field">
+							<label class="input_label sr-only">주문번호</label>
+							<div class="ui_col_12">
+								<div class="input_wrap"> 
+									<input type="text" name="userNumber" placeholder="주문 번호" id="userNumber">
+								</div>
+							</div>
+						</div>	
+                        <div class="btn_group_block btn_group_md ui_row mb40">
+							<div class="ui_col_12">
+								<button class="btn btn_primary btn_block"><span>비회원 주문확인</span></button>
+							</div>
+						</div>
+                        <div class="form_summary clear">
+                            <p class="normal">STYLE24의 고객센터 <span data-font="lato" class="c_primary ml10">1544-5336</span></p>
+                            <p class="t_info light mb40">비회원 주문확인 중 궁금하신 사항은 고객센터로 문의해주세요.</p>
+                            <p class="normal">아직 STYLE24 회원이 아니시라면? <a href="" class="c_primary ml10">회원가입</a></p>
+                            <p class="t_info light">쇼핑 혜택충만! STYLE24 회원이 되세요!</p>
+                        </div>
+                    </form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->	
+	<footer id="footer"></footer>
+
+	<script type="text/javascript">
+	// 컨텐츠 호출
+        $(document).ready( function() {
+            $("#header").load("head.html");
+            // $("#container").load("indexx.html");
+            $("#footer").load("foot.html");
+        });
+	</script>
+	<script>
+		// header scroll
+		$(function(){
+			$(window).scroll(function(){
+				var scroll = $(this).scrollTop();
+				var headerH = $(".header").height();
+				if ($(window).scrollTop() > headerH){
+					$(".header").addClass("minify");
+					return false;
+				}
+				else {
+					$(".header").removeClass("minify");
+					return false;
+				}
+			});
+		});
+    </script>
+
+</body>
+</html>
+
+

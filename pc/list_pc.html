@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+<title>작업현황판 | style24 </title>
+<style type="text/css">
+	* {margin:0; padding:0;}
+	html {overflow-y:scroll;}
+	body {background:#fff; min-width:1024px; color:#000; font:12px/1.4 'Malgun Gothic', Tahoma, Sans-serif;}
+	a {color:#27e; text-decoration:none;}
+	a:focus, a:hover, a:active {text-decoration:underline;}
+	del {display:block;color:#999;}	
+	.guideBtn{padding: 2px 14px 2px 10px;margin: 0;background: #afff44;border: 0;border-radius: 3px;color: #47337b;font: bold 11px/1.5 Tahoma, Sans-serif;cursor: pointer;position: relative;	}
+	.guideBtn::before{content: '';display: inline-block;width: 4px;height: 4px;background: #ff1e1e;border-radius: 100%;position: absolute;top: 2px;left: 4px;}
+	.guideBtn::after{content: ' › ';display: inline-block;padding: 0 0px 0px 6px;font-size: 8px;position: absolute;top: 1px;right: 5px;}
+	.guide-header {width:100%; position:relative; background:#48337b; box-shadow:0 2px 5px 0 #999;color:#fff; font:12px/1.5 'Malgun Gothic', Tahoma, Sans-serif;}
+	.guide-header h1 {padding:.2em; color:#f2f2f2; font-size:24px;}
+	.guide-header h1 strong {font-size:16px;}
+	.guide-header .nav {list-style:none; background:#588f47; border-top:1px solid #164577; padding:.5em .5em .4em; color:#f9f9f9; font-weight:bold; font-size:16px;}
+	.guide-header .nav li {display:inline-block; margin-right:.5em; color:#f2f2f2;}
+	.guide-header .nav li a {color:#f2f2f2;}
+	.guide-header .nav li .on {color:#fff !important; text-shadow:#333 1px 1px 2px; text-decoration:underline;}
+	.guide-header .nav li strong {font-size:120%;}
+	.guide-header .nav li:before {content:'•'; font-weight:normal; font-size:14px; margin-right:.7em;}
+	.guide-header .nav li:first-child:before {content:none !important; margin:0 !important;}
+	.guide-header .nav.nav-subtype {background:#2d5785; font-size:14px;}
+	.guide-header .nav.nav-subtype li:before {content:'|';}
+	.guide-header .navgroup {position:relative;}
+	.guide-header .nav-r {position:absolute; right:0; bottom:8px; margin-top:0; list-style:none; font-weight:bold; font-size:14px;}
+	.guide-header .nav-r li {display:inline; margin-right:0.5em;}
+	.guide-header .nav-r li:before {content:'|'; margin-right:10px; color:#f2f2f2; font-weight:normal;}
+	.guide-header .nav-r li:first-child:before {display:none;}
+	.guide-header .nav-r li a {color:#f2f2f2;}
+	.guide-header .nav-r li a:before {content:'→';}
+	.rule {background:#eeeff3; margin:0 0 2em; padding:1em; color:#4d4d4d;}
+	.rule dt {margin-bottom:.3em; font-size:13px; font-weight:bold;}
+	.rule dd {padding-left:.5em; line-height:1.8;}
+	.rule dd ul {list-style-type:square; margin-left:1.2em;}
+
+	.guideLink {background:#fff;margin:0 0 2em; padding:1em;}
+	.guideLink dt {margin-bottom:.3em; font-size:13px; font-weight:bold;}
+	.guideLink dd {line-height:1.8;}
+	.guideLink ul {overflow:hidden;}
+	.guideLink ul li {float:left;list-style:none;}
+	.guideLink ul li + li {padding-left:8px;}
+	.guideLink ul li a {text-decoration: none;display:inline-block;background-color:#dedede;padding:0 5px;color:#000;}
+
+	.title-topsection {margin:1em .8em .3em; font-size:24px; color:#2d5785;}
+	.title-topsection:before {content:'[';}
+	.title-topsection:after {content:']';}
+	.total {margin:1em 1em .5em; padding-left:.3em; font-weight:bold; font-size:14px;}
+	.total .per {font-size:12px;}
+	.guide-body {padding-bottom:1em;}
+	.section {margin:0 1em;}
+	.section + .section {margin-bottom:1em;}
+	.section .title {margin:0; padding:.6em; background:#2d5785; color:#fff; font-weight:bold; font-size:14px; position:relative; margin-top:-1px; *zoom:1; cursor:pointer;}
+	.section .title-toggle {margin:0; padding:.6em; background:#d9dce3; position:relative; *zoom:1;}
+	.section .title-toggle .togglebtn {padding:2px 5px; margin:0; background:#9f7952; border:0; border-radius:3px; color:#fff; font:bold 12px/1.5 'Malgun Gothic', Tahoma, Sans-serif; cursor:pointer;}
+	.section .title.title-depth2 {background:#8c959d; border:0; margin-top:0; cursor:default;}
+	.section table {width:100%; border-collapse:collapse; border-spacing:0; border:0;}
+	.section table caption {display:none;}
+	.section table th, table td {padding:0.8em; border:1px solid #ccc;}
+	.section table th {color:#333; background:#eeeff3; font-size:11px; text-align:center;}
+	.section table td {text-align:left;}
+	.section table td em {color:#c52126;}
+	.section table td.tit {color:#333; font-weight:bold;}
+	.section table td.file {color:#d4d4d4 !important;}
+	.section table td.file a.img {color:#ff8e1f !important;}
+	.section table td.date {text-align:center; font-style:italic; white-space:nowrap;}
+	.section table td.date del {display:block; color:#aaa !important;}
+	.section table td.name,
+	.section table td.stat {text-align:center;}
+	.section table td.desc, .section table td.note, .section table td.history {font-style:italic; color:#666;}
+	.section table td.author {text-align:center; white-space:nowrap;}
+	.section table td ul {list-style:none; margin:0; padding:0; font-style:italic;}
+	.section table td ul li {margin:2px 0;}
+	.section table tr.tr-bgtype2 td {background:#f4f4f4; color:#666;}
+	.section table tr:hover td {background:#eeeff3;}
+	.section table tr.tr-bgtype3 td {background:#fdfce6; color:#666;}
+	.section table tr.tr-bgtype4 td {background:#fde6e9; color:#666;}
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+	jQuery.fn.stat = function (options) {
+		var settings = jQuery.extend({
+				total: '.total',
+				toggleBtn: '.togglebtn',
+				title: 'h2.title',
+				content: 'div.content',
+				files: 'tbody tr:not(.tr-bgtype2)',
+				stat: 'td.stat',
+				completed: '●',
+				index: 0,
+				openAll: true
+			}, options),
+			all_sections = this;
+
+		return this.each(function () {
+			var self = this,
+				$self = $(self),
+				title_text = [],
+				completed = 0;
+			self.section_title = $(settings.title, $self);
+			self.content = $(settings.content, $self);
+			self.files = $(settings.files, $self);
+			self.files.each(function () {
+				var stat = $(settings.stat, this);
+				stat.each(function () {
+					var text = $(this).text();
+					if (text && (text === settings.completed)) {
+						completed++;
+					}
+				});
+			});
+			title_text = [self.section_title.text(), ' (',completed,'/',self.files.length,')'];
+			self.section_title.text(title_text.join(''));
+			self.section_title.click(function() {
+				self.content.slideToggle('fast');
+			});
+			$(settings.toggleBtn).text('전체닫기').toggle(function() {
+				$(settings.toggleBtn).text('전체열기');
+				$(settings.content).hide();
+			}, function() {
+				$(settings.toggleBtn).text('전체닫기');
+				$(settings.content).show();
+			});
+
+			//total
+			var completedAll = 0;
+			$(settings.files).each(function () {
+				var stat = $(settings.stat, this);
+				stat.each(function () {
+					var text = $(this).text();
+					if (text && (text === settings.completed)) {
+						completedAll++;
+					}
+				});
+			});
+			$(settings.total).html('Total : '+completedAll+'/'+$(settings.files).length+'pages <span class="per">(진행율 '+Math.round(completedAll/$(settings.files).length*100)+'%)</span>');
+
+		});
+	};
+
+	$(document).ready(function() {
+		$('div.section').stat();
+	});
+</script>
+</head>
+<body>
+<div class="guide-header">
+	<h1>:: style24(WEB)<strong> &gt; FILE LIST</strong> <a class="guideBtn" href="http://codepartners.co.kr/project/style24/pc/guide/guide_Typography.html" target="_blank">웹퍼블리싱 가이드</a> </h1>
+</div>
+<dl class="rule">
+	<dt>작업현황판 작성 규칙</dt>
+	<dd>
+		<ul>
+			<li>상태표기 :  '△'(작업중대기) , '○'(부분완료) , '●'(완료) 중 알맞은 것으로 표기. <span style="text-decoration:underline;">'●'(완료) 표기부터 개발작업 가능.</span></li>
+			<li>날짜의 형식은 yyyy-mm-dd 으로 하며, HTML 파일 내용이 수정되었을 경우, 최초작성일('●'(완료)일 기준)은 남겨두고 옆에 마지막 수정일자를 표기함. (예) <del>2013-04-26</del> 2013-05-16)</li>
+			<li>'description'란은 화면에 대한 추가적인 설명, 'note'란은 작업자들 간에 서로 알 수 있는 메모(notice)를 기재함.</li>
+		</ul>
+	</dd>
+</dl>
+<div class="guide-body">
+	<p class="total">Total : 0/0pages <span class="per">(진행율 00%)</span></p>
+	<div class="section">
+		<div class="title-toggle"><button type="button" class="togglebtn">전체닫기</button></div>
+	</div>
+
+	<!-- 대표 -->
+	<div class="section">
+		<h2 class="title" style="background:#48337b;color:#ffffff;">style24</h2>
+		<div class="content">
+			<table border="1">
+				<thead>
+					<tr>
+						<th scope="col" style="width:8%;">1depth</th>
+						<th scope="col" style="width:8%;">2depth</th>
+						<th scope="col" style="width:8%;">3depth</th>
+						<th scope="col" style="width:8%;">4depth</th>
+						<th scope="col" style="width:8%;">5depth</th>
+						<th scope="col" style="width:6%;">path</th>
+						<th scope="col" style="width:10%;">file</th>
+						<th scope="col" style="width:4%;" title="△ :대기 / ○ :부분완료 / ○ :완료">state</th>
+						<th scope="col" style="width:6%;" title="작업자이름">name</th>
+						<th scope="col" style="width:8%;" title="yyyy-mm-dd">date</th>
+						<th scope="col" style="width:15%;">description</th>
+						<th scope="col">note</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="tit">메인</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/index.html">index</a></td>
+						<td class="stat">○</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em>디테일 추가작업 필요</em></td>
+					</tr>
+					<tr>
+						<td class="tit">헤더</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href="#none">head.html</a></td>
+						<td class="stat">○</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126;">include only</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td class="tit">브랜드 헤더</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href="#none"></a>br_head.html</td>
+						<td class="stat">△</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126;">include only</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td class="tit">푸터</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href="#none">foot.html</a></td>
+						<td class="stat">○</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126">include only</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td class="tit" rowspan="16">브랜드</td>
+						<td>상품 리스트 (공통)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/dp_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/dp_list_1.html">dp_list_1.html</a></td>
+						<td class="stat">○</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc">전시 상품 리스트와 동일</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td rowspan="4">캐주얼</td>
+						<td>버커루</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a>brand_main_type1</td>
+						<td class="stat">△</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>TBJ JEANS</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a>brand_main_type2</td>
+						<td class="stat">△</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>ANDEW</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>FRJ JEANS</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td rowspan="3">스포츠</td>
+						<td>NBA</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>LPGA</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>PGA TOUR</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td rowspan="8">키즈</td>
+						<td>모이몰른</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>CURLYSUE</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>NBA kids</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>LEVI'S</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>CONVERSE</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>NIKE</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>조던<td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>HURLEY</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td class="tit" rowspan="5">퀵메뉴</td>
+						<td>최근본상품</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>위시리스트</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>쇼핑백</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>나의쿠폰</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>스타일24카테고리</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td class="tit" rowspan="4">공지배너</td>
+						<td>공지배너기본</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>띠배너</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>확장형 닫힌 배너</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>확장형 열린 배너</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td class="tit" rowspan="3">메인 공지 팝업</td>
+						<td>1개노출</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>2개노출</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>3개이상(슬라이더)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!-- //대표 -->
+	<!-- 전시 -->
+	<div class="section">
+		<h2 class="title" style="background:#48337b;color:#ffffff;">전시</h2>
+		<div class="content">
+			<table border="1">
+				<thead>
+					<tr>
+						<th scope="col" style="width:8%;">1depth</th>
+						<th scope="col" style="width:8%;">2depth</th>
+						<th scope="col" style="width:8%;">3depth</th>
+						<th scope="col" style="width:8%;">4depth</th>
+						<th scope="col" style="width:8%;">5depth</th>
+						<th scope="col" style="width:6%;">path</th>
+						<th scope="col" style="width:10%;">file</th>
+						<th scope="col" style="width:4%;" title="△ :대기 / ○ :부분완료 / ○ :완료">state</th>
+						<th scope="col" style="width:6%;" title="작업자이름">name</th>
+						<th scope="col" style="width:8%;" title="yyyy-mm-dd">date</th>
+						<th scope="col" style="width:15%;">description</th>
+						<th scope="col">note</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="tit">전시 서브메인</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td class="tit" rowspan="2">상품 리스트</td>
+						<td>리스트 기본</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/dp_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/dp_list_1.html">dp_list_1.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc">여성/남성/유아동/골프/라이프, 브랜드 리스트와 동일</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>필터 결과 없을경우</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/dp_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/dp_list_2.html"></a>dp_list_2.html</td>
+						<td class="stat">○</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td class="tit">베스트</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/dp_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/dp_best.html">dp_best.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td class="tit">핫딜</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/dp_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/dp_Hotdeal.html">dp_Hotdeal.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td class="tit" rowspan="6">기획전</td>
+						<td>기획전 리스트</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/dp_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/dp_Exhibition.html">dp_Exhibition.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>기획전 타입1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/dp_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/dp_detail_case1.html">dp_detail_case1.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>기획전 타입2</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/dp_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/dp_detail_case2.html">dp_detail_case2.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>기획전 타입3</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/dp_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/dp_detail_case3.html">dp_detail_case3.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>쿠폰안내 팝업</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/dp_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/dp_detail_casePOPUP.html">dp_detail_casePOPUP.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>기획전없음</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat">△</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td class="tit" rowspan="5">총알배송</td>
+						<td>총알배송 지역검색</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/dp_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/dp_Bulletship1.html">dp_Bulletship1.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>총알배송 검색확인 팝업</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/dp_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/dp_Bulletship_pop.html">dp_Bulletship_pop.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>총알 배송 지역안내</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/dp_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/dp_Bulletship2.html">dp_Bulletship2.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>일반배송 검색확인 팝업</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/dp_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/dp_Bulletship_pop.html">dp_Bulletship_pop.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc">총알배송팝업의 html과 동일</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>일반배송 지역안내</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/dp_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/dp_Bulletship3.html">dp_Bulletship3.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td class="tit" rowspan="3">아울렛</td>
+						<td>아울렛 배너</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126;">이하, 디자인 확인 안됨</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>아울렛 추천상품</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126;">〃</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>아울렛 상품리스트</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126;">〃</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td class="tit" rowspan="3">룩북</td>
+						<td>룩북리스트</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126;">〃</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>리스트없음</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126;">〃</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>룩북상세영역</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat"></td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc">브랜드 룩북 상세페이지와 동일</td>
+						<td class="note"><em></em></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!-- //전시 -->
+	<!-- Utill -->
+	<div class="section">
+		<h2 class="title" style="background:#48337b;color:#ffffff;">Utill</h2>
+		<div class="content">
+			<table border="1">
+				<thead>
+					<tr>
+						<th scope="col" style="width:8%;">1depth</th>
+						<th scope="col" style="width:8%;">2depth</th>
+						<th scope="col" style="width:8%;">3depth</th>
+						<th scope="col" style="width:8%;">4depth</th>
+						<th scope="col" style="width:8%;">5depth</th>
+						<th scope="col" style="width:6%;">path</th>
+						<th scope="col" style="width:10%;">file</th>
+						<th scope="col" style="width:4%;" title="△ :대기 / ○ :부분완료 / ○ :완료">state</th>
+						<th scope="col" style="width:6%;" title="작업자이름">name</th>
+						<th scope="col" style="width:8%;" title="yyyy-mm-dd">date</th>
+						<th scope="col" style="width:15%;">description</th>
+						<th scope="col">note</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="tit" rowspan="10">로그인</td>
+						<td>로그인</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/mb_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/mb_login.html">mb_login</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>아이디찾기</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/mb_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/mb_idInquiry_1.html">mb_idInquiry_1</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>비밀번호찾기</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/mb_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/mb_idInquiry_1.html">mb_idInquiry_1</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>찾기 결과 안내</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/mb_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/mb_idInquiry_2.html">mb_idInquiry_2</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>아이디 없음-회원</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/mb_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/mb_idInquiry_3.html">mb_idInquiry_3</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>아이디 없음-비회원</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/mb_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/mb_idInquiry_4.html">mb_idInquiry_4</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>비밀번호변경</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/mb_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/mb_idInquiry_5.html">mb_idInquiry_5</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>휴면회원</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/mb_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/mb_idInquiry_6.html">mb_idInquiry_6</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>휴면회원 해지</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/mb_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/mb_idInquiry_7.html">mb_idInquiry_7</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>비회원 주문조회</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/mb_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/mb_idInquiry_8.html">mb_idInquiry_8</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td class="tit" rowspan="7">회원가입</td>
+						<td>본인인증</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/mb_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/mb_join_1.html">mb_join_1</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>회원정보 입력</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/mb_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/mb_join_2.html">mb_join_2</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>이미가입된회원안내</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/mb_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/mb_join_3.html">mb_join_3</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>이용약관 Popup</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/mb_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/"></a></td>
+						<td class="stat">△</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>개인정보수집 Popup</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/mb_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/"></a></td>
+						<td class="stat">△</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>개인정보제공약관 Popup</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/mb_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/"></a></td>
+						<td class="stat">△</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>신규회원혜택안내</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/mb_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/"></a></td>
+						<td class="stat">△</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td class="tit" rowspan="13">마이페이지</td>
+						<td rowspan="3">주문확인/배송조회</td>
+						<td>주문확인</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/my_</td>
+						<td class="file"><a target="_blank" href=""></a>my_order_1</td>
+						<td class="stat">○</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126;">이하, 디자인 확인 안됨</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>주문확인상세</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/my_</td>
+						<td class="file"><a target="_blank" href=""></a>my_order_2</td>
+						<td class="stat">○</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126;">〃</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>배송조회상세</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/my_</td>
+						<td class="file"><a target="_blank" href=""></a>my_order_3</td>
+						<td class="stat">○</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126;">〃</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td rowspan="3">취소/반품/환불내역</td>
+						<td>취소상세</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/my_</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat">○</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126;">〃</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>반품상세</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/my_</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat">○</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126;">〃</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>환불내역상세</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/my_</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat">○</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126;">〃</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>재입고 알림내역</td>
+						<td>재입고 알림내역 상세</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/my_</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat">△</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126;">〃</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>리뷰</td>
+						<td>리뷰상세</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/my_</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat">△</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126;">〃</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>배송지 관리</td>
+						<td>배송지 관리 상세</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/my_</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat">△</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126;">〃</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td rowspan="2">문의내역/상품문의Q&A</td>
+						<td>문의내역상세</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/my_</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat">△</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126;">〃</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>상품문의Q&A 상세</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/my_</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat">△</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126;">〃</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>내정보 관리</td>
+						<td>내정보 관리상세</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/my_</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat">△</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126;">〃</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>회원탈퇴</td>
+						<td>회원탈퇴상세</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/my_</td>
+						<td class="file"><a target="_blank" href=""></a></td>
+						<td class="stat">△</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc" style="color:#c52126;">〃</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td class="tit" rowspan="6">고객센터</td>
+						<td rowspan="2">FAQ</td>
+						<td>FAQ 리스트</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/cs_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/cs_faq_1.html">cs_faq_1.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc">(데이터 없을경우 포함, 클래스로 제어 nodata)</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>FAQ Popup</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/cs_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/cs_faq_popup.html">cs_faq_popup.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>	
+					</tr>
+					<tr>
+						<td rowspan="2">1:1문의</td>
+						<td>1:1문의 리스트</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/cs_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/cs_contactUs_1.html">cs_contactUs_1.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc">(데이터 없을경우 포함, 클래스로 제어 nodata)</td>
+						<td class="note"><em></em></td>	
+					</tr>
+					<tr>
+						<td>1:1문의 My</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/cs_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/cs_contactUs_my.html">cs_contactUs_my.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>	
+					</tr>
+					<tr>
+						<td rowspan="1">상품문의</td>
+						<td>상품문의 리스트</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/cs_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/cs_product_1.html">cs_product_1.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc">(데이터 없을경우 포함, 클래스로 제어 nodata)</td>
+						<td class="note"><em></em></td>	
+					</tr>
+					<tr>
+						<td rowspan="1">공지</td>
+						<td>공지 리스트</td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/cs_</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/cs_notice_1.html">cs_notice_1.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc">(데이터 없을경우 포함, 클래스로 제어 nodata)</td>
+						<td class="note"><em></em></td>	
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!-- //Utill -->
+	<!-- 주문결제 -->
+	<div class="section">
+		<h2 class="title" style="background:#48337b;color:#ffffff;">주문결제</h2>
+		<div class="content">
+			<table border="1">
+				<thead>
+					<tr>
+						<th scope="col" style="width:8%;">1depth</th>
+						<th scope="col" style="width:8%;">2depth</th>
+						<th scope="col" style="width:8%;">3depth</th>
+						<th scope="col" style="width:8%;">4depth</th>
+						<th scope="col" style="width:8%;">5depth</th>
+						<th scope="col" style="width:6%;">path</th>
+						<th scope="col" style="width:10%;">file</th>
+						<th scope="col" style="width:4%;" title="△ :대기 / ○ :부분완료 / ○ :완료">state</th>
+						<th scope="col" style="width:6%;" title="작업자이름">name</th>
+						<th scope="col" style="width:8%;" title="yyyy-mm-dd">date</th>
+						<th scope="col" style="width:15%;">description</th>
+						<th scope="col">note</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="tit" rowspan="8">주문/결제</td>
+						<td>쇼핑백</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/od_shopping_Bag.html">od_shopping_Bag.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td rowspan="2">회원주문서</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/od_member1.html">od_member1.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc">결제수단 미등록상태</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/od_member2.html">od_member2.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc">결제수단 등록상태</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td>비회원로그인폼</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/od_nonMb_order.html">od_nonMb_order.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td rowspan="2">비회원주문서</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/od_member1.html">od_member1.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc">결제수단 미등록상태</td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/od_member2.html">od_member2.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc">결제수단 등록상태</td>
+						<td class="note"><em></em></td>
+					</tr>
+
+					<tr>
+						<td rowspan="2">주문완료</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/od_Completed1.html">od_Completed1.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc"></td>
+						<td class="note"><em></em></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/pc/ux/</td>
+						<td class="file"><a target="_blank" href="http://codepartners.co.kr/project/style24/pc/ux/od_Completed2.html">od_Completed2.html</a></td>
+						<td class="stat">●</td>
+						<td class="name"></td>
+						<td class="date"></td>
+						<td class="desc">무통장입금정보</td>
+						<td class="note"><em></em></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!-- //주문결제 -->
+
+</div></body></html>

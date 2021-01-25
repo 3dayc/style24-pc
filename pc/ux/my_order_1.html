@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>STYLE24 | default | Publishing</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+
+<!-- <link rel="stylesheet" type="text/css" href="css/test-common.css" /> -->
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="js/jquery.ellipsis.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/common-ui.js"></script>
+</head>
+
+<body>
+
+	<div class="skipComment">
+		<a href="#content">본문 바로가기</a>
+		<a href="#gnb">주메뉴 바로가기</a>
+		<a href="#footer">하단메뉴 바로가기</a>
+	</div>
+
+	<header id="header"></header>
+	<!--  container -->
+	<div id="container" class="container cs">
+		<div class="breadcrumb">
+			<ul>
+				<li class="bread_home"><a href="index.html">홈</a></li>
+				<li class="bread_2depth">마이페이지</li>
+				<li class="bread_3depth">주문확인/배송조회</li>
+			</ul>
+		</div>
+		<div class="wrap">
+			<div class="content">
+				<div class="cont_head" style="display: none;">
+					CONT-HEAD
+					<style>
+						.tit {text-align: center;}
+						.my_tit{margin: 0 auto;text-align: center;padding-left: 50px;}
+						.clearfix:after {content:''; display: block; clear: both;}
+						/* height 잡기 */
+						.mypage_body {margin-bottom: 160px;}
+						.my_lnb::after  {content: ''; display: block; clear: both;}
+						.my_lnb .lnb_tit {font-size: 20px;}
+						.my_lnb .lnb_list {font-size: 15px;}
+						.my_cont  {float: left;width: 75%;}
+						.mypage .subH2 {margin-bottom: 25px;}
+						.mem_name {margin-bottom: 40px;}
+						.mypage .mem_name h3 {font-weight: 200; color: #898989;}
+						.mypage .mem_name h3 strong {color: #000;}
+						.mypage .mem_rank {position: relative; padding-left: 73px; float:left;}
+						.mypage .mem_rank .rank_icon {width: 60px; height: 60px; line-height: 64px; position: absolute; left: 0; top: 0; font-size: 30px; border-radius: 50%; background: #000; color: #fff; text-align: center;}
+						.mypage .mem_rank .rank_txt01 {font-size: 25px; height: 25px; color: #fd4801; margin-bottom: 14px;}
+						.mypage .mem_rank .rank_txt02 a {display: inline-block; font-size: 12px; padding-right: 13px; margin-right: 20px;}
+						.mem_info .mem_box {float:right;}
+						.mem_info .mem_box > div {float:left;}
+						.order_info {background: #f5f5f5; padding: 50px 80px; margin-bottom: 60px;}
+						.order_info > ul {float:left;}
+						.order_info > ul > li {float:left; text-align: center;}
+						.order_info .order_right {float:right;}
+						.order_sch_filter {padding: 20px 30px; border-top: 1px solid #dcdcdc; border-bottom: 1px solid #dcdcdc;}
+						.order_sch_filter > * {float:left;}
+						.order_sch_filter .btn {padding:10px 20px;}
+						.order_row {margin-top: 60px;}
+						.order_row .order_tit {position: relative; margin-bottom: 17px;}
+						.order_row .order_tit .detail_btn {position: absolute; top: 0; right: 0;}
+						.order_row .order_table {border-top: 1px solid #010101; }
+						.order_row .order_table td {text-align: center; border-right:1px solid #dcdcdc; height: 210px; border-bottom: 1px solid #dcdcdc;}
+						.order_row .order_table td.product {text-align: left;}
+						.order_row .order_table td.order_img, .order_row .order_table td.state {border-right:0;}
+						.order_row .order_table td.state li a, .order_row .order_confirm .btn {width: 100px; line-height: 34px; padding: 0; font-size: 12px;}
+						.order_row .order_confirm {padding: 20px 40px; text-align: right; background: #f5f5f5;}
+					</style>
+					<div class="tit">my_center</div>
+					<div class="tit my_tit">my_tit</div>
+				</div>
+				<div class="cont_body mypage">
+					<!-- CONT-BODY -->
+					<div class="my_lnb">
+						<div class="lnb_tit">
+							<h2>마이페이지</h2>
+						</div>
+						<div class="lnb_list">
+							<ul>
+								<li><a href="" class="on">주문확인/배송조회</a></li>
+								<li><a href="">취소/반품/환불내역</a></li>
+								<li><a href="">재입고 알림 내역</a></li>
+								<li><a href="">리뷰</a></li>
+								<li><a href="">배송지 관리</a></li>
+								<li><a href="">위시리스트</a></li>
+								<li><a href="">내정보 관리</a></li>
+								<li><a href="">회원 탈퇴</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="my_cont">
+						<div class="sec_head">
+							<div class="mem_name">
+								<h3><strong>홍길동</strong>님 반갑습니다.</h3>
+							</div>
+							<div class="mem_info clearfix">
+								<div class="mem_rank">
+									<div class="rank_icon vip">V</div>
+									<div class="rank_txt01">VIP</div>
+									<div class="rank_txt02">
+										<a href="">등급혜택  보기</a>
+										<a href="">등급쿠폰 다운</a>
+									</div>
+								</div>
+								<div class="mem_box clearfix">
+									<div class="mem_coupon">
+										<p class="tit">보유쿠폰/<span class="orange">만료예정</span></p>
+										<span class="coupon_txt01"><span class="big_txt">30</span>장</span>/<span class="coupon_txt02">13장</span>
+									</div>
+									<div class="mem_point">
+										<p class="tit">STYLE  24 포인트</p>
+										<a href=""><span class="big_txt">25,000</span>p</a>
+									</div>
+									<div class="mem_gift">
+										<p class="tit">상품권</p>
+										<a href=""><span class="big_txt">25,000</span>원</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sec_body mypage_body">
+							<!-- 주문 경로 -->
+							<div class="order_info clearfix">
+								<ul class="clearfix">
+									<li class="orl01">
+										<p class="or_p">주문접수</p>
+										<p class="count"><span>12</span></p>
+									</li>
+									<li class="orl02">
+										<p class="or_p">결제완료</p>
+										<p class="count"><span>12</span></p>
+									</li>
+									<li class="orl03">
+										<p class="or_p">상품 준비 중</p>
+										<p class="count"><span>12</span></p>
+									</li>
+									<li class="orl04">
+										<p class="or_p">배송중 중</p>
+										<p class="count"><span>12</span></p>
+									</li>
+									<li class="orl05">
+										<p class="or_p">배송 완료</p>
+										<p class="count"><span>12</span></p>
+									</li>
+								</ul>
+								<div class="order_right">
+									<ul>
+										<li>취소 내역 <span>2</span></li>
+										<li>교환 내역 <span>3</span></li>
+										<li>반품 내역 <span>0</span></li>
+									</ul>
+								</div>
+							</div>
+							<!-- //주문 경로 -->
+							<h2 class="subH2">주문확인/배송조회</h2>
+							<!-- 주문조회 검색 -->
+							<div class="order_sch_filter clearfix">
+								<div class="n_radio_tab">
+									<input type="checkbox" id="radioTabGuide0" name="radioTabGuide">
+									<label for="radioTabGuide0">5월</label>
+									<input type="checkbox" id="radioTabGuide1" name="radioTabGuide">
+									<label for="radioTabGuide1">6월</label>
+									<input type="checkbox" id="radioTabGuide2" name="radioTabGuide">
+									<label for="radioTabGuide2">7월</label>
+									<input type="checkbox" id="radioTabGuide3" name="radioTabGuide">
+									<label for="radioTabGuide3">8월</label>
+									<input type="checkbox" id="radioTabGuide4" name="radioTabGuide">
+									<label for="radioTabGuide4">9월</label>
+									<input type="checkbox" id="radioTabGuide5" name="radioTabGuide">
+									<label for="radioTabGuide5">10월</label>
+								</div>
+								<div class="n_datepicker sb">
+									<input type="text" class="n_input hasDatepicker" name="dt_fr_input" value="" placeholder="20.10.05" id="">
+								</div>
+								<div class="n_datepicker">
+									<input type="text" class="n_input hasDatepicker" name="dt_to_input" value="" placeholder="20.10.05" id="">
+								</div>
+								<button type="button" class="btn btn_dark" onclick="search();">조회</button>
+							</div>
+							<!-- //주문조회 검색 -->
+							<div class="order_list">
+								<!-- 1개주문 -->
+								<section class="order_row">
+									<div class="order_tit">
+										<span class="start_t">주문일</span>
+										<!-- 선물일 -->
+										<!-- <span class="gift_t">선물일</span> -->
+										<span class="order_date">2020.10.25</span>
+										<span class="order_method">업체직배송</span>
+										<a href="" class="detail_btn">주문상세보기</a>
+									</div>
+									<table class="order_table">
+										<colgroup>
+											<col style="width:160px;">
+											<col style="width:500px;">
+											<col style="width:180px;">
+											<col style="width:180px;">
+											<col style="width:180px;">
+										</colgroup>
+										<tr>
+											<td class="order_img"><a href=""><img src="../ux/images/dp_slide_bestItem02.png" alt="상품명" width="100"></a></td>
+											<td class="product">
+												<ul>
+													<li class="brand"><p>브랜드</p></li>
+													<li class="pr_name"><p>남성 라그란 소매배색 싸이로 티셔츠 / F67M-TS927A</p></li>
+													<li class="option clearfix">
+														<div class="option_t">
+															<span>옵션1</span>/<span>옵션2</span>
+														</div>
+														<div class="pr_count">수량 1개</div>
+													</li>
+												</ul>
+											</td>
+											<td class="price">
+												<p class="pr_t"><span>4,900</span>원</p>
+												<p class="point_t"><span>149</span>P</p>
+											</td>
+											<td class="delivery">
+												<p class="staus">배송 중</p>
+												<p class="s_desc">10/26일 도착 예정</p>
+											</td>
+											<td class="state">
+												<ul class="txt case01">
+													<li><a href="" class="btn btn_default">교환</a></li>
+													<li><a href="" class="btn btn_default">반품/취소</a></li>
+													<li><a href="" class="btn btn_dark">리뷰 작성</a></li>
+												</ul>
+												<!-- <div class="txt case02">
+													<a href="">sms 재전송</a>
+												</div> sms 전송-->
+											</td>
+										</tr>
+									</table>
+									<div class="order_confirm">
+										<span>15일 후 자동으로 구매확정</span>
+										<a href="" class="btn btn_primary">구매확정</a>
+										<!-- <a href="" class="case02">구매확정 하기 >> (<span>X</span>일 후 자동으로 구매확정)</a> 구매확정 대기-->
+										<!-- <a href="" class="case03">주소입력 대기 : 남은일자 <span>3</span>일 (<span>YYYY.MM.DD HH:MM:SS</span>까지)</a>  주소입력 대기-->
+									</div>
+								</section>
+								<!-- //1개주문 -->
+								<!-- n개 주문 -->
+								<section class="order_row">
+									<div class="order_tit">
+										<span class="start_t">주문일</span>
+										<!-- 선물일 -->
+										<!-- <span class="gift_t">선물일</span> -->
+										<span class="order_date">2020.10.25</span>
+										<span class="order_method">업체직배송</span>
+										<a href="" class="detail_btn">주문상세보기</a>
+									</div>
+									<table class="order_table">
+										<colgroup>
+											<col style="width:160px;">
+											<col style="width:500px;">
+											<col style="width:180px;">
+											<col style="width:180px;">
+											<col style="width:180px;">
+										</colgroup>
+										<tr>
+											<td class="order_img"><a href=""><img src="../ux/images/dp_slide_bestItem02.png" alt="상품명" width="100"></a></td>
+											<td class="product">
+												<ul>
+													<li class="brand"><p>브랜드</p></li>
+													<li class="pr_name"><p>남성 라그란 소매배색 싸이로 티셔츠 / F67M-TS927A</p></li>
+													<li class="option clearfix">
+														<div class="option_t">
+															<span>옵션1</span>/<span>옵션2</span>
+														</div>
+														<div class="pr_count">수량 1개</div>
+													</li>
+													<li class="freebies">
+														<div class="freebies_detail">
+															<div class="freebies_tit">사은품</div>
+															<div class="freebies_con">DECKE 고급 에코백(블랙) <span>(- 140p)</span></div>
+														</div>
+													</li>
+												</ul>
+											</td>
+											<td class="price">
+												<p class="pr_t"><span>4,900</span>원</p>
+												<p class="point_t"><span>149</span>P</p>
+											</td>
+											<td rowspan="2" class="delivery">
+												<p class="staus">배송 중</p>
+												<p class="s_desc">10/26일 도착 예정</p>
+											</td>
+											<td rowspan="2" class="state">
+												<ul class="txt case01">
+													<li><a href="" class="btn btn_default">교환</a></li>
+													<li><a href="" class="btn btn_default">반품/취소</a></li>
+													<li><a href="" class="btn btn_dark">리뷰 작성</a></li>
+												</ul>
+												<!-- <div class="txt case02">
+													<a href="">sms 재전송</a>
+												</div> sms 전송-->
+											</td>
+										</tr>
+										<tr>
+											<td class="order_img"><a href=""><img src="../ux/images/dp_slide_bestItem02.png" alt="상품명" width="100"></a></td>
+											<td class="product">
+												<ul>
+													<li class="brand"><p>브랜드</p></li>
+													<li class="pr_name"><p>남성 라그란 소매배색 싸이로 티셔츠 / F67M-TS927A</p></li>
+													<li class="option clearfix">
+														<div class="option_t">
+															<span>옵션1</span>/<span>옵션2</span>
+														</div>
+														<div class="pr_count">수량 1개</div>
+													</li>
+												</ul>
+											</td>
+											<td class="price">
+												<p class="pr_t"><span>4,900</span>원</p>
+												<p class="point_t"><span>149</span>P</p>
+											</td>
+										</tr>
+									</table>
+									<div class="order_confirm">
+										<span>15일 후 자동으로 구매확정</span>
+										<a href="" class="btn btn_primary">구매확정</a>
+										<!-- <a href="" class="case02">구매확정 하기 >> (<span>X</span>일 후 자동으로 구매확정)</a> 구매확정 대기-->
+										<!-- <a href="" class="case03">주소입력 대기 : 남은일자 <span>3</span>일 (<span>YYYY.MM.DD HH:MM:SS</span>까지)</a>  주소입력 대기-->
+									</div>
+								</section>
+								<!-- //n개 주문 -->
+								<!-- 주소입력대기 -->
+								<section class="order_row">
+									<div class="order_tit">
+										<span class="start_t">주문일</span>
+										<!-- 선물일 -->
+										<!-- <span class="gift_t">선물일</span> -->
+										<span class="order_date">2020.10.25</span>
+										<span class="order_method">업체직배송</span>
+										<a href="" class="detail_btn">주문상세보기</a>
+									</div>
+									<table class="order_table">
+										<colgroup>
+											<col style="width:160px;">
+											<col style="width:500px;">
+											<col style="width:180px;">
+											<col style="width:180px;">
+											<col style="width:180px;">
+										</colgroup>
+										<tr>
+											<td class="order_img"><a href=""><img src="../ux/images/dp_slide_bestItem02.png" alt="상품명" width="100"></a></td>
+											<td class="product">
+												<ul>
+													<li class="brand"><p>브랜드</p></li>
+													<li class="pr_name"><p>남성 라그란 소매배색 싸이로 티셔츠 / F67M-TS927A</p></li>
+													<li class="option clearfix">
+														<div class="option_t">
+															<span>옵션1</span>/<span>옵션2</span>
+														</div>
+														<div class="pr_count">수량 1개</div>
+													</li>
+												</ul>
+											</td>
+											<td class="price">
+												<p class="pr_t"><span>4,900</span>원</p>
+												<p class="point_t"><span>149</span>P</p>
+											</td>
+											<td class="delivery">
+												<p class="staus orange">주소 입력 대기</p>
+												<p class="s_desc">남은 기간 3일</p>
+												<p class="s_desc">(2020.10.05까지)</p>
+											</td>
+											<td class="state">
+												<ul class="txt case02">
+													<li><a href="" class="btn btn_dark">SMS재전송</a></li>
+												</ul>
+											</td>
+										</tr>
+									</table>
+								</section>
+								<!-- //주소입력대기 -->
+							</div>
+						</div>
+					</div>
+					<!-- // CONT-BODY -->					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->	
+	<footer id="footer"></footer>
+
+	<script type="text/javascript">
+	// 컨텐츠 호출
+        $(document).ready( function() {
+            $("#header").load("head.html");
+            // $("#container").load("indexx.html");
+            $("#footer").load("foot.html");
+        });
+	</script>
+	<script>
+		// header scroll
+		$(function(){
+			$(window).scroll(function(){
+				var scroll = $(this).scrollTop();
+				var headerH = $(".header").height();
+				if ($(window).scrollTop() > headerH){
+					$(".header").addClass("minify");
+					return false;
+				}
+				else {
+					$(".header").removeClass("minify");
+					return false;
+				}
+			});
+		});
+	</script>
+
+
+</body>
+</html>
+
+

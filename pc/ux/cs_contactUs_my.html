@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>iSTYLE24 | default | Publishing</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+
+<!-- <link rel="stylesheet" type="text/css" href="css/test-common.css" /> -->
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/common-ui.js"></script>
+</head>
+
+<body>
+
+	<div class="skipComment">
+		<a href="#content">본문 바로가기</a>
+		<a href="#gnb">주메뉴 바로가기</a>
+		<a href="#footer">하단메뉴 바로가기</a>
+	</div>
+
+	<header id="header"></header>
+	<!--  container -->
+	<div id="container" class="container cs">
+		<div class="breadcrumb"> 
+			<ul>
+				<li class="bread_home"><a href="index.html">홈</a></li>
+				<li class="bread_2depth">고객센터</li>
+				<li class="bread_3depth">1:1문의</li>
+			</ul> 
+		</div>
+		<div class="wrap">
+			<div class="content contactUs_my">
+				<div class="cont_body">
+					<!-- CONT-BODY -->
+					<div class="my_lnb">
+						<div class="lnb_tit">
+							<h2>고객센터</h2>
+						</div>
+						<div class="lnb_list">
+							<ul>
+								<li><a href="">FAQ</a></li>
+								<li><a href="" class="on">1:1문의</a></li>
+								<li><a href="">상품문의</a></li>
+								<li><a href="">공지</a></li>
+							</ul>
+						</div>
+						<div class="lnb_foot">
+							<ul>
+								<li><p>고객센터 운영안내</p></li>
+								<li><p>1544-5336</p></li>
+								<li><p>평일 09:00~18:00<br>토,일,공휴일 휴무</p></li>
+							</ul>
+						</div>
+					</div>
+					<div class="my_cont">
+						<div>
+							<div class="sec_head">
+								<h3>1:1 문의</h3>
+							</div>
+							<div class="sec_body">
+								<form class="form_wrap"  role="form">
+									<div class="form_field">
+										<label class="ui_col_2 input_label">문의 유형</label>
+										<div class="ui_col_10 form_full">
+											<div class="input_wrap">
+												<select name="" id="">
+													<option value="">유형을 선택해 주세요</option>
+													<option value="">더미더미</option>
+													<option value="">더미더미</option>
+												</select>
+											</div> 
+										</div>
+									</div>
+									<div class="form_field">
+										<label class="ui_col_2 input_label">제목</label>
+										<div class="ui_col_10 form_full">
+											<div class="input_wrap">
+												<span class="input_group_addon"><span class="ico"></span></span>
+												<input type="text" class="form_control" placeholder="30자 내외로 작성해주세요">
+											</div> 
+											<!-- 숫자, 특수문자, 불완성형 한글 제외하여 입력 -->
+										</div>
+									</div>
+									<div class="form_field">
+										<label class="ui_col_2 input_label">내용</label>
+										<div class="ui_col_10 form_full">
+											<div class="input_wrap">
+												<textarea class="textarea" name="" id="" cols="30" rows="10" style="resize: none;"></textarea>
+												<div>
+													<span id="counter">(0/500자)</span>
+												</div>
+											</div> 
+											<!-- 특수문자 : \ / : < >  사용 불가 > 입력 시, “특수문자 \ / : < > 는 사용할 수 없습니다.” 얼럿 호출 스크립트 입력 불가능 -->
+										</div>
+									</div>
+									
+									<div class="form_field">
+										<label class="ui_col_2 input_label">첨부이미지</label>
+										<div class="ui_col_10 form_full">
+											<div class="input_wrap">
+												<!-- 이미지첨부 -->
+												<div class="form_field">
+													<div class="imgUpload">
+														<label for="fileAdd" class="fileAdd">업로드</label>
+														<input type="file" id="fileAdd" name="files[]" multiple="">
+													</div>
+												</div>
+												<!-- //이미지첨부 -->
+												<div>
+													<ul>
+														<li><p class="t_info">- 사진은 최대 20MB 이하의 JPG,PNG,GIF <span>파일2장까지 첨부 가능</span>합니다.</p></li>
+														<li><p class="t_info">- 파일명에 한글은 사용불가입니다.</p></li>
+														<li><p class="t_info">- 첨부된 사진은 문의 외의 목적으로는 사용되지 않습니다.</p></li>
+													</ul>
+												</div>
+											</div> 
+										</div>
+									</div>
+									<div class="form_field">
+										<label class="ui_col_2 input_label">휴대폰</label>
+										<div class="ui_col_10">
+											<div class="input_wrap">
+												<input type="text" class="form_control" maxlength="13" placeholder="휴대폰 번호를 입력해주세요.">
+												<input id="chk-1" type="checkbox"><label for="chk-1"><span>알림 신청</span></label>
+											</div> 
+											<!-- 알림 신청 체크박스(선택 _ 기본값) -->
+											<div class="help_block">
+												<p class="t_err">휴대폰 번호를 형식에 맞게 정확히 입력해주세요.</p>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="form_field">
+										<label class="ui_col_2 input_label">이메일</label>
+										<div class="ui_col_10">
+											<div class="input_wrap">
+												<input type="text" class="form_control" maxlength="13" placeholder="이메일 주소를 입력해주세요.">
+												<input id="chk-2" type="checkbox"><label for="chk-2"><span>이메일 답변 수신</span></label>
+											</div> 
+											<div class="help_block">
+												<p class="t_err">이메일 형식이 올바르지 않습니다.</p>
+											</div>
+										</div>
+									</div> -->
+									<div class="form_field">
+										<span>&middot; 문의를 남겨 주시면 24시간 이내(토/일/공휴일 제외)에 답변 드릴 수 있도록 최선을 다 하겠습니다.</span>
+									</div>
+								</form>
+							</div>
+							<div class="sec_foot">
+								<div class="ui_row">
+									<div>
+										<button type="button" class="btn btn_default btn_md"><span>취소</span></button>
+										<button type="button" class="btn btn_dark btn_md"><span>확인</span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- // CONT-BODY -->					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->	
+	<footer id="footer"></footer>
+
+	<script type="text/javascript">
+	// 컨텐츠 호출
+        $(document).ready( function() {
+            $("#header").load("head.html");
+            // $("#container").load("indexx.html");
+            $("#footer").load("foot.html");
+        });
+	</script>
+	<script>
+		// header scroll
+		$(function(){
+			$(window).scroll(function(){
+				var scroll = $(this).scrollTop();
+				var headerH = $(".header").height();
+				if ($(window).scrollTop() > headerH){
+					$(".header").addClass("minify");
+					return false;
+				}
+				else {
+					$(".header").removeClass("minify");
+					return false;
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+/* Reset */
+body,div,dl,dt,dd,ul,ol,li,p,
+h1,h2,h3,h4,h5,h6,
+form,fieldset,legend,input,label,button,textarea,select,
+table,caption,thead,tfoot,tbody,tr,th,td,
+address,img,span,em,strong,pre {margin:0; padding:0;}
+
+html,body {width:100%; height:100%;}
+html {overflow-y:scroll;}
+body {line-height:20px; background-color:#fff; word-break:break-all;}
+
+body,input,textarea,select,button {font-size:13px; font-family:'Malgun Gothic',Dotum,applegothic,sans-serif,arial; color:#333; letter-spacing:-0.5px; *letter-spacing:-1px}
+h1,h2,h3,h4,h5,h6 {font-family:'Malgun Gothic',Dotum,applegothic,sans-serif,arial; color:#333; letter-spacing:-0.5px;}
+table {border-collapse:collapse; border-spacing:0; width:100%;}
+/* table td {word-break: break-all;} */
+
+/* legend {*width:0;} */
+legend,hr,caption {visibility:hidden; overflow:hidden; width:0; height:0; font-size:0; line-height:0;}
+legend,hr {overflow: hidden; position:absolute; top:0; left:0;}
+
+img,fieldset,iframe {border:0 none;}
+ul,ol,li {list-style: none;}
+i,em,address {font-style: normal;}
+hr{display:none;}
+img {vertical-align:top}
+
+a {color:#444; text-decoration:none; vertical-align:top;}
+a:link,a:visited {/* color:#333;  */text-decoration:none;}
+a:hover {text-decoration:none;}
+a:active {text-decoration:none;}
+
+/* form style */
+label {cursor:pointer; vertical-align: middle;}
+button {background-color:transparent; cursor:pointer; border:0;}
+
+.show{display:block}
+.hide{display:none}
+.blind,
+.ico > em {position:absolute; top:-5000px; width:1px; height:1px; font-size:0; line-height:0; overflow:hidden;}
+.ellipsis {text-overflow:ellipsis; white-space:nowrap; overflow:hidden; display:inline-block;}
+
+div.skipNav{position:absolute; top:0; display:block; font-size:12px; width:100%; height:0; line-height:1em; overflow:visible; visibility: visible; z-index:2000; }
+div.skipNav a{position:absolute; top:-9999px; display:block; width:100%; padding:10px 0; font-weight:bold; text-align:center; background-color:#f5f5f5;}
+div.skipNav a:hover, div.skipNav a:active, div.skipNav a:focus{position:absolute; top:0; left:0; color:#333; }
+
+
+
+/* 로그인-SNS간편로긴추가 */
+.sns_loginBtn .btn{margin-top:5px;height:38px;padding-left:41px;background-image:url(http://www.akmall.com/resource/front/images/login/bg_snsBTN.png);font-family:'나눔바른고딕',NanumBarunGothic;font-size:13px;color:#999;line-height:42px;letter-spacing:-1px;cursor:pointer}
+.sns_loginBtn .txt {line-height:44px;letter-spacing:-1px; color:#999; }
+.sns_loginBtn .btn span{width:146px;background-image:url(http://www.akmall.com/resource/front/images/login/bg_snsBTN.png)}
+.sns_loginBtn .btn.naver{background-position:0 0;display:inline-block;vertical-align:top;}
+.sns_loginBtn .btn.naver span{background-position:100% -40px;display:inline-block;vertical-align:top;text-align:center;}
+
+/* 주소찾기-행정안정부이동 */
+.newaddr_go {padding: 20px 0 10% 32px; color: #666; font-size: 12px;background-color: #ebebeb; border-top: 1px solid #d7d7d7;}
+.newaddr_go strong {color:#0b596b;}

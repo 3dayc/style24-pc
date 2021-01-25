@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>STYLE24 | GUIDE_FormElements | Publishing</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+	<link rel="stylesheet" type="text/css" href="../ux/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="./css/guide_only.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="../ux/js/jquery.ellipsis.js"></script>
+	<script src="../ux/js/jquery-ui.js"></script>
+	<script src="../ux/js/common-ui.js"></script>
+</head>
+
+<body>
+	<header id="header"></header>
+	<!--  container -->
+	<div class="gdWrap" id="contents">	
+		<div class="gd_lnb">
+			<div></div>
+			<ul>
+				<li><a href="#area1">Check Box/ Radio</a></li>
+				<li><a href="#area2">img-checkbox </a></li>
+				<li><a href="#area2">select </a></li>
+				<li><a href="#area3">Input</a></li>
+				<li><a href="#area4">Inline-Form Input</a></li>
+				<li><a href="#area5">Input States</a></li>
+				<li><a href="#area6">Input Validation</a></li>
+				<li><a href="#area7">Input File</a></li>
+				<li><a href="#area8">Date pickers</a></li>
+
+				<!-- Typography :  h1~h6 , span/p 상태별 , 텍스트그룹 , label -->
+				<!-- Form : One Column , Two Column ,   -->
+				<!-- Form Elements : Form Grid폼그리드 , Default From Inputs , Form Validation States인풋폼상태 , Checkbox And Radio , Input File파일업로드 , Date and time pickers달력 ,   -->
+				<!-- Elements : Pagination , Labels , Custom Content Scroller , Collapsible Group Item , Tabs with heading-->
+				<!-- Buttons : Buttons버튼기본종류 , Button States버튼상태, Buttons Sizes버튼사이즈별 , Buttons With Dropdown드롭다운버튼 , Block Level Buttons자동채움버튼 , Buttons With Icons버튼아이콘  -->
+				<!-- Popups : Tooltips툴팁 , Popovers팝오버툴팁 , Message Box메세지팝업 ,  -->
+				<!-- Alerts : 헤더푸터 고정 레이아웃 , 영상팝업 , 테이블 , 사이즈별 , 슬라이드팝업은링크만걸기  -->
+				<!-- Table : 댓글테이블 , 마이페이지 테이블 ,   -->
+			</ul>
+		</div>
+
+		<!-- 본문 start -->		
+		<div class="wrap guide">			
+			<div class="area">				
+				<section>
+					<div class="guide_title">
+						<h2>Form Elements</h2>
+					</div>
+
+
+					<div class="guide_area"  id="area1">
+						<h3 class="guide_tit">Check Box/ Radio</h3>
+						<!-- START HEADING -->
+						
+						<h4 class="guide_tit2">Check Box</h4>
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<!-- form start -->
+								<form class="form_wrap">
+
+									<div class="form_field">
+										<div class="ui_col_4">
+											<input id="chk-1" type="checkbox"><label for="chk-1"> <span>Default</span> </label>
+										</div>
+										<div class="ui_col_4">
+											<input id="chk-2" type="checkbox" Checked><label for="chk-2"> <span>Checked</span> </label>
+										</div>
+										<div class="ui_col_4">
+											<input id="chk-3" type="checkbox" Disabled><label for="chk-3"> <span>Disabled</span> </label>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<h4 class="guide_tit2">Radio</h4>
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<!-- form start -->
+								<form class="form_wrap">
+
+									<div class="form_field">
+										<div class="ui_col_4">
+											
+											 <!-- width auto important, 소수점 백그라운드 이슈로 인해 auto 설정 -->
+
+											<input type="radio" name="radio"  name="test1" id="rdi-1" value="1"><label for="rdi-1"> <span>Default</span> </label>
+										</div>
+										<div class="ui_col_4">
+											<input type="radio" name="radio"  name="test1" id="rdi-2" value="2" Checked><label for="rdi-2"> <span>Checked</span> </label>
+										</div>
+										<div class="ui_col_4">
+											<input type="radio" name="radio"  name="test1" id="rdi-3" value="3" Disabled><label for="rdi-3"> <span>Disabled</span> </label> 
+										</div>
+									</div>
+
+									
+								</form>
+							</div>
+						</div>
+
+						<!-- EOF HEADING -->  
+					</div>
+
+
+								
+					<div class="guide_area"  id="area2">
+						<h3 class="guide_tit">img-checkbox</h3>
+						<!-- START HEADING -->
+
+						<h4 class="guide_tit2">Img-checkbox</h4>
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<!-- form start -->
+								<form class="form_wrap">
+									<div class="form_field">
+										<div class="ui_col_4">
+											<input id="chk-img-1" class="chk_img" type="checkbox"><label for="chk-img-1"> <span><img src="../ux/images/img_common03.png" alt=""></span> </label>
+										</div>
+										<div class="ui_col_4">
+											<input id="chk-img-2" class="chk_img" type="checkbox" Checked><label for="chk-img-2"> <span><img src="../ux/images/img_common03.png" alt=""></span> </label>
+										</div>
+										<div class="ui_col_4">
+											<input id="chk-img-3" class="chk_img" type="checkbox" Disabled><label for="chk-img-3"> <span><img src="../ux/images/img_common03.png" alt=""></span> </label>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<!-- EOF HEADING -->  
+					</div>
+
+
+
+								
+					<div class="guide_area"  id="area2">
+						<h3 class="guide_tit">Select</h3>
+						<!-- START HEADING -->
+
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<!-- form start -->
+								<form class="form_wrap">
+
+									<div class="form_field">										
+
+										<!-- <select id="Test_select"> -->
+										<select id="mounth">
+											<option value="hide">TSET_SELECT</option>
+											<option value="Test_SELECT_OPTION_1" rel="icon-temperature">Test_SELECT_OPTION_1</option>
+											<option value="Test_SELECT_OPTION_2">Test_SELECT_OPTION_2</option>
+											<option value="Test_SELECT_OPTION_3">Test_SELECT_OPTION_3</option>
+										</select> 
+										
+									</div>
+									<div class="form_field">
+
+										<select class="form-control select" data-live-search="true">
+											<option value="hide">평점 전체 </option>
+											<option>5점</option>
+											<option>4점</option>
+											<option>3점</option>
+											<option>2점</option>
+											<option>1점</option>
+										</select>
+
+										<select id="Coupon">
+											<option value="hide">구매금액 100,000원 이상시 10% 할인 쿠폰</option>
+											<option value="적용안함" rel="icon-temperature">적용안함</option>
+											<option value="구매금액 1,000원 이상시 1% 할인 쿠폰" >구매금액 1,000원 이상시 1% 할인 쿠폰</option>
+											<option value="구매금액 2,000원 이상시 2% 할인 쿠폰" >구매금액 2,000원 이상시 2% 할인 쿠폰</option>
+											<option value="구매금액 10,000원 이상시 10% 할인 쿠폰" >구매금액 10,000원 이상시 10% 할인 쿠폰</option>
+											<option value="구매금액 20,000원 이상시 20% 할인 쿠폰" >구매금액 20,000원 이상시 20% 할인 쿠폰</option>
+											<option value="구매금액 50,000원 이상시 50% 할인 쿠폰">구매금액 50,000원 이상시 50% 할인 쿠폰</option>
+										</select> 
+
+									</div>
+								</form>
+							</div>
+						</div>
+						<script>
+							
+						</script>
+
+						<!-- EOF HEADING -->  
+					</div>
+
+
+
+					<div class="guide_area"  id="area3">
+						<h3 class="guide_tit">Input</h3>
+						<!-- START HEADING -->
+
+						<h4 class="guide_tit2">Basic</h4>
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<!-- form start -->
+								<form class="form_wrap">	
+									<div class="form_field">
+										<label class="input_label sr-only">label hide</label>
+										<div class="ui_col_12">
+											<div class="input_wrap">
+												<input type="text" class="form_control">
+											</div>
+										</div>
+									</div>
+
+									<div class="form_field">
+										<label class="ui_col_1 input_label">label .ui_col_1</label> <!-- Text label은 각 페이지에서 디자인 적용 -->
+										<div class="ui_col_11">
+											<div class="input_wrap">
+												<input type="text" class="form_control" placeholder=".ui_col_11">
+											</div>   
+											<div class="help_block">
+												<p class="t_info">.help_block p.t_info</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="form_field ">
+										<label class="ui_col_1 input_label">Input + Button</label> <!-- Text label은 각 페이지에서 디자인 적용 -->
+
+										<div class="input_wrap">
+											<input type="text" class="form_control" placeholder="input + button">
+											<button type="button" class="btn btn_default"><span>우편번호 찾기</span></button>
+										</div>
+
+									</div>
+
+									<div class="form_field form_full"> 
+										<!-- 	
+											풀사이즈 input일 경우,
+											.form_field에  .form_full 추가
+											버튼.btn은 input size를 지정한 .ui_col_ 의 형제요소로 위치한다.
+										-->
+										<div class="ui_col_10">
+											<div class="input_wrap form_full">
+												<input type="text" class="form_control " placeholder=".form_full input + .btn">
+											</div>   
+										</div>
+										<button type="button" class="btn btn_default"><span>로그인</span></button>
+									</div>
+
+
+
+									<br><br>
+
+
+									<div class="form_field">
+										<label class="input_label">Text label</label> 
+										<!-- Text label의 상세 디자인은 각 페이지에서 적용 -->
+										<div>
+											<div class="input_wrap">
+												<input type="text" class="form_control" placeholder=".ui_col_을 사용하지 않을 경우, 간격 없음" style="width:320px;">
+											</div>   
+											<div class="help_block">
+												<!-- input 상태에 따른 메세지 영역 -->
+											</div>
+										</div>
+									</div>
+
+									
+								</form>
+								<!-- form end -->
+							</div>
+						</div>
+
+						<!-- EOF HEADING -->  
+					</div>
+
+
+					<div class="guide_area"  id="area4">
+						<h3 class="guide_tit">Inline-Form Input</h3>
+						<!-- START HEADING -->
+	
+							<div class="ui_row">
+								<div class="ui_col_12">
+									<!-- form start -->
+	
+									<form class="form_wrap form_inline"  role="form">
+		
+										<div class="form_field">
+											<label class="sr-only">Login</label>
+											<input type="text" class="form_control" placeholder="ID">
+										</div>
+										<div class="form_field">
+											<div class="input_wrap">
+												<label class="sr-only">Password</label>
+												<input class="form_control" type="password" placeholder="password">
+											</div>
+										</div>
+										<button type="submit" class="btn btn_primary">Login</button>
+	
+									</form>
+								</div>
+							</div>
+	
+							<!-- EOF HEADING -->  
+						</div>
+
+
+					<div class="guide_area"  id="area5">
+						<h3 class="guide_tit">Input States</h3>
+						<!-- START HEADING -->
+
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<!-- form start -->
+								<form class="form_wrap">	
+									<div class="form_field">
+										<label class="ui_col_2 input_label">기본 (선택 전)</label>
+										<div class="ui_col_12">
+											<div class="input_wrap">
+												<input type="text" class="form_control">
+											</div>
+										</div>
+									</div>
+
+									<div class="form_field">
+										<label class="ui_col_2 input_label">선택 (커서/ 선택 상태)</label>
+										<div class="ui_col_12">
+											<div class="input_wrap">
+												<input type="text" class="form_control active">
+											</div>
+										</div>
+									</div>
+
+									<div class="form_field">
+										<label class="ui_col_2 input_label"><span class="t_req">*</span> 필수입력</label>
+										<div class="ui_col_12">
+											<div class="input_wrap">
+												<input type="text" class="form_control">
+											</div>
+										</div>
+									</div>
+
+									<div class="form_field">
+										<label class="ui_col_2 input_label">입력 완료</label>
+										<div class="ui_col_12">
+											<div class="input_wrap">
+												<input type="text" class="form_control">
+											</div>
+										</div>
+									</div>
+
+									<div class="form_field">
+										<label class="ui_col_2 input_label">Disabled</label>
+										<div class="ui_col_12">
+											<div class="input_wrap">
+												<input type="text" class="form_control" disabled>
+											</div>
+										</div>
+									</div>
+
+									<div class="form_field">
+										<label class="ui_col_2 input_label">Read-only</label>
+										<div class="ui_col_12">
+											<div class="input_wrap">
+												<input type="text" class="form_control" readonly placeholder="우편번호 145-653">
+											</div>
+										</div>
+									</div>
+								</form>
+								<!-- form end -->
+							</div>
+						</div>
+	
+						<!-- EOF HEADING -->  
+					</div>
+
+					<div class="guide_area"  id="area6">
+						<h3 class="guide_tit">Input Validation</h3>
+						<!-- START HEADING -->
+
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<!-- form start -->
+								<form class="form_wrap">
+
+									<h4 class="guide_tit2">기본 상태　→　<u>.input_wrap 과 .help_block는 형제요소</u></h4>
+									<div class="form_field">
+										<label class="ui_col_2 input_label"> class <code> .help_block </code></label>
+										<div class="ui_col_10">
+											<div class="input_wrap">
+												<input type="text" class="form_control" placeholder="">
+												<span class="usable"></span> <!-- id일 경우 필수 -->
+											</div>
+											<div class="help_block">
+											</div>
+										</div>
+									</div>
+
+									<h4 class="guide_tit2">사용 가능　→　<u>ID가 사용 가능한 상태일 경우 .Usable 생성</u></h4>
+									<div class="form_field ">
+										<label class="ui_col_2 input_label">
+											1. 기본 <code>.form_control </code>
+											<br>
+											2. 가능 <code>.form_control</code> + <code>.usable</code>
+										</label>
+										<div class="ui_col_10">
+											<div class="input_wrap">
+												<input type="text" class="form_control "  value="">
+												<span class="usable"></span> <!-- id일 경우 필수 -->
+											</div>
+											<br>
+											<div class="input_wrap">
+												<input type="text" class="form_control usable"  value="Usable_ID">
+												<span class="usable"></span> <!-- id일 경우 필수 -->
+											</div>
+										</div>
+									</div>
+
+									<h4 class="guide_tit2">오류 상태　→　<u>.help_block의 .t_help 안에 메세지 생성, 오류는 .t_err로 노출</u></h4>
+									<div class="form_field">
+										<label class="ui_col_2 input_label" style="line-height: 1.8;"> 
+											1. input에 <code> .form_control </code> + <code> .err </code> <br>
+											2. 기본메세지는 <code> .t_help </code> <br>
+											3. 오류상태는 <code> .t_err </code> <br>
+											4. 오류 해결 시 <code> .t_success </code>
+										</label>
+										<div class="ui_col_10">
+											<div class="input_wrap">
+												<input type="text" class="form_control err" value=".form_control + .err">
+											</div>
+											<div class="help_block">
+												<p class="t_help">- 4개이상 연속되거나 동일한 문자/숫자 제외</p>
+												<p class="t_err">영문(대/소문자)/숫자/특수문자 중 2가지 이상 조합(8~20자)</p>
+												<p class="t_success">아이디 제외</p>
+											</div>
+										</div>
+									</div>
+
+									<h4 class="guide_tit2"> 오류 + 버튼 추가　→　<u>Add Class <code> .btn_wrap </code></u></h4>
+									<div class="form_field ">
+										<label class="ui_col_2 input_label">ID가 사용 가능할 경우,</label>
+										<div class="ui_col_10">
+											<div class="input_wrap">
+												<input type="text" class="form_control err" value=".form_control + .err">
+											</div>
+											<div class="help_block">
+												<p class="t_err">이미 가입된 이메일 주소입니다. 다른 이메일 주소를 입력하여 주세요.</p>
+											</div>
+											<div class="btn_wrap">
+												<div class="btn_group_sm">
+													<button type="button" class="btn btn_default"><span>로그인</span></button>
+													<button type="button" class="btn btn_default"><span>아이디 찾기</span></button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</form>
+								<!-- form end -->
+								
+							</div>
+						</div>
+
+						<!-- EOF HEADING -->  
+					</div>
+
+
+								
+					<div class="guide_area"  id="area7">
+						<h3 class="guide_tit">Input File</h3>
+						<!-- START HEADING -->
+
+						<h4 class="guide_tit2">Input File</h4>
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<!-- form start -->
+								<form class="form_wrap">
+									<div class="form_field">
+
+										<div class="imgUpload">
+											<label for="fileAdd" class="fileAdd" >업로드</label>
+											<input type="file" id="fileAdd" name="files[]" multiple />
+
+											<!-- 첨부한 이미지가 반영될 곳, 실제 반영 시 해당 구역은 제거할 것 -->
+											<span class="pics">
+												<span class="removes">removes image</span>
+											</span>		
+										</div>
+
+									</div>
+								</form>
+							</div>
+						</div>
+						
+
+						<!-- EOF HEADING -->  
+					</div>
+
+					
+
+					<div class="guide_area wait"  id="area8">
+						<h3 class="guide_tit">Date pickers</h3>
+						<!-- START HEADING -->
+
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<!-- form start -->
+
+								<form class="form_wrap form_inline"  role="form">
+	
+									<div class="form_field">
+										<label class="sr-only">data pickers</label>
+                                        <input type="text" class="form_control" placeholder="data pickers">
+									</div>
+
+								</form>
+							</div>
+						</div>
+
+						<!-- EOF HEADING -->  
+					</div>
+
+
+
+
+					
+				</section>
+			</div>
+		</div>
+		<!-- 본문 end -->
+	</div>
+	<!-- // container -->	
+	<script type="text/javascript">
+        $(document).ready( function() {
+            $("#header").load("guide_head.html");
+        });
+	</script>
+</body>
+</html>
+
+

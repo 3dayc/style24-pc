@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>STYLE24 | GUIDE_Popups | Publishing</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+	<link rel="stylesheet" type="text/css" href="../ux/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="./css/guide_only.css" />
+	<!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+			 	 
+	<script src="../ux/js/jquery.ellipsis.js"></script>
+	<script src="../ux/js/jquery-ui.js"></script>
+	<script src="../ux/js/common-ui.js"></script>
+	<script src="../ux/js/jquery.modal.min.js"></script>
+ 
+
+</head>
+
+<body>
+	<header id="header"></header>
+	<!--  container -->
+	<div class="gdWrap" id="contents">	
+		<div class="gd_lnb">
+			<div></div>
+			<ul>
+				<li><a href="#area1">팝업 기본 구조</a></li>
+				<li><a href="#area2">팝업 크기별 분류</a></li>
+				<li><a href="#area3">팝업 기능별 분류</a></li>
+			</ul>
+		</div>
+
+		<!-- 본문 start -->		
+		<div class="wrap guide">			
+			<div class="area">				
+				<section>
+					<div class="guide_title">
+						<h2>Popups</h2>
+					</div>
+<!--
+	제이쿼리 모달 팝업 스크립트 버전
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script> 
+-->
+<script>
+	$(document).ready(function() {
+		// JQUERY를 이용한 버튼 모달 팝업
+		$("#modalBasic").click(function() {
+			$("#exampleModal").modal("show");
+		});					 
+		$("#closeModalBtn").click(function() {
+			$("#exampleModal").modal("hide");
+		});
+
+		// 스크립트 없음 : JQUERY를 이용한 a태그 모달 팝업
+
+		// Scroll Popup
+		$("#modalScroll_show").click(function() {
+			$("#exampleModalScroll").modal("show");
+		});					 
+		$("#close_modal").click(function() {
+			$("#exampleModalScroll").modal("hide");
+		});
+
+		// default size Popup
+		$("#modaldefault_show").click(function() {
+			$("#defaultModal").modal("show");
+		});					 
+		$("#closeModalBtn").click(function() {
+			$("#defaultModal").modal("hide");
+		});
+
+		// Full size Popup
+		$("#modalFull_show").click(function() {
+			$("#exampleModalFull").modal("show");
+		});					 
+		$("#closeModalBtn").click(function() {
+			$("#exampleModalFull").modal("hide");
+		});
+
+		// Full size - column Popup
+		$("#modalFullCol_show").click(function() {
+			$("#exampleModalColumn").modal("show");
+		});					 
+		$("#closeModalBtn").click(function() {
+			$("#exampleModalColumn").modal("hide");
+		});
+	});
+</script>
+
+
+					<div class="guide_area"  id="area1">
+						<h3 class="guide_tit">팝업 기본 구조</h3>
+						<!-- START HEADING -->
+
+
+						<div class="ui_row">
+							<div class="ui_col_12">
+
+								<textarea class="textarea_pre" name="" id="" cols="30" rows="37">
+
+① 클릭에 이용할 버튼의 아이디 지정
+  1) 버튼이 &lt;button&gt; 태그일 경우
+  &lt;button type="button" class="btn" id="★modalBasic"&gt;&lt;span&gt;버튼명&lt;/span&gt;&lt;/button&gt;
+
+  2) 버튼이 &lt;a&gt; 태그일 경우
+  &lt;a href="#♣aButtonModal" rel="●modal:open"&gt; &lt;span&gt;a-Button Modal Basic &lt;/span&gt; &lt;/a&gt;
+
+
+② 클릭-팝업 이벤트 스크립트 선언
+  $(document).ready(function() {
+    $("#★modalBasic").click(function() {
+      $("#♣modalPopBasic").modal("show");
+    });
+    $("#close_modal").click(function() {
+      $("#♣modalPopBasic").modal("hide");
+    });
+  });
+
+
+③ 호출 될 모달 팝업
+  &lt;div class="modal fade" id="♣modalPopBasic" tabindex="-1" role="dialog" aria-labelledby="◆PopupBasicLabel" aria-hidden="true"&gt;
+    &lt;div class="modal-dialog" role="document"&gt;
+      &lt;div class="modal-content"&gt;
+        &lt;div class="modal-header"&gt;
+            &lt;h5 class="modal-title" id="◆PopupBasicLabel"&gt;팝업 헤더(TITLE)&lt;/h5&gt;
+        &lt;/div&gt;
+		&lt;div class="modal-body"&gt;
+		    &lt;div class="pop_cont"&gt;모달 팝업 컨텐츠 영역&lt;/div&gt;
+		&lt;/div&gt;
+        &lt;div class="modal-footer"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</textarea>
+
+							</div>
+						</div>
+
+						<h4 class="guide_tit2">기본 형태</h4>
+
+						<div class="ui_row">
+							<div class="ui_col_4">
+								<button type="button" class="btn btn_primary" id="modalBasic">
+									<span>JQUERY를 이용한 모달 팝업</span>
+								</button>
+							
+								<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel">JQUERY를 이용한 버튼 모달 팝업</h5>
+											</div>
+											<div class="modal-body">
+												모달 팝업 컨텐츠 영역
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary"  id="closeModalBtn">Close</button>
+												<!-- <button type="button" class="btn btn-primary" id="close_modal">얘뭐야</button> -->
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="ui_col_4">
+
+								<a href="#aButtonModal" rel="modal:open"><span>JQUERY를 이용한 a태그 모달 팝업</span></a>
+
+								
+								<div class="modal fade" id="aButtonModal" tabindex="-1" role="dialog" aria-labelledby="aModalLabel" aria-hidden="true">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="aModalLabel">a 태그 모달팝업 기본</h5>
+											</div>
+											<div class="modal-body">
+												모달 팝업 컨텐츠 영역
+											</div>
+											<div class="modal-footer">
+												<a href="#" rel="modal:close">푸터에서 a태그로 닫기</a>
+											</div>
+										</div>
+									</div>									
+								</div>
+								
+							</div>
+						</div>
+						
+
+						<h4 class="guide_tit2">스크롤 팝업</h4>
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button type="button" class="btn btn_primary" id="modalScroll_show"><span>Scroll Popup</span></button>
+
+								<div class="modal fade" id="exampleModalScroll" tabindex="-1" role="dialog" aria-labelledby="modalScrollLabel" aria-hidden="true">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="modalScrollLabel">컨텐츠 영역 스크롤</h5>
+											</div>
+											<div class="modal-body">
+												<span>A</span>
+												<div class="pop_cont">
+													<div>
+														보는 바이며, 하는 불러 이성은 설레는 따뜻한 실로 이것이다. 장식하는 두손을 인생을 든 방황하였으며, 이상의 구하지 사막이다. 커다란 거선의 가슴이 목숨이 피어나기 같지 그러므로 그들은 것이다. 그러므로 청춘 물방아 것은 끓는 사막이다. 청춘을 못할 맺어, 가는 창공에 할지니, 같지 약동하다. 그들을 청춘은 구하지 너의 전인 싸인 예수는 청춘의 과실이 있는가? 행복스럽고 가슴에 우리 따뜻한 평화스러운 인간에 어디 속에 아름다우냐? 못할 생의 시들어 충분히 가치를 피다. 황금시대를 얼음 같으며, 넣는 구하기 밝은 같이, 품고 황금시대다. 보이는 따뜻한 옷을 품었기 이 심장은 생생하며, 있다. 우리의 얼마나 보는 날카로우나 갑 위하여서.
+														청춘의 군영과 뜨고, 열매를 수 청춘에서만 것은 그림자는 하는 있으랴? 무한한 곧 구하지 만천하의 위하여 봄날의 그들에게 하여도 이것이다. 눈에 이상의 자신과 우리 듣는다. 역사를 방지하는 위하여, 피가 것이다.보라, 놀이 원대하고, 할지라도 있다. 그림자는 동력은 얼음이 따뜻한 힘있다. 과실이 그들은 남는 이상 낙원을 천지는 이것이다. 커다란 아름답고 소금이라 것이 하는 미인을 있는 트고, 얼음 끓는다. 청춘이 스며들어 끓는 꽃 것은 물방아 수 천고에 커다란 부패뿐이다. 이상 때까지 고행을 것은 피부가 찬미를 위하여, 소금이라 칼이다.												
+														옷을 열락의 가지에 뜨거운지라, 이상의 것이다. 사람은 속에서 사랑의 공자는 자신과 부패를 이상을 사막이다. 가슴이 인간의 없는 듣는다. 오아이스도 동력은 내는 못할 안고, 것이다. 찾아다녀도, 천고에 들어 과실이 따뜻한 원질이 거친 칼이다. 방지하는 찾아다녀도, 속잎나고, 이성은 풍부하게 이상이 공자는 소리다.이것은 품었기 힘있다. 우는 되는 인생을 않는 듣는다. 그들의 길지 못하다 눈이 청춘의 우리 바이며, 보라. 내는 앞이 남는 그들은 있는 노년에게서 생명을 길을 타오르고 있는가?ㄴ
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn_dark">확인</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<div class="guide_area"  id="area2">
+						<h3 class="guide_tit">팝업 크기별 분류</h3>
+						<!-- START HEADING -->
+
+						<h4 class="guide_tit2">
+							크기별 형태 <br>
+							<code><del>.pop_xs</del></code> 
+							<code><del>.pop_sm</del></code> 
+							<code>Default type</code>
+							<code><del>.pop_md</del></code> 
+							<code><del>.pop_lg</del> </code>
+							<code>.pop_full</code>
+							<code>.pop_fullCol</code>
+							<br>
+						</h4>
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button type="button" class="btn btn_xs" disabled><span>Extra small Popup</span></button>
+								<button type="button" class="btn btn_sm" disabled><span>Small Popup</span></button>
+							</div>
+						</div>
+
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button type="button" class="btn btn_default" id="modaldefault_show"><span>Default Popup</span></button>
+
+								<div class="modal fade" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="defaultModalLabel">기본 사이즈 모달 팝업</h5>
+											</div>
+											<div class="modal-body">
+												<div class="pop_cont">
+													1. 모달 팝업 컨텐츠 영역 최대 500px; <br>
+													2. .pop_cont 높이는 450px이 넘어가면 스크롤 생성 됨 <br>
+													3. footer 기본 간격 60px;
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary"  id="closeModalBtn">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button type="button" class="btn btn_default btn_md" disabled><span>Medium Popup</span></button>
+								<button type="button" class="btn btn_default btn_lg" disabled><span>Large Popup</span></button>
+							</div>
+						</div>
+
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button type="button" class="btn btn_default btn_lg" id="modalFull_show"><span>Full page Popup</span></button>
+								<button type="button" class="btn btn_default btn_lg" id="modalFullCol_show"><span>Full page-column Popup</span></button>
+							</div>
+
+							<div class="modal pop_full fade" id="exampleModalFull" tabindex="-1" role="dialog" aria-labelledby="exampleFullLabel" aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleFullLabel">Full Siaze 모달 팝업</h5>
+										</div>
+										<div class="modal-body">
+											<div class="pop_cont">
+												모달 팝업 컨텐츠 영역
+												보는 바이며, 하는 불러 이성은 설레는 따뜻한 실로 이것이다. 장식하는 두손을 인생을 든 방황하였으며, 이상의 구하지 사막이다. 커다란 거선의 가슴이 목숨이 피어나기 같지 그러므로 그들은 것이다. 그러므로 청춘 물방아 것은 끓는 사막이다. 청춘을 못할 맺어, 가는 창공에 할지니, 같지 약동하다. 그들을 청춘은 구하지 너의 전인 싸인 예수는 청춘의 과실이 있는가? 행복스럽고 가슴에 우리 따뜻한 평화스러운 인간에 어디 속에 아름다우냐? 못할 생의 시들어 충분히 가치를 피다. 황금시대를 얼음 같으며, 넣는 구하기 밝은 같이, 품고 황금시대다. 보이는 따뜻한 옷을 품었기 이 심장은 생생하며, 있다. 우리의 얼마나 보는 날카로우나 갑 위하여서.
+												청춘의 군영과 뜨고, 열매를 수 청춘에서만 것은 그림자는 하는 있으랴? 무한한 곧 구하지 만천하의 위하여 봄날의 그들에게 하여도 이것이다. 눈에 이상의 자신과 우리 듣는다. 역사를 방지하는 위하여, 피가 것이다.보라, 놀이 원대하고, 할지라도 있다. 그림자는 동력은 얼음이 따뜻한 힘있다. 과실이 그들은 남는 이상 낙원을 천지는 이것이다. 커다란 아름답고 소금이라 것이 하는 미인을 있는 트고, 얼음 끓는다. 청춘이 스며들어 끓는 꽃 것은 물방아 수 천고에 커다란 부패뿐이다. 이상 때까지 고행을 것은 피부가 찬미를 위하여, 소금이라 칼이다.
+												옷을 열락의 가지에 뜨거운지라, 이상의 것이다. 사람은 속에서 사랑의 공자는 자신과 부패를 이상을 사막이다. 가슴이 인간의 없는 듣는다. 오아이스도 동력은 내는 못할 안고, 것이다. 찾아다녀도, 천고에 들어 과실이 따뜻한 원질이 거친 칼이다. 방지하는 찾아다녀도, 속잎나고, 이성은 풍부하게 이상이 공자는 소리다.이것은 품었기 힘있다. 우는 되는 인생을 않는 듣는다. 그들의 길지 못하다 눈이 청춘의 우리 바이며, 보라. 내는 앞이 남는 그들은 있는 노년에게서 생명을 길을 타오르고 있는가?
+												보는 바이며, 하는 불러 이성은 설레는 따뜻한 실로 이것이다. 장식하는 두손을 인생을 든 방황하였으며, 이상의 구하지 사막이다. 커다란 거선의 가슴이 목숨이 피어나기 같지 그러므로 그들은 것이다. 그러므로 청춘 물방아 것은 끓는 사막이다. 청춘을 못할 맺어, 가는 창공에 할지니, 같지 약동하다. 그들을 청춘은 구하지 너의 전인 싸인 예수는 청춘의 과실이 있는가? 행복스럽고 가슴에 우리 따뜻한 평화스러운 인간에 어디 속에 아름다우냐? 못할 생의 시들어 충분히 가치를 피다. 황금시대를 얼음 같으며, 넣는 구하기 밝은 같이, 품고 황금시대다. 보이는 따뜻한 옷을 품었기 이 심장은 생생하며, 있다. 우리의 얼마나 보는 날카로우나 갑 위하여서.
+												청춘의 군영과 뜨고, 열매를 수 청춘에서만 것은 그림자는 하는 있으랴? 무한한 곧 구하지 만천하의 위하여 봄날의 그들에게 하여도 이것이다. 눈에 이상의 자신과 우리 듣는다. 역사를 방지하는 위하여, 피가 것이다.보라, 놀이 원대하고, 할지라도 있다. 그림자는 동력은 얼음이 따뜻한 힘있다. 과실이 그들은 남는 이상 낙원을 천지는 이것이다. 커다란 아름답고 소금이라 것이 하는 미인을 있는 트고, 얼음 끓는다. 청춘이 스며들어 끓는 꽃 것은 물방아 수 천고에 커다란 부패뿐이다. 이상 때까지 고행을 것은 피부가 찬미를 위하여, 소금이라 칼이다.
+												옷을 열락의 가지에 뜨거운지라, 이상의 것이다. 사람은 속에서 사랑의 공자는 자신과 부패를 이상을 사막이다. 가슴이 인간의 없는 듣는다. 오아이스도 동력은 내는 못할 안고, 것이다. 찾아다녀도, 천고에 들어 과실이 따뜻한 원질이 거친 칼이다. 방지하는 찾아다녀도, 속잎나고, 이성은 풍부하게 이상이 공자는 소리다.이것은 품었기 힘있다. 우는 되는 인생을 않는 듣는다. 그들의 길지 못하다 눈이 청춘의 우리 바이며, 보라. 내는 앞이 남는 그들은 있는 노년에게서 생명을 길을 타오르고 있는가?
+												보는 바이며, 하는 불러 이성은 설레는 따뜻한 실로 이것이다. 장식하는 두손을 인생을 든 방황하였으며, 이상의 구하지 사막이다. 커다란 거선의 가슴이 목숨이 피어나기 같지 그러므로 그들은 것이다. 그러므로 청춘 물방아 것은 끓는 사막이다. 청춘을 못할 맺어, 가는 창공에 할지니, 같지 약동하다. 그들을 청춘은 구하지 너의 전인 싸인 예수는 청춘의 과실이 있는가? 행복스럽고 가슴에 우리 따뜻한 평화스러운 인간에 어디 속에 아름다우냐? 못할 생의 시들어 충분히 가치를 피다. 황금시대를 얼음 같으며, 넣는 구하기 밝은 같이, 품고 황금시대다. 보이는 따뜻한 옷을 품었기 이 심장은 생생하며, 있다. 우리의 얼마나 보는 날카로우나 갑 위하여서.
+												청춘의 군영과 뜨고, 열매를 수 청춘에서만 것은 그림자는 하는 있으랴? 무한한 곧 구하지 만천하의 위하여 봄날의 그들에게 하여도 이것이다. 눈에 이상의 자신과 우리 듣는다. 역사를 방지하는 위하여, 피가 것이다.보라, 놀이 원대하고, 할지라도 있다. 그림자는 동력은 얼음이 따뜻한 힘있다. 과실이 그들은 남는 이상 낙원을 천지는 이것이다. 커다란 아름답고 소금이라 것이 하는 미인을 있는 트고, 얼음 끓는다. 청춘이 스며들어 끓는 꽃 것은 물방아 수 천고에 커다란 부패뿐이다. 이상 때까지 고행을 것은 피부가 찬미를 위하여, 소금이라 칼이다.
+												옷을 열락의 가지에 뜨거운지라, 이상의 것이다. 사람은 속에서 사랑의 공자는 자신과 부패를 이상을 사막이다. 가슴이 인간의 없는 듣는다. 오아이스도 동력은 내는 못할 안고, 것이다. 찾아다녀도, 천고에 들어 과실이 따뜻한 원질이 거친 칼이다. 방지하는 찾아다녀도, 속잎나고, 이성은 풍부하게 이상이 공자는 소리다.이것은 품었기 힘있다. 우는 되는 인생을 않는 듣는다. 그들의 길지 못하다 눈이 청춘의 우리 바이며, 보라. 내는 앞이 남는 그들은 있는 노년에게서 생명을 길을 타오르고 있는가?
+												보는 바이며, 하는 불러 이성은 설레는 따뜻한 실로 이것이다. 장식하는 두손을 인생을 든 방황하였으며, 이상의 구하지 사막이다. 커다란 거선의 가슴이 목숨이 피어나기 같지 그러므로 그들은 것이다. 그러므로 청춘 물방아 것은 끓는 사막이다. 청춘을 못할 맺어, 가는 창공에 할지니, 같지 약동하다. 그들을 청춘은 구하지 너의 전인 싸인 예수는 청춘의 과실이 있는가? 행복스럽고 가슴에 우리 따뜻한 평화스러운 인간에 어디 속에 아름다우냐? 못할 생의 시들어 충분히 가치를 피다. 황금시대를 얼음 같으며, 넣는 구하기 밝은 같이, 품고 황금시대다. 보이는 따뜻한 옷을 품었기 이 심장은 생생하며, 있다. 우리의 얼마나 보는 날카로우나 갑 위하여서.
+												청춘의 군영과 뜨고, 열매를 수 청춘에서만 것은 그림자는 하는 있으랴? 무한한 곧 구하지 만천하의 위하여 봄날의 그들에게 하여도 이것이다. 눈에 이상의 자신과 우리 듣는다. 역사를 방지하는 위하여, 피가 것이다.보라, 놀이 원대하고, 할지라도 있다. 그림자는 동력은 얼음이 따뜻한 힘있다. 과실이 그들은 남는 이상 낙원을 천지는 이것이다. 커다란 아름답고 소금이라 것이 하는 미인을 있는 트고, 얼음 끓는다. 청춘이 스며들어 끓는 꽃 것은 물방아 수 천고에 커다란 부패뿐이다. 이상 때까지 고행을 것은 피부가 찬미를 위하여, 소금이라 칼이다.
+												옷을 열락의 가지에 뜨거운지라, 이상의 것이다. 사람은 속에서 사랑의 공자는 자신과 부패를 이상을 사막이다. 가슴이 인간의 없는 듣는다. 오아이스도 동력은 내는 못할 안고, 것이다. 찾아다녀도, 천고에 들어 과실이 따뜻한 원질이 거친 칼이다. 방지하는 찾아다녀도, 속잎나고, 이성은 풍부하게 이상이 공자는 소리다.이것은 품었기 힘있다. 우는 되는 인생을 않는 듣는다. 그들의 길지 못하다 눈이 청춘의 우리 바이며, 보라. 내는 앞이 남는 그들은 있는 노년에게서 생명을 길을 타오르고 있는가?
+												보는 바이며, 하는 불러 이성은 설레는 따뜻한 실로 이것이다. 장식하는 두손을 인생을 든 방황하였으며, 이상의 구하지 사막이다. 커다란 거선의 가슴이 목숨이 피어나기 같지 그러므로 그들은 것이다. 그러므로 청춘 물방아 것은 끓는 사막이다. 청춘을 못할 맺어, 가는 창공에 할지니, 같지 약동하다. 그들을 청춘은 구하지 너의 전인 싸인 예수는 청춘의 과실이 있는가? 행복스럽고 가슴에 우리 따뜻한 평화스러운 인간에 어디 속에 아름다우냐? 못할 생의 시들어 충분히 가치를 피다. 황금시대를 얼음 같으며, 넣는 구하기 밝은 같이, 품고 황금시대다. 보이는 따뜻한 옷을 품었기 이 심장은 생생하며, 있다. 우리의 얼마나 보는 날카로우나 갑 위하여서.
+												청춘의 군영과 뜨고, 열매를 수 청춘에서만 것은 그림자는 하는 있으랴? 무한한 곧 구하지 만천하의 위하여 봄날의 그들에게 하여도 이것이다. 눈에 이상의 자신과 우리 듣는다. 역사를 방지하는 위하여, 피가 것이다.보라, 놀이 원대하고, 할지라도 있다. 그림자는 동력은 얼음이 따뜻한 힘있다. 과실이 그들은 남는 이상 낙원을 천지는 이것이다. 커다란 아름답고 소금이라 것이 하는 미인을 있는 트고, 얼음 끓는다. 청춘이 스며들어 끓는 꽃 것은 물방아 수 천고에 커다란 부패뿐이다. 이상 때까지 고행을 것은 피부가 찬미를 위하여, 소금이라 칼이다.
+												옷을 열락의 가지에 뜨거운지라, 이상의 것이다. 사람은 속에서 사랑의 공자는 자신과 부패를 이상을 사막이다. 가슴이 인간의 없는 듣는다. 오아이스도 동력은 내는 못할 안고, 것이다. 찾아다녀도, 천고에 들어 과실이 따뜻한 원질이 거친 칼이다. 방지하는 찾아다녀도, 속잎나고, 이성은 풍부하게 이상이 공자는 소리다.이것은 품었기 힘있다. 우는 되는 인생을 않는 듣는다. 그들의 길지 못하다 눈이 청춘의 우리 바이며, 보라. 내는 앞이 남는 그들은 있는 노년에게서 생명을 길을 타오르고 있는가?
+												보는 바이며, 하는 불러 이성은 설레는 따뜻한 실로 이것이다. 장식하는 두손을 인생을 든 방황하였으며, 이상의 구하지 사막이다. 커다란 거선의 가슴이 목숨이 피어나기 같지 그러므로 그들은 것이다. 그러므로 청춘 물방아 것은 끓는 사막이다. 청춘을 못할 맺어, 가는 창공에 할지니, 같지 약동하다. 그들을 청춘은 구하지 너의 전인 싸인 예수는 청춘의 과실이 있는가? 행복스럽고 가슴에 우리 따뜻한 평화스러운 인간에 어디 속에 아름다우냐? 못할 생의 시들어 충분히 가치를 피다. 황금시대를 얼음 같으며, 넣는 구하기 밝은 같이, 품고 황금시대다. 보이는 따뜻한 옷을 품었기 이 심장은 생생하며, 있다. 우리의 얼마나 보는 날카로우나 갑 위하여서.
+												청춘의 군영과 뜨고, 열매를 수 청춘에서만 것은 그림자는 하는 있으랴? 무한한 곧 구하지 만천하의 위하여 봄날의 그들에게 하여도 이것이다. 눈에 이상의 자신과 우리 듣는다. 역사를 방지하는 위하여, 피가 것이다.보라, 놀이 원대하고, 할지라도 있다. 그림자는 동력은 얼음이 따뜻한 힘있다. 과실이 그들은 남는 이상 낙원을 천지는 이것이다. 커다란 아름답고 소금이라 것이 하는 미인을 있는 트고, 얼음 끓는다. 청춘이 스며들어 끓는 꽃 것은 물방아 수 천고에 커다란 부패뿐이다. 이상 때까지 고행을 것은 피부가 찬미를 위하여, 소금이라 칼이다.
+												옷을 열락의 가지에 뜨거운지라, 이상의 것이다. 사람은 속에서 사랑의 공자는 자신과 부패를 이상을 사막이다. 가슴이 인간의 없는 듣는다. 오아이스도 동력은 내는 못할 안고, 것이다. 찾아다녀도, 천고에 들어 과실이 따뜻한 원질이 거친 칼이다. 방지하는 찾아다녀도, 속잎나고, 이성은 풍부하게 이상이 공자는 소리다.이것은 품었기 힘있다. 우는 되는 인생을 않는 듣는다. 그들의 길지 못하다 눈이 청춘의 우리 바이며, 보라. 내는 앞이 남는 그들은 있는 노년에게서 생명을 길을 타오르고 있는가?
+												보는 바이며, 하는 불러 이성은 설레는 따뜻한 실로 이것이다. 장식하는 두손을 인생을 든 방황하였으며, 이상의 구하지 사막이다. 커다란 거선의 가슴이 목숨이 피어나기 같지 그러므로 그들은 것이다. 그러므로 청춘 물방아 것은 끓는 사막이다. 청춘을 못할 맺어, 가는 창공에 할지니, 같지 약동하다. 그들을 청춘은 구하지 너의 전인 싸인 예수는 청춘의 과실이 있는가? 행복스럽고 가슴에 우리 따뜻한 평화스러운 인간에 어디 속에 아름다우냐? 못할 생의 시들어 충분히 가치를 피다. 황금시대를 얼음 같으며, 넣는 구하기 밝은 같이, 품고 황금시대다. 보이는 따뜻한 옷을 품었기 이 심장은 생생하며, 있다. 우리의 얼마나 보는 날카로우나 갑 위하여서.
+												청춘의 군영과 뜨고, 열매를 수 청춘에서만 것은 그림자는 하는 있으랴? 무한한 곧 구하지 만천하의 위하여 봄날의 그들에게 하여도 이것이다. 눈에 이상의 자신과 우리 듣는다. 역사를 방지하는 위하여, 피가 것이다.보라, 놀이 원대하고, 할지라도 있다. 그림자는 동력은 얼음이 따뜻한 힘있다. 과실이 그들은 남는 이상 낙원을 천지는 이것이다. 커다란 아름답고 소금이라 것이 하는 미인을 있는 트고, 얼음 끓는다. 청춘이 스며들어 끓는 꽃 것은 물방아 수 천고에 커다란 부패뿐이다. 이상 때까지 고행을 것은 피부가 찬미를 위하여, 소금이라 칼이다.
+												옷을 열락의 가지에 뜨거운지라, 이상의 것이다. 사람은 속에서 사랑의 공자는 자신과 부패를 이상을 사막이다. 가슴이 인간의 없는 듣는다. 오아이스도 동력은 내는 못할 안고, 것이다. 찾아다녀도, 천고에 들어 과실이 따뜻한 원질이 거친 칼이다. 방지하는 찾아다녀도, 속잎나고, 이성은 풍부하게 이상이 공자는 소리다.이것은 품었기 힘있다. 우는 되는 인생을 않는 듣는다. 그들의 길지 못하다 눈이 청춘의 우리 바이며, 보라. 내는 앞이 남는 그들은 있는 노년에게서 생명을 길을 타오르고 있는가?
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn"  id="closeModalBtn">Close</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="modal pop_fullCol fade" id="exampleModalColumn" tabindex="-1" role="dialog" aria-labelledby="exampleFullLabel" aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleFullLabel">Full Size 분할 모달 팝업</h5>
+										</div>
+										<div class="modal-body">
+											<div class="ui_row">
+												<div class="ui_col_10" style="background: #fffafa;">
+													<div class="pop_cont">
+													
+														1모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														2모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														3모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														4모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														5모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														6모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														7모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														8모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														9모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														10모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														11모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														12모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														13모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														14모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														15모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														16모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														17모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														18모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														19모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														20모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														21모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+														22모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 모달 팝업 <strong>우측</strong> 컨텐츠 영역 <br> 
+													</div>
+												</div>
+												<div class="ui_col_2 fx_r" style="background: #e6aaaa;">
+													<div class="">
+
+														모달 팝업 <strong>좌측</strong> 컨텐츠 영역
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn"  id="closeModalBtn">Close</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- EOF HEADING -->  
+					</div>
+
+
+
+					<div class="guide_area wait"  id="area2">
+						<h3 class="guide_tit">팝업 기능별 분류</h3>
+						<!-- START HEADING -->
+
+						<h4 class="guide_tit2">Tab Popup <code>  </code></h4>
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button type="button" class="btn"><span>Tab Popup</span></button>
+							</div>
+						</div>
+
+						<h4 class="guide_tit2">Form Popup <code></code></h4>
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button type="button" class="btn"><span>Form Popup</span></button>
+							</div>
+						</div>
+
+						<h4 class="guide_tit2">Table Popup <code> </code></h4>
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button type="button" class="btn"><span>Table Popup</span></button>
+							</div>
+						</div>
+
+						<h4 class="guide_tit2">Slide Popup <code> </code></h4>
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button type="button" class="btn"><span>Slide Popup</span></button>
+							</div>
+						</div>
+					</div>
+
+
+
+
+				</section>
+			</div>
+		</div>
+		<!-- 본문 end -->
+	</div>
+	<!-- // container -->	
+	<script type="text/javascript">
+        $(document).ready( function() {
+            $("#header").load("guide_head.html");
+        });
+	</script>
+</body>
+</html>
+
+

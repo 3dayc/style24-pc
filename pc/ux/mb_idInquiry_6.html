@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>STYLE24 | default | Publishing</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+
+<!-- <link rel="stylesheet" type="text/css" href="css/test-common.css" /> -->
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/common-ui.js"></script>
+</head>
+
+<body>
+
+	<div class="skipComment">
+		<a href="#content">본문 바로가기</a>
+		<a href="#gnb">주메뉴 바로가기</a>
+		<a href="#footer">하단메뉴 바로가기</a>
+	</div>
+
+	<header id="header"></header>
+	<!--  container -->
+	<div id="container" class="container mb">
+		<div class="wrap">
+			<div class="content dormant"> <!-- 페이지특정 클래스 = dormant -->
+				<div class="cont_head">
+                    <div>
+                        <h3>style24</h3>
+                    </div>
+				</div>
+				<div class="cont_body">
+					<div class="form_wrap form_col_c">
+						<div class="form_head">
+							<h4>휴면회원 전환안내</h4>
+						</div> 
+						<div class="form_info">
+							<span class="ico_content_dormant"></span>
+							<p class="c_primary">최근 1년 이상 서비스를 이용하지 않아 휴면회원으로 전환되었습니다.</p>
+							<p class="t_info">휴면회원계정 복원 후 정상 서비스 이용이 가능합니다.</p>
+						</div>
+						<div class="ui_row mb40">
+							<div class="ui_col_6">
+								<button class="btn btn_default btn_block"><span>휴대폰인증</span></button>
+							</div>
+							<div class="ui_col_6">
+								<button class="btn btn_default btn_block"><span>아이폰인증</span></button>
+							</div>
+						</div>
+						<div class="form_summary">
+							<strong>관련 법령</strong>
+							<p>
+								정보통신망 이용촉진 및 정보보호 등에 관한 법률 제 29조 (개인정보의 파기) 2항 및 동법 시행령 제 16조에 의거하여 최근 1년 이상 서비스 및 이용 회원의 개인정보를 별도 분리&middot;보관하고 있습니다.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->	
+	<footer id="footer"></footer>
+
+	<script type="text/javascript">
+	// 컨텐츠 호출
+        $(document).ready( function() {
+            $("#header").load("head.html");
+            // $("#container").load("indexx.html");
+            $("#footer").load("foot.html");
+        });
+	</script>
+	<script>
+		// header scroll
+		$(function(){
+			$(window).scroll(function(){
+				var scroll = $(this).scrollTop();
+				var headerH = $(".header").height();
+				if ($(window).scrollTop() > headerH){
+					$(".header").addClass("minify");
+					return false;
+				}
+				else {
+					$(".header").removeClass("minify");
+					return false;
+				}
+			});
+		});
+    </script>
+    <script>
+        $(document).ready( function() {
+            $('.registration_tap ul li a').on('click',function(){
+                $(this).next('.tr_cont').slideToggle(100);
+            });
+            var navTaps = $('.registration_nav ul li');
+            var	tapPanels = $('.registration_tap .form_group');
+            navTaps.click(function(){
+                tapPanels.hide();		
+                tapPanels.eq($(this).index()).show();
+            });
+            navTaps.eq(0).trigger('click');	
+            });    
+    </script>
+
+
+
+</body>
+</html>
+
+

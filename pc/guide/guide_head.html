@@ -1,0 +1,68 @@
+
+	<!-- footer start -->
+	<!-- <footer id="header"> -->
+	<div class="header guide_header">
+		
+		<div class="quick_menu_group">
+			<div class="area">
+				<div>
+					<span><a href="" title="바로가기"><strong>STYLE24 HTML GUIDE</strong></a></span>
+					<span><a href="https://docs.google.com/spreadsheets/d/1EQeyEh5P9EXSR52DI34cbBv7CZkloA-p_xCp29PNbuY/edit?usp=sharing" target="_blank" title="바로가기">문서정의</a></span>
+				</div>
+				<!--
+				<div class="inr">
+					<span><a href="" title="바로가기">로그인</a></span>
+					<span><a href="" title="바로가기">회원가입</a></span>
+					<span><a href="" title="바로가기">Error 404</a></span>
+					<span><a href="" title="바로가기">Error 500</a></span>
+					 <span><a href="" onclick="AppDownloadPopup();" title="바로가기">앱다운로드</a></span> 
+				</div>
+				-->
+			</div>
+		</div>
+
+		<div class="gnb">
+			<div class="nav" style="width: 100%;">
+			<ul class="bundle" id="gnb">
+				<!-- [D] 전체메뉴 열림 닫힘 구분 클래스 on -->
+
+				<li><a href="guide_Typography.html">Typography</a></li> 
+				<li><a href="guide_Buttons.html">Buttons</a></li> 
+				<li><a href="guide_Elements.html">Elements</a></li>
+				<li><a href="guide_FormLayout.html">Form Layout</a></li> 
+				<li><a href="guide_FormElements.html">Form Elements</a></li> 
+				<li><a href="#none">Table</a></li> <!-- 댓글테이블 , 마이페이지 테이블 ,   -->
+				<li><a href="guide_Alerts.html">Alerts</a></li> <!-- Tooltips툴팁 , Popovers팝오버툴팁 , Message Box메세지팝업 ,  -->
+				<li><a href="guide_Popups.html">Popups</a></li>
+			</ul>
+			<ul class="bundle fr" id="gnb2">
+				<li class="active"><a href="../..../ux/A_index.html" target="_blank">LAYOUT</a></li> 
+				<li><a href="#none" target="_blank">LNB</a></li> <!--브랜드head , 전시필터, 마이페이지lnb, 고객센터lnb -->
+				<li><a href="guide_items.html" target="_blank">ITEM LIST</a></li> <!-- 상품목록 , 브랜드목록 , 룩북목록 -->
+				<li><a href="#none" target="_blank">GALLERY</a></li> <!-- 상품상세옵션 , 포토영상리뷰 , 이미지/영상 -->
+				<li><a href="#none" target="_blank">SLIDE / POPUP SLIDE</a></li> <!-- 슬라이드 -->
+			</ul>
+		</div>
+
+		</div>
+	</div>
+	<!-- footer end -->
+	<script>
+		// header-minify scroll
+		$(function(){
+			$(window).scroll(function(){
+				var scroll = $(this).scrollTop();
+				var headerH = $(".guide_header").height();
+				if ($(window).scrollTop() > headerH){
+					$(".gd_lnb").addClass("minify");
+					// $(this.hash).fadeIn(300);
+					return false;
+				}
+				else {
+					$(".gd_lnb").removeClass("minify");
+					// $(this.hash).fadeout(300);
+					return false;
+				}
+			});
+		});
+	</script>

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>STYLE24 | GUIDE_Items | Publishing</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+<link rel="stylesheet" type="text/css" href="../ux/css/common.css" />
+<link rel="stylesheet" type="text/css" href="./css/guide_only.css" />
+<!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+<script src="../ux/js/jquery.ellipsis.js"></script>
+<script src="../ux/js/jquery-ui.js"></script>
+<script src="../ux/js/common-ui.js"></script>
+<script src="../ux/js/jquery.modal.min.js"></script>
+
+
+</head>
+
+<body>
+
+	<div class="skipComment">
+		<a href="#content">본문 바로가기</a>
+		<a href="#gnb">주메뉴 바로가기</a>
+		<a href="#footer">하단메뉴 바로가기</a>
+	</div>
+
+	<header id="guide_header"></header>
+	<div class="gd_lnb">
+		<div></div>
+		<ul>
+			<li><a href="#area1">상품리스트 기본 구조</a></li>
+			<li><a href="#area2">기본상태</a></li>
+			<li><a href="#area3">베스트</a></li>
+			<li><a href="#area4">핫딜</a></li>
+			<li><a href="#area5">기본딜</a></li>
+			<li><a href="#area6">광고 / 품절</a></li>
+			<li><a href="#area7">이미지 정방형 타입</a></li>
+		</ul>
+	</div>
+
+	<style>
+		/* .container {background:#333;color: #fff;padding: 100px 0;} */
+		/* .container .breadcrumb{ color: #fff;} */
+		.container .item_memo{font-size: 46px; font-weight: 600; /*color: #fff;*/text-align: center;line-height: 100px;letter-spacing: -.025em;}
+		/* .container .wrap{background: #cacaca;padding: 30px 0;height: 100%;margin-bottom:50px;} */
+		.container .wrap:last-child{margin-bottom:0px;}
+		/* .container .wrap .content{background:#eeeeee; padding: 30px 0 !important;} */
+		/* .container .wrap .content.wide{background:#ffffff; padding: 30px 0 !important;} */
+		.container .wrap .content .cont_head{background:#67b75d; padding: 30px 0;}
+		/* .container .wrap .content .cont_body{background:#0b6b48; padding: 30px 0;} */
+		 .container .wrap .content .cont_body section{/*background:#acacac;  */padding: 30px 0;}
+		/* .container .wrap .content .cont_body section .sec_head{background:#999999; padding: 30px 0;text-align: center;} */
+		.container .wrap .content .cont_body section .sec_head > *{font-size:13px;padding:5px 0;background: #efefef;}
+		/* .container .wrap .content .cont_body section .sec_body{background:#6e6e6e; padding: 30px 0;text-align: center;} */
+		.container .wrap .content .cont_body section .sec_foot{/*background: #999999;*/ padding: 30px 0;text-align: center;}
+		/* .container .wrap .content .cont_foot{ background:#0b502d; padding: 30px 0;} */
+	</style>
+	<!--  container -->
+	<div id="container" class="container">
+		<div class="breadcrumb"> (breadcrumb) </div>
+
+		
+		<div class="wrap">
+			<div class="content">
+				<div class="cont_head"> <!-- CONT-HEAD -->
+					<span class="item_memo">Items </span>
+				</div>
+
+				<div class="cont_body">	<!-- CONT-BODY -->
+					<section id="area1">
+						<h3>1. 상품리스트 기본 구조</h3>
+						<div class="sec_head"><h3>ㆍ구조 설명</h3></div>
+						<div class="sec_body">
+							<h3></h3>	
+							<div class="ui_row">
+								<div class="ui_col_12">
+	
+									<textarea class="textarea_pre" name="" id="" cols="30" rows="48">
+
+		① [itemsGrp] 종류: 기본, 베스트(2~100위), 핫딜, 기본딜
+
+		1) 기본
+			<div class="itemsGrp">
+
+		2) 베스트(2~100위)
+			<div class="itemsGrp r⸏an⸏k">
+
+		3) 핫딜
+			<div class="itemsGrp h⸏ot">
+
+		4) 기본딜
+			<div class="itemsGrp d⸏ea⸏l">
+
+
+
+		② [item_prod] 종류 상세: 베스트 1위, 기본딜 상세
+
+		1)기본
+			<div class="item_prod ">
+			- css 선언 : .itemsGrp .item_prod
+
+		2)베스트 1위
+			<div class="item_prod r⸏an⸏ke⸏r">
+			- css 선언 : .rank .item_prod.ranker
+
+		3)기본딜상세
+			<div class="item_prod d⸏_d⸏et⸏ai⸏l">
+			- css 선언 : .deal .item_prod.d_detail
+
+
+
+		③ [item_state] 상태: 일반, 광고, 품절
+
+		1) 일반
+			<div class="item_state">
+
+		2) 광고
+			<div class="item_state A⸏D">
+
+		3) 품절
+			<div class="item_state s⸏ol⸏do⸏u⸏t">
+	</textarea>
+	
+								</div>
+							</div>
+						</div>
+						<div class="sec_foot"></div>
+						<div class="sec_head"><h3>ㆍ기본 구조 예시</h3></div>
+						<div class="sec_body">
+							<div class="ui_row">
+								<div class="ui_col_12">
+
+									<!-- 코드 -->
+									<textarea class="textarea_pre" name="" id="" cols="30" rows="40">
+
+		<div class="itemsGrp">            🞴 1. 아이템 그룹 종류 		
+			<div class=" item_prod">      🞴 2. 아이템 종류 상세 	
+				<div class="item_state">  🞴 3. 아이템 상태 
+					
+
+					<a href="#none" class=" itemLink">   🞴 4. 아이템 링크 영역 
+						<div class="ItemPic">            🞴 5. 아이템 이미지 
+							<img class="vLHTC pd_img" src="이미지경로" alt="이미지설명" >
+							<button type="button" class="itemLike">관심상품 추가</button>
+						</div>
+						<p class=" itemBrand">브랜드명</p>    🞴  6. 아이템 브랜드 
+						<div class=" itemName">제품명</div>   🞴  7. 아이템 제품명 
+						<p class="itemPrice">80,100                        🞴 8. 판매가 
+							<span class="itemPrice_original">89,000</span> 🞴 9. 원가 
+							<span class=" itemPercent">10%</span>          🞴 10. 할인률 
+						</p>
+						<div class="itemcolorchip">    🞴 11. 아이템 색상
+							<span class="chip_color35" value="ABM">BEIGE</span>
+							<span class="chip_color54" value="BDS">BLACK</span>
+							<span class="chip_color40" value="YBR">WHITE</span>
+						</div>
+						<p class="itemBadge">          🞴 12. 아이템 뱃지
+							<span class="badge13">쿠폰할인 </span>
+						</p>
+						<div class="itemComment"># 가을 느낌 물씬! 주문 폭주 상품!</div>   🞴 13. 아이템 셀링문구 
+					</a>
+					
+
+				</div>
+			</div>
+			<div class=" item_prod"> ~ </div>
+			<div class=" item_prod"> ~ </div>
+		</div>
+									</textarea>
+									<!-- //코드 -->
+									
+								</div>
+							</div>
+						</div>
+						<div class="sec_foot"></div>
+					</section>
+
+
+					<section id="area2">
+						<h3>2. 기본 상태</h3>
+						<div class="sec_head"><h3>ㆍ이미지 없을 경우 / 마우스오버 전, 후 </h3></div>
+						<div class="sec_body">
+							<!-- 아이템그룹 시작 -->
+							<div class="itemsGrp"> <!-- itemsGrp rank hot deal -->
+								<div class=" item_prod sUiXc "> <!-- item_prod ranker d_detail -->
+									<div class="item_state"> <!-- item_state AD soldout -->
+										<a href="#none" class=" itemLink">
+											<div class="itemPic">
+												<img alt="BLACK-a" class=" vLHTC pd_img" src="../ux/images/thumb/bg_item_none.png">
+												<button type="button" class="itemLike">관심상품 추가</button>
+											</div>
+											<p class=" itemBrand">BRAND NAME</p>
+											<div class=" itemName">[온라인 단독] 여성 니트 후드 경량 다운 점퍼 여성 니트 후드 경량 다운 점퍼 여성 니트 후드 경량 다운 점퍼</div>
+											<p class="itemPrice">80,100
+												<span class="itemPrice_original">89,000</span>
+												<span class=" itemPercent">10%</span>
+											</p>
+											<div class="itemcolorchip">
+												<span class="chip_color35" value="ABM">BEIGE</span>
+												<span class="chip_color54" value="BDS">BLACK</span>
+												<span class="chip_color40" value="YBR">WHITE</span>
+											</div>
+											<p class="itemBadge">
+												<span class="badge13">베스트 </span>
+											</p>
+											<div class="itemComment">★ [NEW] 20FW 빅웨이브 단독발매!</div>
+										</a>
+									</div>
+								</div>
+
+								<div class=" item_prod">
+									<div class="item_state">
+										<a href="#none" class="itemLink">
+											<div class=" itemPic">
+												<img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod1.jpg">
+												<button type="button" class="itemLike active">관심상품 추가</button>
+											</div>
+											<p class="itemBrand">BRAND NAME</p>
+
+											<div class=" itemName">남성 헤링본 기모 팬츠 헤링본 기모 팬츠</div>
+											<p class="itemPrice">488,000<!-- -->원</p>
+											<p class="itemBadge">
+												<span class="badge13">베스트 </span>
+											</p>
+											<div class="itemcolorchip">
+												<span class="chip_color35" value="ABM">BEIGE</span>
+												<span class="chip_color54" value="BDS">BLACK</span>
+												<span class="chip_color40" value="YBR">WHITE</span>
+											</div>
+											<div class="itemComment">#주문 폭주 상품</div>
+										</a>
+									</div>
+								</div>
+
+								<div class=" item_prod">
+									<div class="item_state">
+										<a href="#none" class="itemLink">
+											<div class=" itemPic">
+												<img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod3.jpg"> 
+												<button type="button" class="itemLike">관심상품 추가</button>
+											</div>
+											<p class="itemBrand">BRAND NAME</p>
+
+											<div class=" itemName">여성 체인 프린트 큐롯 스커트 프린트 큐롯 스커트</div>
+											<p class="itemPrice">488,000<!-- -->원</p>
+											<p class="itemBadge">
+												<span class="badge13">베스트 </span>
+											</p>
+											<div class="itemcolorchip">
+												<span class="chip_color35" value="ABM">BEIGE</span>
+												<span class="chip_color54" value="BDS">BLACK</span>
+												<span class="chip_color40" value="YBR">WHITE</span>
+											</div>
+											<div class="itemComment">#데일리웨어로 매일입고싶은</div>
+										</a>
+									</div>
+								</div>
+							</div>								
+							<!-- 아이템그룹 종료 -->
+						</div>
+						<div class="sec_foot"></div>
+					</section>
+
+
+					<section id="area3">		
+						<h3>3. 베스트</h3>				
+						<div class="sec_head"><h3>ㆍ베스트</h3></div>					
+						<div class="sec_body">
+							<!-- 아이템그룹 시작 -->
+							<div class="itemsGrp"> <!-- itemsGrp rank hot deal -->
+								<div class=" item_prod sUiXc "> <!-- item_prod ranker d_detail -->
+									
+									<div class="item_state"> <!-- item_state AD soldout -->
+										<a href="#none" class=" itemLink">
+											<div class="rank ranker"><span>1</span></div>
+											<div class="itemPic">
+												<img alt="BLACK-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod1.jpg">
+												<button type="button" class="itemLike">관심상품 추가</button>
+											</div>
+											<p class=" itemBrand">BRAND NAME</p>
+											<div class=" itemName">남성 로고 자카드 방풍 패딩 스웨터 가디건 자카드 방풍 패딩 스웨터 가디건 자카드 방풍 패딩 스웨터 가디건</div>
+											<p class="itemPrice">80,100
+												<span class="itemPrice_original">89,000</span>
+												<span class=" itemPercent">10%</span>
+											</p>
+											<div class="itemcolorchip">
+												<span class="chip_color35" value="ABM">BEIGE</span>
+												<span class="chip_color54" value="BDS">BLACK</span>
+												<span class="chip_color40" value="YBR">WHITE</span>
+											</div>
+											<p class="itemBadge">
+												<span class="badge13">베스트 </span>
+											</p>
+											<div class="itemComment">#평범한듯 특별한</div>
+										</a>
+									</div>
+								</div>
+
+								<div class=" item_prod">
+									<div class="item_state">
+										<a href="#none" class="itemLink">
+											<div class="rank r⸏an⸏ke⸏r"><span>88</span></div>
+											<div class=" itemPic">
+												<img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod2.jpg">
+												<button type="button" class="itemLike">관심상품 추가</button>
+											</div>
+											<p class="itemBrand">BRAND NAME</p>
+
+											<div class=" itemName">여성 체인 프린트 큐롯 스커트 프린트 큐롯 스커트</div>
+											<p class="itemPrice">488,000<!-- -->원</p>
+											<p class="itemBadge">
+												<span class="badge13">베스트 </span>
+											</p>
+											<div class="itemcolorchip">
+												<span class="chip_color35" value="ABM">BEIGE</span>
+												<span class="chip_color54" value="BDS">BLACK</span>
+												<span class="chip_color40" value="YBR">WHITE</span>
+											</div>
+											<div class="itemComment">#주문 폭주 상품</div>
+										</a>
+									</div>
+								</div>
+
+								<div class=" item_prod">
+									<div class="item_state">
+										<a href="#none" class="itemLink">
+											<div class="rank"><span>100</span></div>
+											<div class=" itemPic">
+												<img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod3.jpg"> 
+												<button type="button" class="itemLike">관심상품 추가</button>
+											</div>
+											<p class="itemBrand">BRAND NAME</p>
+
+											<div class=" itemName">남성 헤링본 기모 팬츠 헤링본 기모 팬츠</div>
+											<p class="itemPrice">488,000<!-- -->원</p>
+											<p class="itemBadge">
+												<span class="badge13">베스트 </span>
+											</p>
+											<div class="itemcolorchip">
+												<span class="chip_color35" value="ABM">BEIGE</span>
+												<span class="chip_color54" value="BDS">BLACK</span>
+												<span class="chip_color40" value="YBR">WHITE</span>
+											</div>
+											<div class="itemComment">#베이직 셔츠의 정수</div>
+										</a>
+									</div>
+								</div>
+
+								<div class=" item_prod">
+									<div class="item_state">
+										<a href="#none" class="itemLink">
+											<div class="rank"><span>특가</span></div>
+											<div class=" itemPic">
+												<img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod4.jpg"> 
+												<button type="button" class="itemLike">관심상품 추가</button>
+											</div>
+											<p class="itemBrand">BRAND NAME</p>
+
+											<div class=" itemName">[온라인 단독] 여성 니트 후드 경량 다운 점퍼 여성 니트 후드 경량 다운 점퍼 여성 니트 후드 경량 다운 점퍼</div>
+											<p class="itemPrice">488,000<!-- -->원</p>
+											<p class="itemBadge">
+												<span class="badge13">베스트 </span>
+											</p>
+											<div class="itemcolorchip">
+												<span class="chip_color35" value="ABM">BEIGE</span>
+												<span class="chip_color54" value="BDS">BLACK</span>
+												<span class="chip_color40" value="YBR">WHITE</span>
+											</div>
+											<div class="itemComment">★ [NEW] 20FW 빅웨이브 단독발매!</div>
+										</a>
+									</div>
+								</div>
+
+								<div class=" item_prod">
+									<div class="item_state">
+										<a href="#none" class="itemLink">
+											<div class="rank detail"><span>상품 014</span></div>
+											<div class=" itemPic">
+												<img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod5.jpg"> 
+												<button type="button" class="itemLike">관심상품 추가</button>
+											</div>
+											<p class="itemBrand">BRAND NAME</p>
+
+											<div class=" itemName">[온라인 단독] 여성 겨울 부클칼라 A라인 다운베스트(구스)</div>
+											<p class="itemPrice">488,000<!-- -->원</p>
+											<p class="itemBadge">
+												<span class="badge13">베스트 </span>
+											</p>
+											<div class="itemcolorchip">
+												<span class="chip_color35" value="ABM">BEIGE</span>
+												<span class="chip_color54" value="BDS">BLACK</span>
+												<span class="chip_color40" value="YBR">WHITE</span>
+											</div>
+											<div class="itemComment">#데일리웨어로 매일입고싶은</div>
+										</a>
+									</div>
+								</div>
+								
+
+								<div class=" item_prod sUiXc "> 
+									<div class="item_state"> 
+										<a href="#none" class=" itemLink">
+											<div class="shape ranker"><span>1</span></div>
+											<div class="itemPic">
+												<img alt="BLACK-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod4.jpg">
+												<button type="button" class="itemLike">관심상품 추가</button>
+											</div>
+											<p class=" itemBrand">BRAND NAME</p>
+											<div class=" itemName">남성 로고 자카드 방풍 패딩 스웨터 가디건 자카드 방풍 패딩 스웨터 가디건 자카드 방풍 패딩 스웨터 가디건</div>
+											<p class="itemPrice">80,100
+												<span class="itemPrice_original">89,000</span>
+												<span class=" itemPercent">10%</span>
+											</p>
+											<div class="itemcolorchip">
+												<span class="chip_color35" value="ABM">BEIGE</span>
+												<span class="chip_color54" value="BDS">BLACK</span>
+												<span class="chip_color40" value="YBR">WHITE</span>
+											</div>
+											<p class="itemBadge">
+												<span class="badge13">베스트 </span>
+											</p>
+											<div class="itemComment">#주문 폭주 상품</div>
+										</a>
+									</div>
+								</div>
+								<div class=" item_prod">
+									<div class="item_state">
+										<a href="#none" class="itemLink">
+										<div class="shape"><span>88</span></div>
+											<div class=" itemPic">
+												<img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod5.jpg"> 
+												<button type="button" class="itemLike">관심상품 추가</button>
+											</div>
+											<p class="itemBrand">BRAND NAME</p>
+
+											<div class=" itemName">[온라인 단독] 여성 겨울 부클칼라 A라인 다운베스트(구스)</div>
+											<p class="itemPrice">488,000<!-- -->원</p>
+											<p class="itemBadge">
+												<span class="badge13">베스트 </span>
+											</p>
+											<div class="itemcolorchip">
+												<span class="chip_color35" value="ABM">BEIGE</span>
+												<span class="chip_color54" value="BDS">BLACK</span>
+												<span class="chip_color40" value="YBR">WHITE</span>
+											</div>
+											<div class="itemComment">#데일리웨어로 매일입고싶은</div>
+										</a>
+									</div>
+								</div>
+								<div class=" item_prod">
+									<div class="item_state">
+										<a href="#none" class="itemLink">
+										<div class="shape"><span>999</span></div>
+											<div class=" itemPic">
+												<img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod5.jpg"> 
+												<button type="button" class="itemLike">관심상품 추가</button>
+											</div>
+											<p class="itemBrand">BRAND NAME</p>
+
+											<div class=" itemName">[온라인 단독] 여성 겨울 부클칼라 A라인 다운베스트(구스)</div>
+											<p class="itemPrice">488,000<!-- -->원</p>
+											<p class="itemBadge">
+												<span class="badge13">베스트 </span>
+											</p>
+											<div class="itemcolorchip">
+												<span class="chip_color35" value="ABM">BEIGE</span>
+												<span class="chip_color54" value="BDS">BLACK</span>
+												<span class="chip_color40" value="YBR">WHITE</span>
+											</div>
+											<div class="itemComment">#데일리웨어로 매일입고싶은</div>
+										</a>
+									</div>
+								</div>
+								<div class=" item_prod">
+									<div class="item_state">
+										<a href="#none" class="itemLink">
+										<div class="shape"><span>특가</span></div>
+											<div class=" itemPic">
+												<img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod5.jpg"> 
+												<button type="button" class="itemLike">관심상품 추가</button>
+											</div>
+											<p class="itemBrand">BRAND NAME</p>
+
+											<div class=" itemName">[온라인 단독] 여성 겨울 부클칼라 A라인 다운베스트(구스)</div>
+											<p class="itemPrice">488,000<!-- -->원</p>
+											<p class="itemBadge">
+												<span class="badge13">베스트 </span>
+											</p>
+											<div class="itemcolorchip">
+												<span class="chip_color35" value="ABM">BEIGE</span>
+												<span class="chip_color54" value="BDS">BLACK</span>
+												<span class="chip_color40" value="YBR">WHITE</span>
+											</div>
+											<div class="itemComment">#데일리웨어로 매일입고싶은</div>
+										</a>
+									</div>
+								</div>
+								<div class=" item_prod">
+									<div class="item_state">
+										<a href="#none" class="itemLink">
+										<div class="shape dealdetail"><span>상품<br>   04</span></div>
+											<div class=" itemPic">
+												<img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod5.jpg"> 
+												<button type="button" class="itemLike">관심상품 추가</button>
+											</div>
+											<p class="itemBrand">BRAND NAME</p>
+
+											<div class=" itemName">[온라인 단독] 여성 겨울 부클칼라 A라인 다운베스트(구스)</div>
+											<p class="itemPrice">488,000<!-- -->원</p>
+											<p class="itemBadge">
+												<span class="badge13">베스트 </span>
+											</p>
+											<div class="itemcolorchip">
+												<span class="chip_color35" value="ABM">BEIGE</span>
+												<span class="chip_color54" value="BDS">BLACK</span>
+												<span class="chip_color40" value="YBR">WHITE</span>
+											</div>
+											<div class="itemComment">#데일리웨어로 매일입고싶은</div>
+										</a>
+									</div>
+								</div>
+
+
+
+							</div>								
+							<!-- 아이템그룹 종료 -->
+						</div>
+						<div class="sec_foot"></div>
+					</section>
+
+
+					<section id="area4">
+						<h3>4. 핫딜</h3>
+						<div class="sec_head"><h3>ㆍ핫딜</h3></div>					
+						<div class="sec_body">
+							<!-- 아이템그룹 시작 -->
+							핫딜
+							<!-- 아이템그룹 종료 -->
+						</div>
+						<div class="sec_foot"></div>
+					</section>
+
+
+					<section id="area5">
+						<h3>5. 기본 딜</h3>	
+						<div class="sec_head"><h3>ㆍ기본 딜</h3></div>					
+						<div class="sec_body">
+							<!-- 아이템그룹 시작 -->
+							기본 딜
+							<!-- 아이템그룹 종료 -->
+						</div>
+						<div class="sec_foot"></div>
+						<div class="sec_head"><h3>ㆍ기본 딜 상세</h3></div>					
+						<div class="sec_body">
+							<!-- 아이템그룹 시작 -->
+							기본 딜
+							<!-- 아이템그룹 종료 -->
+						</div>
+						<div class="sec_foot"></div>
+					</section>
+
+
+					<section id="area6">
+						<h3>6. 광고/품절 상태</h3>
+						<div class="sec_head"><h3>ㆍ광고</h3></div>					
+						<div class="sec_body">
+							<!-- 아이템그룹 시작 -->
+							ㆍ광고/품절 상태
+							<!-- 아이템그룹 종료 -->
+						</div>
+						<div class="sec_foot"></div>
+						<div class="sec_head"><h3>ㆍ품절</h3></div>					
+						<div class="sec_body">
+							<!-- 아이템그룹 시작 -->
+							ㆍ광고/품절 상태
+							<!-- 아이템그룹 종료 -->
+						</div>
+						<div class="sec_foot"></div>
+					</section>
+
+
+					<section id="area7">
+						<h3>7.이미지 정방형 타입</h3>
+						<div class="sec_head"><h3>ㆍ이미지 정방형 : 높이 기준</h3></div>					
+						<div class="sec_body">
+							<!-- 아이템그룹 시작 -->
+							이미지 정방형 타입
+							<!-- 아이템그룹 종료 -->
+						</div>
+						<div class="sec_foot"></div>
+						<div class="sec_head"><h3>ㆍ이미지 정방형 : 너비 기준</h3></div>					
+						<div class="sec_body">
+							<!-- 아이템그룹 시작 -->
+							이미지 정방형 타입
+							<!-- 아이템그룹 종료 -->
+						</div>
+						<div class="sec_foot"></div>
+					</section>
+
+
+				</div>
+				<div class="cont_foot">
+					CONT-FOOT
+				</div>
+			</div>
+		</div>
+
+		<div class="wrap ">
+			<div class="content wide">
+				<div class="cont_head"><!-- CONT-HEAD -->
+					<span class="item_memo">Wide Type: Items </span>					
+				</div>
+				<div class="cont_body">
+					CONT-BODY
+					<section>
+						<div class="sec_head">SECTION-HEAD</div>
+						<div class="sec_body">SECTION-BODY</div>
+						<div class="sec_foot">SECTION-FOOT</div>
+					</section>
+				</div>
+				<div class="cont_foot">
+					CONT-FOOT
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- // container -->	
+	<footer id="footer"></footer>
+
+	<script type="text/javascript">
+	// 컨텐츠 호출
+        $(document).ready( function() {
+			$("#guide_header").load("guide_head.html");
+            $("#header").load("../ux/head.html");
+            // $("#container").load("indexx.html");
+            $("#footer").load("../ux/foot.html");
+        });
+	</script>
+	<script>
+		// header scroll
+		$(function(){
+			$(window).scroll(function(){
+				var scroll = $(this).scrollTop();
+				var headerH = $(".header").height();
+				if ($(window).scrollTop() > headerH){
+					$(".header").addClass("minify");
+					return false;
+				}
+				else {
+					$(".header").removeClass("minify");
+					return false;
+				}
+			});
+		});
+	</script>
+
+
+</body>
+</html>
+
+

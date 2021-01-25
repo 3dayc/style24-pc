@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>iSTYLE24 | default | Publishing</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+
+<!-- <link rel="stylesheet" type="text/css" href="css/test-common.css" /> -->
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/common-ui.js"></script>
+</head>
+
+<body>
+
+	<div class="skipComment">
+		<a href="#content">본문 바로가기</a>
+		<a href="#gnb">주메뉴 바로가기</a>
+		<a href="#footer">하단메뉴 바로가기</a>
+	</div>
+
+	<header id="header"></header>
+	<!--  container -->
+	<div id="container" class="container mb">
+		<div class="wrap">
+			<div class="content join2"> <!-- 페이지특정 클래스 = join1 -->
+				<div class="cont_head">
+                    <div>
+                        <h3>style24</h3>
+                    </div>
+				</div>
+				<div class="cont_body">
+					<!-- form start -->
+                    <form class="form_wrap form_col_c form_full" role="form">
+						<div class="form_head">
+							<h4>회원정보 입력</h4>
+						</div> 
+						<!-- 아이디 사용가능시 -->
+                        <div class="form_field">
+							<label class="input_label sr-only">아이디</label>
+							<div class="ui_col_12">
+								<div class="input_wrap"> 
+									<input type="text" name="userId" placeholder="아이디" value="moon123" class="form_control usable" id="txtId"><!-- class "usable" 추가 -->
+									<span class="usable" style="display:block;"></span><!-- display:block 추가 -->
+								</div>
+								<div class="help_block">
+									<p>사용 가능한 ID입니다.</p>
+								</div>
+							</div>
+						</div>	
+						<!-- //아이디 사용가능시 -->	
+						<!-- 아이디 사용불가시 -->					
+                        <div class="form_field">
+							<label class="input_label sr-only">아이디</label>
+							<div class="ui_col_12">
+								<div class="input_wrap"> 
+									<input type="text" name="userId" placeholder="아이디" class="form_control err" id="txtId"><!-- class "err" 추가 -->
+									<span class="usable"></span>
+								</div>
+								<div class="help_block">
+									<p class="t_err">이미 가입된 아이디입니다.다른 아이디를 입력하여 주세요.</p>
+								</div>
+							</div>
+						</div>	
+						<!-- //아이디 사용불가시 -->
+
+						<!-- 오류시 부모 div에서 제어 -->
+                        <div class="form_field">
+							<label class="input_label sr-only">비밀번호</label>
+							<div class="ui_col_12">
+								<input type="password" name="userPassword" placeholder="비밀번호" class="form_control" id="txtPassword">
+								<!-- case (비밀번호 틀렸을경우,사용가능한 비밀번호일경우) -->
+								<div class="help_block">
+									<!-- 평시 -->
+									<p class="t_info">- 영문(대/소문자)/숫자/특수문자 중 2가지 이상 조합(8~20자)</p>
+									<p class="t_info">- 4개이상 연속되거나 동일한 문자/숫자 제외</p>
+									<p class="t_info">- 아이디 제외</p>
+									<!-- //평시 -->
+									<!-- 아닐경우 -->
+									<p class="t_err">- 영문(대/소문자)/숫자/특수문자 중 2가지 이상 조합(8~20자)</p>
+									<p class="t_info">- 4개이상 연속되거나 동일한 문자/숫자 제외</p>
+									<p>- 아이디 제외</p>
+									<!-- //평시 -->
+									<!-- 맞을경우 -->
+									<p>사용 가능한 비밀번호입니다</p>
+									<!-- //맞을경우 -->
+								</div>
+								<!-- //case (비밀번호 틀렸을경우,사용가능한 비밀번호일경우) -->
+							</div>
+						</div>
+						<!-- //오류시 부모 div에서 제어 -->
+                        <div class="form_field">
+							<label class="input_label sr-only">비밀번호 확인</label>
+							<div class="ui_col_12">
+								<input type="password" name="userConfirm" placeholder="비밀번호 확인" class="form_control" id="txtConfirm">
+								<!-- case (비밀번호확인 틀렸을경우,비밀번호 일치할경우) -->
+								<div class="help_block">
+									<!-- 아닐경우 -->
+									<p class="t_err">새 비밀번호가 일치하지 않습니다.</p>
+									<!-- //아닐경우 -->
+									<!-- 맞을경우 -->
+									<p>새 비밀번호가 일치합니다.</p>
+									<!-- //맞을경우 -->
+								</div>
+								<!-- //case (비밀번호확인 틀렸을경우,비밀번호 일치할경우) -->
+							</div>
+                        </div>
+                        <div class="form_field">
+							<label class="input_label sr-only">이메일</label>
+							<div class="ui_col_12">
+								<input type="text" name="userEmail" placeholder="이메일" class="form_control" id="txtEmail">
+								<!-- case (이메일 형식이 바르지않을경우,이미 가입되어있는 이메일인경우) -->
+								<div class="help_block">
+									<!-- 이메일 형식이 바르지않을경우 -->
+									<p class="t_err">이메일 형식이 올바르지 않습니다.</p>
+									<!-- //이메일 형식이 바르지않을경우 -->
+									<!-- 이미 가입되어있는 이메일인경우 -->
+									<p class="t_err">이미 가입된 이메일 주소입니다. 다른 이메일 주소를 입력하여 주세요.</p>
+									<div class="ui_row">
+										<div class="ui_col_12">
+											<button type="button" class="btn btn_default btn_sm"><span>로그인</span></button>
+											<button type="button" class="btn btn_default btn_sm"><span>아이디 찾기</span></button>
+										</div>
+									</div>
+									<!-- //이미 가입되어있는 이메일인경우 -->
+								</div>
+								<!-- //case (이메일 형식이 바르지않을경우,이미 가입되어있는 이메일인경우) -->
+							</div>
+                        </div>	
+                        <div class="form_field">
+							<label class="input_label sr-only">휴대폰번호</label>
+							<div class="ui_col_12">
+								<input type="text" name="userTell" placeholder="휴대폰번호" class="form_control" id="txtTell">
+								<!-- case (휴대폰번호 형식이 맞지 않을경우,이미 가입되어있는 핸드폰번호일경우) -->
+								<div class="help_block">
+									<!-- 휴대폰번호 형식이 맞지 않을경우 -->
+									<p class="t_err">휴대폰번호를 형식에 맞게 정확히 입력해주세요</p>
+									<!-- //휴대폰번호 형식이 맞지 않을경우 -->
+									<!-- 이미 가입되어있는 핸드폰번호일경우 -->
+									<p class="t_err">I***D로 가입된 핸드폰 번호 입니다.</p>
+									<div class="ui_row">
+										<div class="ui_col_12">
+											<button type="button" class="btn btn_default btn_sm"><span>휴대폰 인증</span></button>
+										</div>
+									</div>
+									<!-- //이미 가입되어있는 핸드폰번호일경우 -->
+								</div>
+								<!-- //case (휴대폰번호 형식이 맞지 않을경우,이미 가입되어있는 핸드폰번호일경우) -->
+							</div>
+                        </div>
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button class="btn btn_primary btn_block"><span>동의하고 가입하기</span></button>
+							</div>
+						</div>
+						<div class="desc_wrap">
+							<p>본인은&nbsp;<em>만 14세 이상이며</em> <span><a href="#">STYLE24이용약관</a></span>, <span><a href="#">개인정보 수집 및 이용</a></span>,<br><span><a href="#">개인정보 취급 위탁</a></span> 내용을 확인 하였으며,동의합니다.</p>
+						</div>
+					</form>
+					<!-- form End -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->	
+	<footer id="footer"></footer>
+
+	<script type="text/javascript">
+	// 컨텐츠 호출
+        $(document).ready( function() {
+            $("#header").load("head.html");
+            // $("#container").load("indexx.html");
+            $("#footer").load("foot.html");
+        });
+	</script>
+	<script>
+		// header scroll
+		$(function(){
+			$(window).scroll(function(){
+				var scroll = $(this).scrollTop();
+				var headerH = $(".header").height();
+				if ($(window).scrollTop() > headerH){
+					$(".header").addClass("minify");
+					return false;
+				}
+				else {
+					$(".header").removeClass("minify");
+					return false;
+				}
+			});
+		});
+	</script>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>STYLE24 | GUIDE_LNB | Publishing</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+<link rel="stylesheet" type="text/css" href="../ux/css/common.css" />
+<link rel="stylesheet" type="text/css" href="./css/guide_only.css" />
+<!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+<script src="../ux/js/jquery.ellipsis.js"></script>
+<script src="../ux/js/jquery-ui.js"></script>
+<script src="../ux/js/common-ui.js"></script>
+<script src="../ux/js/jquery.modal.min.js"></script>
+
+
+</head>
+
+<body>
+
+	<div class="skipComment">
+		<a href="#content">본문 바로가기</a>
+		<a href="#gnb">주메뉴 바로가기</a>
+		<a href="#footer">하단메뉴 바로가기</a>
+	</div>
+
+	<header id="guide_header"></header>
+	<div class="gd_lnb">
+		<div></div>
+		<ul>
+			<li><a href="#area1">Left LNB</a></li>
+			<li><a href="#area2">Right Fixed</a></li>
+		</ul>
+	</div>
+	<!-- <header id="header"></header> -->
+	<!-- <div class="gdWrap" id="contents">	 -->
+
+		<style>
+			.container {background:#333;color: #fff;padding: 100px 0;}
+			.container .breadcrumb{background: #11c06e; color: #fff;}
+			.container .wrap{background: #cacaca;padding: 30px 0;height: 100%;margin-bottom:50px;}
+			.container .wrap:last-child{margin-bottom:0px;}
+			.container .wrap .content{background:#eeeeee; padding: 30px 0 !important;}
+			.container .wrap .content.wide{background:#ffffff; padding: 30px 0 !important;}
+			.container .wrap .content .cont_head{background:#67b75d; padding: 30px 0;}
+			.container .wrap .content .cont_body{background:#0b6b48; padding: 30px 0;}
+			.container .wrap .content .cont_body section{background:#acacac; padding: 30px 0;}
+			.container .wrap .content .cont_body section .sec_head{background:#999999; padding: 30px 0;text-align: center;}
+			.container .wrap .content .cont_body section .sec_body{background:#6e6e6e; padding: 30px 0;text-align: center;}
+			.container .wrap .content .cont_body section .sec_foot{background: #999999; padding: 30px 0;text-align: center;}
+			.container .wrap .content .cont_foot{background:#0b502d; padding: 30px 0;}
+		</style>
+	<!--  container -->
+	<div id="container" class="container">
+		<div class="breadcrumb"> (breadcrumb) </div>
+
+		
+		<div class="wrap" id="area1">
+			<div class="content">
+				<div class="cont_head">
+					CONT-HEAD
+					<style>
+						.tit {text-align: center;}
+						.my_tit{margin: 0 auto;text-align: center;padding-left: 50px;}
+						/* height 잡기 */
+						.my_lnb  {float: left;width: 25%;}
+						.my_lnb::after  {content: ''; display: block; clear: both;}
+						.my_lnb .lnb_tit {font-size: 20px;}
+						.my_lnb .lnb_list {font-size: 15px;}
+						.my_cont  {float: left;width: 75%;}
+					</style>
+					<div class="tit">my_center</div>
+					<div class="tit my_tit">my_tit</div>
+				</div>
+				<div class="cont_body">
+					<!-- CONT-BODY -->
+					<div class="my_lnb" style="height: 100%; background: #0b596b;">
+						<div class="lnb_tit">
+							left menu
+						</div>
+						<div class="lnb_list">
+							<ul>
+								<li>nav1</li>
+								<li>nav2</li>
+								<li>nav3</li>
+							</ul>
+						</div>
+					</div>
+					<div class="my_cont" style="height: 100%; background-color: #398293;">
+						right cont
+						<section>
+							<div class="sec_head">SECTION-HEAD</div>
+							<div class="sec_body">SECTION-BODY</div>
+							<div class="sec_foot">SECTION-FOOT</div>
+						</section>
+					</div>
+					<!-- // CONT-BODY -->					
+				</div>
+				<div class="cont_foot">
+					CONT-FOOT
+				</div>
+			</div>
+		</div>
+
+		
+		<div class="wrap" id="area2">
+			<div class="content wide">
+				<div class="cont_head">
+					CONT-HEAD
+					<style>
+						.tit {text-align: center;}
+						.my_tit{margin: 0 auto;text-align: center;padding-left: 50px;}
+						/* height 잡기 */
+						.my_lnb  {float: left;width: 25%;}
+						.my_lnb::after  {content: ''; display: block; clear: both;}
+						.my_lnb .lnb_tit {font-size: 20px;}
+						.my_lnb .lnb_list {font-size: 15px;}
+						.my_cont  {float: left;width: 75%;}
+					</style>
+					<div class="tit">my_center</div>
+					<div class="tit my_tit">my_tit</div>
+				</div>
+				<div class="cont_body">
+					<!-- CONT-BODY -->
+					<div class="my_lnb" style="height: 100%; background: #0b596b;">
+						<div class="lnb_tit">
+							Right menu - Fixed
+						</div>
+						<div class="lnb_list">
+							<ul>
+								<li>nav1</li>
+								<li>nav2</li>
+								<li>nav3</li>
+							</ul>
+						</div>
+					</div>
+					<div class="my_cont" style="height: 100%; background-color: #398293;">
+						right cont
+						<section>
+							<div class="sec_head">SECTION-HEAD</div>
+							<div class="sec_body">SECTION-BODY</div>
+							<div class="sec_foot">SECTION-FOOT</div>
+						</section>
+					</div>
+					<!-- // CONT-BODY -->					
+				</div>
+				<div class="cont_foot">
+					CONT-FOOT
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- // container -->	
+	<footer id="footer"></footer>
+
+	<script type="text/javascript">
+	// 컨텐츠 호출
+        $(document).ready( function() {
+			$("#guide_header").load("guide_head.html");
+            $("#header").load("../ux/head.html");
+            // $("#container").load("indexx.html");
+            $("#footer").load("../ux/foot.html");
+        });
+	</script>
+	<script>
+		// header scroll
+		$(function(){
+			$(window).scroll(function(){
+				var scroll = $(this).scrollTop();
+				var headerH = $(".header").height();
+				if ($(window).scrollTop() > headerH){
+					$(".header").addClass("minify");
+					return false;
+				}
+				else {
+					$(".header").removeClass("minify");
+					return false;
+				}
+			});
+		});
+	</script>
+
+
+</body>
+</html>
+
+

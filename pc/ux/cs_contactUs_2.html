@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>iSTYLE24 | default | Publishing</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+
+<!-- <link rel="stylesheet" type="text/css" href="css/test-common.css" /> -->
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="js/jquery.ellipsis.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/common-ui.js"></script>
+</head>
+
+<body>
+
+	<div class="skipComment">
+		<a href="#content">본문 바로가기</a>
+		<a href="#gnb">주메뉴 바로가기</a>
+		<a href="#footer">하단메뉴 바로가기</a>
+	</div>
+
+	<header id="header"></header>
+	<style>
+		.container {padding: 100px 0;}
+		.container .breadcrumb{background: #11c06e; color: #fff;}
+		.container .breadcrumb ul {display: flex;}
+		.container .wrap{padding: 30px 0;height: 100%;margin-bottom:50px;}
+		.container .wrap:last-child{margin-bottom:0px;}
+		.container .wrap .content{padding: 30px 0 !important;}
+		.container .wrap .content.wide{background:#f0145b; padding: 30px 0 !important;}
+		.container .wrap .content .cont_head{background:#0b596b; padding: 30px 0;}
+		.container .wrap .content .cont_foot{background:#0b596b; padding: 30px 0;}
+	</style>
+	<!--  container -->
+	<div id="container" class="container contactUs">
+		<div class="breadcrumb"> 
+			<ul>
+				<li>홈</li>
+				<li>고객센터</li>
+				<li>1:1문의</li>
+			</ul> 
+		</div>
+		<div class="wrap">
+			<div class="content">
+				<div class="cont_body">
+					<!-- CONT-BODY -->
+					<div class="my_lnb">
+						<div class="lnb_tit">
+							<h2>고객센터</h2>
+						</div>
+						<div class="lnb_list">
+							<ul>
+								<li><a href="">FAQ</a></li>
+								<li><a href="" class="on">1:1문의</a></li>
+								<li><a href="">상품문의</a></li>
+								<li><a href="">공지</a></li>
+							</ul>
+						</div>
+						<div class="lnb_foot">
+							<ul>
+								<li><p>고객센터 운영안내</p></li>
+								<li><p>1544-5336</p></li>
+								<li><p>평일 09:00~18:00<br>토,일,공휴일 휴무</p></li>
+							</ul>
+						</div>
+					</div>
+					<div class="my_cont">
+						<div>
+							<div class="sec_tit">
+								<h3>1:1 문의</h3>
+							</div>
+							<div class="sec_head">
+								<div>
+									<ul>
+										<li>
+											<span>총 문의</span>
+											<a href="">0</a>
+										</li>
+										<li>
+											<span>답변 완료</span>
+											<a href="">0</a>
+										</li>
+										<li>
+											<span>처리 중</span>
+											<a href="">0</a>
+										</li>
+									</ul>
+								</div>
+								<div>
+									<p>궁금하신 점은 우측 문의하기를 통해 남겨주세요.<br>문의를 남겨 주시면 24시간 이내(토/일/공휴일 제외)에<br> 답변 드릴 수 있도록 최선을 다 하겠습니다.</p>
+								</div>
+								<div>
+									<button type="button" class="btn"><span>1:1 문의하기</span></button>
+								</div>
+							</div>
+							<div class="sec_body">
+								<!-- no_data -->
+								<div>
+                                    <div>
+                                        <img src="https://dummyimage.com/200x200/000/fff&text=dummy" alt="">
+                                    </div>
+                                    <div>
+                                        <p>등록된 문의가 없습니다.</p>
+                                    </div>
+								</div>
+								<!-- //no_data -->
+							</div>
+						</div>
+					</div>
+					<!-- // CONT-BODY -->					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->	
+	<footer id="footer"></footer>
+
+	<script type="text/javascript">
+	// 컨텐츠 호출
+        $(document).ready( function() {
+            $("#header").load("head.html");
+            // $("#container").load("indexx.html");
+            $("#footer").load("foot.html");
+        });
+	</script>
+	<script>
+		// header scroll
+		$(function(){
+			$(window).scroll(function(){
+				var scroll = $(this).scrollTop();
+				var headerH = $(".header").height();
+				if ($(window).scrollTop() > headerH){
+					$(".header").addClass("minify");
+					return false;
+				}
+				else {
+					$(".header").removeClass("minify");
+					return false;
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>
+
+

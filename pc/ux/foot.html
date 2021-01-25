@@ -1,0 +1,108 @@
+	<!-- footer start -->
+	<!-- <footer id="footer""> -->
+	<div class="common_footer">
+		<div class="service_support">
+			<h2>
+				<i class="ico ico_logo_ft"></i>
+				<em class="sr-only">STYLE24</em>
+			</h2>
+			<ul class="support_txt">
+				<li><a href=""><span>이용약관</span></a></li>
+				<li><a href=""><strong>개인정보처리방침</strong></a></li>
+				<li><a href="" target="_blank" title="새창 열림"><span>제휴/입점문의</span></a></li>
+				<li><a href="" target="_blank" title="새창 열림"><span>SN@PP</span><i class="ico ico_blank ml5"></i></a></li>
+			</ul>
+			<div class="family_link">
+				<h2><a href="" class="btn ui_toggle">FAMILY SITE<i class="ico ico_ft_arrow_b"></i></a></h2>
+				<dl id="family_site" class="">
+					<dt class="no_tit"><span class="blind">그룹없음</span></dt>
+					<dd><a class="clickable" href="" target="_blank" title="새창 열림">그룹없는사이트맵1</a></dd>
+					<dd><a class="clickable" href="" target="_blank" title="새창 열림">그룹없는사이트맵2</a></dd>
+
+					<dt><span class="txt">그룹1</span></dt>
+					<dd><a class="clickable" href="" target="_blank" title="새창 열림">그룹1의사이트맵1</a></dd>
+					<dd><a class="clickable" href="" target="_blank" title="새창 열림">그룹1의사이트맵2</a></dd>
+					<dd><a class="clickable" href="" target="_blank" title="새창 열림">그룹1의사이트맵3</a></dd>
+
+					<dt><span class="txt">그룹2</span></dt>
+					<dd><a class="clickable" href="" target="_blank" title="새창 열림">그룹2의사이트맵1</a></dd>
+					<dd><a class="clickable" href="" target="_blank" title="새창 열림">그룹2의사이트맵2</a></dd>
+					<dd><a class="clickable" href="" target="_blank" title="새창 열림">그룹2의사이트맵3</a></dd>
+				</dl>
+			</div>
+			<div class="connect">
+				<div class="cs_box">
+					<p>
+						<span class="mb20"><a class="clickable" href="" target="_blank" title="새창 열림">고객센터<i class="ico ico_ft_arrow_r ml5"></i></a></span><br>
+						<span class="time mb20">평일 09:00 ~ 18:00 <br> (토/일공휴일 휴무)</span><br>
+						<span class="tel mb10">1544-5336</span><br>
+						<span class="fax mb10">F.02-780-0435</span><br>
+						<span class="mail mb30">Email : help@istyle24.com</span>
+					</p>
+				</div>
+				<div class="sns_box clear">
+					<a href="https://www.facebook.com/" class="fbook clickable fl mr10" target="_blank" title="새창 열림"><span class="sr-only">STYLE24 페이스북</span></a>
+					<a href="https://www.instagram.com/" class="insta clickable fl" target="_blank" title="새창 열림"><span class="sr-only">STYLE24 인스타그램</span></a>
+				</div>
+				<div class="isms_box mt30">
+					<p>정보보호관리체계 ISMS 인증획득</p>
+				</div>		
+			</div>
+		</div>
+		<div class="corporation_info">
+			<div class="ft_cpinfo">
+				<dl>
+					<dt>아이스타일이십사 주식회사</dt>
+					<dd> 
+						<div>
+							<p>
+								<span>대표이사 : 윤종선</span>
+								<span>주소: 서울시 영등포구 은행로 11, 8층 (여의도동, 일신빌딩)</span> <br>
+								<span>사업자등록번호: 116-27-32499</span>
+								<span>통신판매업 신고번호: 제2020-서울영등포-1432</span>
+								<span><a class="clickable" href="" target="_blank" title="새창 열림">사업자정보확인</a></span><br>
+								<span>개인정보보호책임자 : 김명인</span>
+								<span>호스팅 서비스사업자 : 아이스타일이십사(주)</span>
+							</p>
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<div class="ft_cpinfo">
+				<dl>
+					<dt>소비자피해보상보험</dt>
+					<dd> 
+						<div>
+							<p>
+								고객님은 안전거래를 위해 현금 결제 시 저희 쇼핑몰이 가입한<br>
+								소비자피해보상보험 서비스를 이용하실 수 있습니다.
+								<a class="clickable" href="" target="_blank" title="새창 열림">가입정보확인</a>
+							</p>
+						</div>
+					</dd>
+				</dl>				
+			</div>
+		</div>
+		<div class="copyright">
+			<p>
+				COPYRIGHT©2020. STYLE24 ALL RIGHTS RESERVED.
+			</p>
+		</div>
+		<div class="mobile_version" style="display:none" id="_moveToMobileVer">
+			<a href="javascript:appBroswer('http://m.ssg.com','mo');" class="btn_def">모바일 버전으로 가기</a>
+		</div>
+	</div>
+	<!-- </section> -->
+	<!-- footer end -->
+
+	<script>
+	/* familysite */
+	$(document).ready( function() {
+		$('.family_link').on('click','.btn',function(e){
+			e.preventDefault();
+			$(this).parents('.family_link').find('#family_site').slideToggle(100);
+			$(this).find('.ico.ico_ft_arrow_b').toggleClass('ico_ft_arrow_t');
+		});
+	});
+	/* //familysite  */
+	</script>

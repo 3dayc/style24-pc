@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>STYLE24 | GUIDE_Alerts | Publishing</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+	<link rel="stylesheet" type="text/css" href="../ux/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="./css/guide_only.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+			 	 
+	<script src="../ux/js/jquery.ellipsis.js"></script>
+	<script src="../ux/js/jquery-ui.js"></script>
+	<script src="../ux/js/common-ui.js"></script>
+ 
+
+</head>
+
+<body>
+	<header id="header"></header>
+	<!--  container -->
+	<div class="gdWrap" id="contents">	
+		<div class="gd_lnb">
+			<div></div>
+			<ul>
+				<li><a href="#area1">Alert Popup</a></li>
+				<li><a href="#area2">토스트 Popup</a></li>
+			</ul>
+		</div>
+
+		<!-- 본문 start -->		
+		<div class="wrap guide">			
+			<div class="area">				
+				<section>
+					<div class="guide_title">
+						<h2>Alerts</h2>
+					</div>
+
+					
+
+					<div class="guide_area"  id="area2">
+						<h3 class="guide_tit">Alert Popup</h3>
+						<!-- START HEADING -->
+
+						<h4 class="guide_tit2">알람 팝업</h4>
+						<h6 class="t_req">디자인 커스텀은 페이지 진행하면서 누적 시킬 것</h6>
+
+						<div class="alert" role="alert">
+							<strong>알람 팝업 예시</strong>   닫기 버튼 클릭 시, 알람 전체  display:none;
+							<button type="button" class="alertCls" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+						</div>
+
+						<!-- EOF HEADING -->  
+					</div>
+
+
+
+					<div class="guide_area wait"  id="area1">
+						<h3 class="guide_tit">토스트 Popup</h3>
+						<!-- START HEADING -->
+						<h4 class="guide_tit2">브라우저 하단으로 토스트</h4>
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button type="button" class="btn btn_default"><span>toast popup</span></button>
+							</div>
+						</div>
+						<!-- EOF HEADING -->  
+					</div>
+
+					
+
+
+
+				</section>
+			</div>
+		</div>
+		<!-- 본문 end -->
+	</div>
+	<!-- // container -->	
+	<script type="text/javascript">
+        $(document).ready( function() {
+            $("#header").load("guide_head.html");
+        });
+	</script>
+</body>
+</html>
+
+

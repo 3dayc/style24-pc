@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>iSTYLE24 | default | Publishing</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+
+<!-- <link rel="stylesheet" type="text/css" href="css/test-common.css" /> -->
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/common-ui.js"></script>
+</head>
+
+<body>
+
+	<div class="skipComment">
+		<a href="#content">본문 바로가기</a>
+		<a href="#gnb">주메뉴 바로가기</a>
+		<a href="#footer">하단메뉴 바로가기</a>
+	</div>
+
+	<header id="header"></header>
+	<!--  container -->
+	<div id="container" class="container mb">
+		<div class="wrap">
+			<div class="content login"> <!-- 페이지특정 클래스 = login -->
+				<div class="cont_head">
+                    <div>
+                        <h3>style24</h3>
+                    </div>
+				</div>
+				<div class="cont_body">
+                    <form class="form_wrap form_col_c form_full" role="form">
+						<div class="form_head">
+							<h4>회원 로그인</h4>
+						</div> 
+						<div class="form_field mt0">
+							<label class="input_label sr-only">아이디</label>
+							<div class="ui_col_12">
+								<div class="input_wrap"> 
+									<input type="text" name="userId" placeholder="아이디" id="txtId" class="form_control" minlength="4" maxlength="12">
+								</div>
+							</div>
+						</div>
+						<div class="form_field">
+							<label class="input_label sr-only">비밀번호</label>
+							<div class="ui_col_12">
+								<div class="input_wrap"> 
+									<input type="password" name="userPassword" class="form_control" placeholder="비밀번호 8자 ~ 20자 입력" id="password">
+								</div>
+							</div>
+						</div>
+						<div class="login_check">
+							<div class="form_field">
+									<input id="chk-1" type="checkbox"><label for="chk-1"> <span>아이디 저장</span> </label>
+							</div>
+							<div class="btn_wrap">
+								<ul>
+									<li><a href="">아이디찾기</a></li>
+									<li><a href="">비밀번호 찾기</a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- case (회원 아이디 또는 비밀번호가 일치하지 않을때,보안문자 입력시) -->
+						<div class="help_block">
+							<!-- 회원 아이디 또는 비밀번호가 일치하지 않을때 -->
+							<p class="t_err mt10">회원 아이디 또는 비밀번호가 일치하지 않습니다. (<span>4</span>&#47;10)</p>
+							<!-- //회원 아이디 또는 비밀번호가 일치하지 않을때 -->
+							<!-- 보안문자 입력시 -->
+							<div class="captcha mt40"> <!-- 캡차영역 -->
+								<ul>
+									<li class="captcha_box"> <!-- 캡차이미지 -->
+										
+									</li>
+									<li class="captcha_btn_dual">
+										<button type="button" id="play_audio">새로고침</button>
+										<button type="button" id="swap_captcha">음성듣기</button>
+									</li>
+									<li class="captcha_area">
+										<label for="captcha" id="label_captcha_area">보안문자 입력</label>
+										<input type="text" id="captcha" name="captcha" title="문자입력">
+									</li>
+								</ul>
+							</div>
+							<p class="t_err mt10">보안문자 입력을 다시 시도해 주세요. (<span>4</span>&#47;10)</p>
+							<!-- //보안문자 입력시 -->
+						</div>
+						<!-- //case (회원 아이디 또는 비밀번호가 일치하지 않을때,보안문자 입력시) -->
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button class="btn btn_dark btn_block"><span>로그인</span></button>
+							</div>
+						</div>
+						<div class="ui_row mt10">
+							<div class="ui_col_12">
+								<button class="btn btn_default btn_block"><span>비회원 주문조회</span></button>
+							</div>
+						</div>
+						<div class="sns_wrap">
+							<div>
+								<p>간편로그인</p>
+							</div>
+							<div>
+								<ul>
+									<li>
+										<a href="javascript:void(0)">
+											<span>네이버이미지</span>
+											<span>네이버</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<span>카카오톡이미지</span>
+											<span>카카오</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<span>예스24이미지</span>
+											<span>YES24</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->	
+	<footer id="footer"></footer>
+
+	<script type="text/javascript">
+	// 컨텐츠 호출
+        $(document).ready( function() {
+            $("#header").load("head.html");
+            // $("#container").load("indexx.html");
+            $("#footer").load("foot.html");
+        });
+	</script>
+	<script>
+		// header scroll
+		$(function(){
+			$(window).scroll(function(){
+				var scroll = $(this).scrollTop();
+				var headerH = $(".header").height();
+				if ($(window).scrollTop() > headerH){
+					$(".header").addClass("minify");
+					return false;
+				}
+				else {
+					$(".header").removeClass("minify");
+					return false;
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>STYLE24 | GUIDE_FormLayout | Publishing</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+	<link rel="stylesheet" type="text/css" href="../ux/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="./css/guide_only.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="../ux/js/jquery.ellipsis.js"></script>
+	<script src="../ux/js/jquery-ui.js"></script>
+	<script src="../ux/js/common-ui.js"></script>
+</head>
+
+<body>
+	<header id="header"></header>
+	<!--  container -->
+	<div class="gdWrap" id="contents">	
+		<div class="gd_lnb">
+			<div></div>
+			<ul>
+				<li><a href="#area1">Basic Form Sample</a></li>
+				<li><a href="#area2">Form Grid</a></li>
+				<li><a href="#area3">One Column Layout</a></li>
+				<li><a href="#area4">Inline Form</a></li>
+
+			</ul>
+		</div>
+
+		<!-- 본문 start -->		
+		<div class="wrap guide">			
+			<div class="area">				
+				<section>
+					<div class="guide_title">
+						<h2>Form Layout</h2>
+					</div>
+
+
+
+
+					<div class="guide_area"  id="area1">
+						<h3 class="guide_tit">Basic Form Sample</h3>
+						<!-- START HEADING -->
+
+						<div class="ui_row">
+							<div class="ui_col_12">
+
+								<textarea class="textarea_pre" name="" id="" cols="30" rows="30">
+<!-- form start -->
+
+<form class="form_wrap"  role="form">
+	// .form_wrap	: 폼을 감싸는 그룹
+	// .form_inline : input + input
+	// .form_col_c	: 가운데정렬타입
+	// .form_col_w  : 와이드타입
+	// .form_full	 : 감싸고 있는 영역에서 지정이 가능하다. 요소 본인에게는 비해당
+
+	<div class="form_field">
+		<label class="input_label sr-only">Login</label>
+		// .input_label : 라벨의 스타일을 받을 곳
+		// .sr-only 	: 라벨 생략 시 사용
+		// .ui_col_1~12 : 라벨의 영역을 지정
+
+		<div class="input_wrap"> 
+		// .input_wrap  : 인풋을 감싸는 영역
+		// .ui_col_1~12 : 인풋의 영역을 지정
+			<input type="text" class="form_control" placeholder="">
+		</div>
+	</div>
+</form>
+
+<!-- form End -->
+
+								</textarea>
+
+							</div>
+						</div>
+
+						<!-- EOF HEADING -->  
+					</div>
+
+					<div class="guide_area"  id="area2">
+						<h3 class="guide_tit">Form Grid</h3>
+						<!-- START HEADING -->
+
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<!-- form start -->
+								<form class="form_wrap form_full" role="form">
+
+									<div class="form_field">
+										<div class="ui_col_12">
+											<div class="input_wrap">
+											<input type="text" placeholder=".ui_col_12" class="form_control">
+											</div>
+										</div>
+									</div>
+
+									<div class="form_field">
+										<div class="ui_col_8">
+											<input type="text" placeholder=".ui_col_8" class="form_control">
+										</div>               
+										<div class="ui_col_4">
+											<input type="text" placeholder=".ui_col_4" class="form_control">
+										</div>
+									</div>
+
+									<div class="form_field">
+										<div class="ui_col_6">
+											<input type="text" placeholder=".ui_col_6" class="form_control">
+										</div>               
+										<div class="ui_col_3">
+											<input type="text" placeholder=".ui_col_3" class="form_control">
+										</div>
+										<div class="ui_col_3">
+											<input type="text" placeholder=".ui_col_3" class="form_control">
+										</div>
+									</div>  
+
+									<div class="form_field">
+										<div class="ui_col_4">
+											<input type="text" placeholder=".ui_col_4" class="form_control">
+										</div>               
+										<div class="ui_col_4">
+											<input type="text" placeholder=".ui_col_4" class="form_control">
+										</div>
+										<div class="ui_col_4">
+											<input type="text" placeholder=".ui_col_4" class="form_control">
+										</div>
+									</div>
+
+									<div class="form_field">
+										<div class="ui_col_2">
+											<input type="text" placeholder=".ui_col_2" class="form_control">
+										</div>
+										<div class="ui_col_5">
+											<input type="text" placeholder=".ui_col_5" class="form_control">
+										</div>   
+										<div class="ui_col_5">
+											<input type="text" placeholder=".ui_col_5" class="form_control">
+										</div>  
+									</div>
+
+								</form>
+								<!-- form end -->
+							</div>
+						</div>
+
+						<!-- EOF HEADING -->  
+					</div>
+
+
+					<div class="guide_area"  id="area3">
+						<h3 class="guide_tit">One Column Layout</h3>
+						<!-- START HEADING -->
+						
+						<h4 class="guide_tit2">Center 타입</h4>
+						<div class="ui_row" style="background: #f9f9f9;padding:10px;">
+							<div class="ui_col_12">
+								<!-- form start -->
+								<form class="form_wrap form_col_c form_full">
+
+									<div class="form_field">
+										<label class="ui_col_2 input_label">Text label</label>
+										<div class="ui_col_10">
+											<div class="input_wrap">
+												<span class="input_group_addon"><span class="ico"></span></span>
+												<input type="text" class="form_control">
+											</div> 
+											<div class="help_block">
+												<p class="t_help">사용가능한 비밀번호입니다</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="form_field">
+										<label class="ui_col_2 input_label">form_full</label>
+										<div class="ui_col_10">
+											<div class="input_wrap">
+												<span class="input_group_addon"><span class="ico"></span></span>
+												<input type="text" class="form_control">
+											</div> 
+											<div class="help_block">
+												<p class="t_danger">영문(대/소문자)/숫자/특수문자 중 2가지 이상 조합(8~20자)</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="form_field">
+										<div class="ui_col_12">
+											<div class="input_wrap">
+												<span class="input_group_addon"><span class="ico"></span></span>
+												<input type="text" class="form_control" placeholder=".form_full">
+											</div> 
+											<div class="help_block">
+												<p class="t_info">4개이상 연속되거나 동일한 문자/숫자 제외</p>
+											</div>
+										</div>
+									</div>
+
+								</form>
+								<!-- form end -->
+							</div>
+						</div>
+
+						<h4 class="guide_tit2"> Wide 타입</h4>
+						<div class="ui_row" style="background: #f9f9f9;padding:10px;">
+							<div class="ui_col_12">
+								<!-- form start -->	
+								<form class="form_wrap form_col_w">
+
+									<div class="form_field">
+										<label class="ui_col_2 input_label">Text Field</label>
+										<div class="ui_col_10" >
+											<div class="input_wrap">
+												<span class="input_group_addon"><span class="ico"></span></span>
+												<input type="text" class="form_control">
+											</div> 
+											<div class="help_block">
+												<p class="t_info">input help/info text</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="form_field">
+										<label class="ui_col_2 input_label">.form_full type</label>
+										<div class="ui_col_10 form_full">
+											<div class="input_wrap">
+												<span class="input_group_addon"><span class="ico"></span></span>
+												<input type="text" class="form_control" placeholder=".form_full">
+											</div> 
+											<div class="help_block"> 												
+												<p class="t_info">input help/info text</p>
+											</div>
+										</div>
+									</div>
+
+								</form>
+								<!-- form end -->
+							</div>
+						</div>
+
+						<!-- EOF HEADING -->  
+					</div>
+
+
+
+
+					<div class="guide_area"  id="area4">
+						<h3 class="guide_tit">Inline Form Sample</h3>
+						<!-- START HEADING -->
+
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<!-- form start -->
+
+								<form class="form_wrap form_inline"  role="form">
+	
+									<div class="form_field">
+										<label class="sr-only">Login</label>
+                                        <input type="text" class="form_control" placeholder="ID">
+									</div>
+									<div class="form_field">
+										<div class="input_wrap">
+                                            <label class="sr-only">Password</label>
+                                            <input class="form_control" type="password" placeholder="password">
+                                        </div>
+									</div>
+									<button type="submit" class="btn btn_primary">Login</button>
+
+								</form>
+							</div>
+						</div>
+
+						<!-- EOF HEADING -->  
+					</div>
+
+
+
+
+
+
+					
+				</section>
+			</div>
+		</div>
+		<!-- 본문 end -->
+	</div>
+	<!-- // container -->	
+	<script type="text/javascript">
+        $(document).ready( function() {
+            $("#header").load("guide_head.html");
+        });
+	</script>
+</body>
+</html>
+
+

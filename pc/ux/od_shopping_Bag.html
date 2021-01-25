@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>iSTYLE24 | default | Publishing</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+
+<!-- <link rel="stylesheet" type="text/css" href="css/test-common.css" /> -->
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/slick.css" />
+<!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/common-ui.js"></script>
+</head>
+
+<body>
+
+	<div class="skipComment">
+		<a href="#content">본문 바로가기</a>
+		<a href="#gnb">주메뉴 바로가기</a>
+		<a href="#footer">하단메뉴 바로가기</a>
+	</div>
+
+	<header id="header"></header>
+	<!--  container -->
+	<div id="container" class="container od">
+		<div class="breadcrumb"> 
+			<ul>
+				<li class="bread_home"><a href="index.html">홈</a></li>
+				<li class="bread_2depth">고객센터</li>
+				<li class="bread_3depth">주문/결제</li>
+			</ul> 
+        </div>
+		<div class="wrap">
+			<div class="content shop_bag"> <!-- 페이지특정 클래스 = shop_bag -->
+				<div class="cont_body">
+                    <!-- CONT-BODY -->
+                    <div class="od_head">
+                        <h3>쇼핑백</h3>
+                    </div>
+					<div class="od_lnb">
+                        <div class="od_lnb_cont">
+                            <div class="lnb_tit">
+                                <p>결제 정보</p>
+                                <p><span>14</span>개의 상품</p>
+                            </div>
+                            <div class="lnb_body">
+                                <div class="lnb_bill">
+                                    <dl>
+                                        <dt>상품금액</dt>
+                                        <dd>1,746,500원</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>배송비</dt>
+                                        <dd>0원</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>할인금액</dt>
+                                        <dd class="on">-1,746,500원</dd>
+                                    </dl>
+                                </div>
+                                <div class="lnb_bill_print">
+                                    <dl>
+                                        <dt>총 결제 예정 금액</dt>
+                                        <dd>3,546,200원</dd>
+                                    </dl>
+                                    <div>
+                                        <button class="btn btn_primary btn_block"><span>주문하기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sale_code_wrap">
+                            <div class="heading">
+                                <p>할인코드 입력</p>
+                            </div>
+                            <div class="form_field">
+                                <label class="input_label sr-only">이메일주소</label>
+                                <div class="ui_col_12">
+                                    <div class="input_wrap" style="display: flex;"> 
+                                        <input type="text" name="userNumber" placeholder="할인코드를 입력해주세요." id="saleCode">
+                                        <button type="submit" class="btn btn_default">적용</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="od_cont">
+						<div class="wrapper">
+							<div class="sec_head">
+								<div>
+                                    <p>배송방법 선택</p>
+                                </div>
+								<div>
+                                    <div class="form_field">
+                                        <input type="radio" name="radio" id="rdi-1" value="1">
+                                        <label for="rdi-1"> 
+                                            <p><span>총알배송</span>10/15일 24:00 까지 도착</p> 
+                                        </label>
+                                        <input type="radio" name="radio" id="rdi-2" value="2" checked="">
+                                        <label for="rdi-2"> 
+                                            <p>총알 배송 안함 (10/25일 도착 예정)</p> 
+                                        </label>
+                                    </div>
+                                </div>
+							</div>
+							<div class="sec_body">
+                                <div class="bag_wrapper bullet">
+                                    <div class="heading">
+                                        <div>
+                                            <p>STYLE24 총알배송</p>
+                                            <span>오늘 자정까지 도착</span>
+                                        </div>
+                                        <div>
+                                            <button>전체삭제</button>
+                                        </div>
+                                    </div> 
+                                    <div class="grid_wrap">
+                                        <table>
+                                            <colgroup>
+                                                <col width="699">
+                                                <col width="192">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form_field">
+                                                            <input id="chk-1" type="checkbox">
+                                                            <label for="chk-1"> 
+                                                                <div class="shop_img">
+                                                                    <img src="../ux/images/thumb/dp_item02.jpg" alt="">
+                                                                </div>
+                                                                <div class="item_info">
+                                                                    <p class="brand">TBJ</p>
+                                                                    <p class="name">남성 테이퍼드핏 코튼스판 올밴딩 조거 알파벳 스포티 팬츠남성 테이퍼드핏 코튼스판 올밴딩 조거 알파벳 스포티 팬츠</p>
+                                                                    <p><span>옵션1&#47;옵션2</span><span>수량1개</span></p>
+                                                                    <button>옵션&#47;수량변경</button>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <p class="price">61,200원</p>
+                                                        <p><span>49</span>p적립예정</p>
+                                                        <div class="ui_row">
+                                                            <button type="button" class="btn btn_primary btn_sm"><span>즉시구매</span></button>
+                                                        </div>
+                                                        <div class="benefits">
+                                                            <div>
+                                                                <button type="button" class="itemLike">관심상품 추가</button>
+                                                            </div>
+                                                            <div>
+                                                                <button>휴지통</button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form_field">
+                                                            <input id="chk-2" type="checkbox">
+                                                            <label for="chk-2"> 
+                                                                <div class="shop_img">
+                                                                    <img src="../ux/images/thumb/dp_item02.jpg" alt="">
+                                                                </div>
+                                                                <div class="item_info">
+                                                                    <p class="brand">TBJ</p>
+                                                                    <p class="name">남성 테이퍼드핏 코튼스판 올밴딩 조거 알파벳 스포티 팬츠</p>
+                                                                    <p><span>옵션1&#47;옵션2</span><span>수량1개</span></p>
+                                                                    <button>옵션&#47;수량변경</button>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <p class="price">61,200원</p>
+                                                        <p><span>49</span>p적립예정</p>
+                                                        <div class="ui_row">
+                                                            <button type="button" class="btn btn_primary btn_sm"><span>즉시구매</span></button>
+                                                        </div>
+                                                        <div class="benefits">
+                                                            <div>
+                                                                <button type="button" class="itemLike">관심상품 추가</button>
+                                                            </div>
+                                                            <div>
+                                                                <button>휴지통</button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="right_tbl">
+                                            <p><span>3,000원</span></p>
+                                            <button>배송비 SAVE 상품 보기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bag_wrapper standard">
+                                    <div class="heading">
+                                        <div>
+                                            <p>STYLE24 일반배송</p>
+                                        </div>
+                                        <div>
+                                            <button>전체삭제</button>
+                                        </div>
+                                    </div> 
+                                    <div class="grid_wrap">
+                                        <table>
+                                            <colgroup>
+                                                <col width="699">
+                                                <col width="192">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form_field">
+                                                            <input id="chk-2" type="checkbox">
+                                                            <label for="chk-2"> 
+                                                                <div class="shop_img">
+                                                                    <img src="../ux/images/thumb/dp_item02.jpg" alt="">
+                                                                </div>
+                                                                <div class="item_info">
+                                                                    <p class="brand">TBJ</p>
+                                                                    <p class="name">남성 테이퍼드핏 코튼스판 올밴딩 조거 알파벳 스포티 팬츠</p>
+                                                                    <p><span>옵션1&#47;옵션2</span><span>수량1개</span></p>
+                                                                    <button>옵션&#47;수량변경</button>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <p class="price">61,200원</p>
+                                                        <p><span>49</span>p적립예정</p>
+                                                        <div class="ui_row">
+                                                            <button type="button" class="btn btn_primary btn_sm"><span>즉시구매</span></button>
+                                                        </div>
+                                                        <div class="benefits">
+                                                            <div>
+                                                                <button type="button" class="itemLike">관심상품 추가</button>
+                                                            </div>
+                                                            <div>
+                                                                <button>휴지통</button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="right_tbl">
+                                            <p><span>3,000원</span></p>
+                                            <button>배송비 SAVE 상품 보기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bag_wrapper standard">
+                                    <div class="heading">
+                                        <div>
+                                            <p>업체직배송</p>
+                                        </div>
+                                        <div>
+                                            <button>전체삭제</button>
+                                        </div>
+                                    </div> 
+                                    <div class="grid_wrap">
+                                        <table>
+                                            <colgroup>
+                                                <col width="699">
+                                                <col width="192">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form_field">
+                                                            <input id="chk-1" type="checkbox">
+                                                            <label for="chk-1"> 
+                                                                <div class="shop_img">
+                                                                    <img src="../ux/images/thumb/dp_item02.jpg" alt="">
+                                                                </div>
+                                                                <div class="item_info">
+                                                                    <p class="brand">TBJ</p>
+                                                                    <p class="name">남성 테이퍼드핏 코튼스판 올밴딩 조거 알파벳 스포티 팬츠남성 테이퍼드핏 코튼스판 올밴딩 조거 알파벳 스포티 팬츠</p>
+                                                                    <p><span>옵션1&#47;옵션2</span><span>수량1개</span></p>
+                                                                    <button>옵션&#47;수량변경</button>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <p class="price">61,200원</p>
+                                                        <p><span>49</span>p적립예정</p>
+                                                        <div class="ui_row">
+                                                            <button type="button" class="btn btn_primary btn_sm"><span>즉시구매</span></button>
+                                                        </div>
+                                                        <div class="benefits">
+                                                            <div>
+                                                                <button type="button" class="itemLike">관심상품 추가</button>
+                                                            </div>
+                                                            <div>
+                                                                <button>휴지통</button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form_field">
+                                                            <input id="chk-2" type="checkbox">
+                                                            <label for="chk-2"> 
+                                                                <div class="shop_img">
+                                                                    <img src="../ux/images/thumb/dp_item02.jpg" alt="">
+                                                                </div>
+                                                                <div class="item_info">
+                                                                    <p class="brand">TBJ</p>
+                                                                    <p class="name">남성 테이퍼드핏 코튼스판 올밴딩 조거 알파벳 스포티 팬츠</p>
+                                                                    <p><span>옵션1&#47;옵션2</span><span>수량1개</span></p>
+                                                                    <button>옵션&#47;수량변경</button>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <p class="price">61,200원</p>
+                                                        <p><span>49</span>p적립예정</p>
+                                                        <div class="ui_row">
+                                                            <button type="button" class="btn btn_primary btn_sm"><span>즉시구매</span></button>
+                                                        </div>
+                                                        <div class="benefits">
+                                                            <div>
+                                                                <button type="button" class="itemLike">관심상품 추가</button>
+                                                            </div>
+                                                            <div>
+                                                                <button>휴지통</button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="right_tbl">
+                                            <p><span>3,000원</span></p>
+                                            <button>배송비 SAVE 상품 보기</button>
+                                        </div>
+                                    </div>
+                                </div>
+							</div>
+						</div>
+                    </div>
+                    <div class="od_slide_item">
+                        <div>
+                            <p>추천상품</p>
+                        </div>
+                        <div class="od_shoppingBag_slide">
+                            <div class="post-wrapper od_slide"> <!-- 쇼핑백슬라이드 -->
+                                <div class="post">                   
+                                    <a href="#none" class="slide_item">
+                                        <div>
+                                            <img src="../ux/images/od_shopping_slide01.png">
+                                        </div>
+                                        <div class="info">
+                                            <p class="itemBrand">TBJ</p>
+                                            <div class="itemName">스타 착용 여성 퍼 아플리케 오버핏 투마일 웨어링 점퍼</div>
+                                            <p class="itemPrice">488,000원 <del>79,900원</del> <span>98%</span></p>
+                                            <div class="itemcolorchip">
+                                                <span class="chip_color35" value="ABM">BEIGE</span>
+                                                <span class="chip_color54" value="BDS">BLACK</span>
+                                                <span class="chip_color40" value="YBR">WHITE</span>
+                                            </div>
+                                            <div class="itemComment">#가을 느낌 물씬!</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="post">                   
+                                    <a href="#none" class="slide_item">
+                                        <div>
+                                            <img src="../ux/images/od_shopping_slide01.png">
+                                        </div>
+                                        <div class="info">
+                                            <p class="itemBrand">TBJ</p>
+                                            <div class="itemName">스타 착용 여성 퍼 아플리케 오버핏 투마일 웨어링 점퍼</div>
+                                            <p class="itemPrice">488,000원 <del>79,900원</del> <span>98%</span></p>
+                                            <div class="itemcolorchip">
+                                                <span class="chip_color35" value="ABM">BEIGE</span>
+                                                <span class="chip_color54" value="BDS">BLACK</span>
+                                                <span class="chip_color40" value="YBR">WHITE</span>
+                                            </div>
+                                            <div class="itemComment">#가을 느낌 물씬!</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="post">                   
+                                    <a href="#none" class="slide_item">
+                                        <div>
+                                            <img src="../ux/images/od_shopping_slide01.png">
+                                        </div>
+                                        <div class="info">
+                                            <p class="itemBrand">TBJ</p>
+                                            <div class="itemName">스타 착용 여성 퍼 아플리케 오버핏 투마일 웨어링 점퍼</div>
+                                            <p class="itemPrice">488,000원 <del>79,900원</del> <span>98%</span></p>
+                                            <div class="itemcolorchip">
+                                                <span class="chip_color35" value="ABM">BEIGE</span>
+                                                <span class="chip_color54" value="BDS">BLACK</span>
+                                                <span class="chip_color40" value="YBR">WHITE</span>
+                                            </div>
+                                            <div class="itemComment">#가을 느낌 물씬!</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="post">                   
+                                    <a href="#none" class="slide_item">
+                                        <div>
+                                            <img src="../ux/images/od_shopping_slide01.png">
+                                        </div>
+                                        <div class="info">
+                                            <p class="itemBrand">TBJ</p>
+                                            <div class="itemName">스타 착용 여성 퍼 아플리케 오버핏 투마일 웨어링 점퍼</div>
+                                            <p class="itemPrice">488,000원 <del>79,900원</del> <span>98%</span></p>
+                                            <div class="itemcolorchip">
+                                                <span class="chip_color35" value="ABM">BEIGE</span>
+                                                <span class="chip_color54" value="BDS">BLACK</span>
+                                                <span class="chip_color40" value="YBR">WHITE</span>
+                                            </div>
+                                            <div class="itemComment">#가을 느낌 물씬!</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="post">                   
+                                    <a href="#none" class="slide_item">
+                                        <div>
+                                            <img src="../ux/images/od_shopping_slide01.png">
+                                        </div>
+                                        <div class="info">
+                                            <p class="itemBrand">TBJ</p>
+                                            <div class="itemName">스타 착용 여성 퍼 아플리케 오버핏 투마일 웨어링 점퍼</div>
+                                            <p class="itemPrice">488,000원 <del>79,900원</del> <span>98%</span></p>
+                                            <div class="itemcolorchip">
+                                                <span class="chip_color35" value="ABM">BEIGE</span>
+                                                <span class="chip_color54" value="BDS">BLACK</span>
+                                                <span class="chip_color40" value="YBR">WHITE</span>
+                                            </div>
+                                            <div class="itemComment">#가을 느낌 물씬!</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="post">                   
+                                    <a href="#none" class="slide_item">
+                                        <div>
+                                            <img src="../ux/images/od_shopping_slide01.png">
+                                        </div>
+                                        <div class="info">
+                                            <p class="itemBrand">TBJ</p>
+                                            <div class="itemName">스타 착용 여성 퍼 아플리케 오버핏 투마일 웨어링 점퍼</div>
+                                            <p class="itemPrice">488,000원 <del>79,900원</del> <span>98%</span></p>
+                                            <div class="itemcolorchip">
+                                                <span class="chip_color35" value="ABM">BEIGE</span>
+                                                <span class="chip_color54" value="BDS">BLACK</span>
+                                                <span class="chip_color40" value="YBR">WHITE</span>
+                                            </div>
+                                            <div class="itemComment">#가을 느낌 물씬!</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<!-- // CONT-BODY -->					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->	
+	<footer id="footer"></footer>
+
+	<script type="text/javascript">
+	// 컨텐츠 호출
+        $(document).ready( function() {
+            $("#header").load("head.html");
+            // $("#container").load("indexx.html");
+            $("#footer").load("foot.html");
+        });
+	</script>
+	<script>
+		// header scroll
+		$(function(){
+			$(window).scroll(function(){
+				var scroll = $(this).scrollTop();
+				var headerH = $(".header").height();
+				if ($(window).scrollTop() > headerH){
+					$(".header").addClass("minify");
+					return false;
+				}
+				else {
+					$(".header").removeClass("minify");
+					return false;
+				}
+			});
+		});
+    </script>
+    <script>
+        $(function(){
+            $('.od_slide').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                adaptiveHeight: true,
+                variableWidth:true
+            });
+        });
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>STYLE24 | GUIDE_Buttons | Publishing</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+	<link rel="stylesheet" type="text/css" href="../ux/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="./css/guide_only.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="../ux/js/jquery.ellipsis.js"></script>
+	<script src="../ux/js/jquery-ui.js"></script>
+	<script src="../ux/js/common-ui.js"></script>
+</head>
+
+<body>
+	<header id="header"></header>
+	<!--  container -->
+	<div class="gdWrap" id="contents">	
+		<div class="gd_lnb">
+			<div></div>
+			<ul>
+				<li><a href="#area1">기본버튼</a></li>
+				<li><a href="#area2">버튼 그룹</a></li>
+				<li><a href="#area3">아이콘타입</a></li>
+				<li><a href="#area4">드롭다운 타입</a></li>
+				<li><a href="#area5">스위치 타입</a></li>
+			</ul>
+		</div>
+
+		<!-- 본문 start -->		
+		<div class="wrap guide">			
+			<div class="area">				
+				<section>
+					<div class="guide_title">
+						<h2>Buttons</h2>
+					</div>
+
+
+					<div class="guide_area"  id="area1">
+						<h3 class="guide_tit">기본버튼</h3>
+						<!-- START HEADING -->
+						<h4 class="guide_tit2">기본 형태</h4>
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button type="button" class="btn"><span>.btn (ghost)</button>
+								<button type="button" class="btn btn_default"><span>.btn_default</span></button>
+								<button type="button" class="btn btn_dark"><span>.btn_dark</span></button>
+								<button type="button" class="btn btn_primary ghost"><span>.btn_primary</span></button>
+								<button type="button" class="btn btn_success"><span>.btn_success</span></button>
+								<button type="button" class="btn btn_info"><span>.btn_info</span></button>
+								<button type="button" class="btn btn_warning"><span>.btn_warning</span></button>
+								<button type="button" class="btn btn_danger"><span>.btn_danger</span></button>
+								<button type="button" class="btn btn_link"><span>.btn_link</span></button>
+							</div>
+						</div>
+
+						<h4 class="guide_tit2">현재선택 형태 <code> .active</code> </h4>
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button type="button" class="btn active"><span>.btn (ghost)</button>
+								<button type="button" class="btn btn_default active"><span>.btn_default</span></button>
+								<button type="button" class="btn btn_dark active"><span>.btn_dark</span></button>
+								<button type="button" class="btn btn_primary active"><span>.btn_primary</span></button>
+								<button type="button" class="btn btn_success active"><span>.btn_success</span></button>
+								<button type="button" class="btn btn_info active"><span>.btn_info</span></button>
+								<button type="button" class="btn btn_warning active"><span>.btn_warning</span></button>
+								<button type="button" class="btn btn_danger active"><span>.btn_danger</span></button>
+								<button type="button" class="btn btn_link active"><span>.btn_link</span></button>
+							</div>
+						</div>
+
+						<h4 class="guide_tit2">사용불가 형태 <code> [ disabled ] </code></h4>
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button type="button" class="btn" disabled><span>.btn (ghost)</span></button>
+								<button type="button" class="btn btn_default" disabled><span>.btn_default</span></button>
+								<button type="button" class="btn btn_dark" disabled><span>.btn_dark</span></button>
+								<button type="button" class="btn btn_primary" disabled><span>.btn_primary</span></button>
+								<button type="button" class="btn btn_success" disabled><span>.btn_success</span></button>
+								<button type="button" class="btn btn_info" disabled><span>.btn_info</span></button>
+								<button type="button" class="btn btn_warning" disabled><span>.btn_warning</span></button>
+								<button type="button" class="btn btn_danger" disabled><span>.btn_danger</span></button>
+								<button type="button" class="btn btn_link" disabled><span>.btn_link</span></button>
+							</div>
+						</div>
+
+						<h4 class="guide_tit2">크기별 형태 <code>.bt-xs</code> <code>.btn_sm</code> <code>.btn_md</code> <code>.btn_lg</code></h4>
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button type="button" class="btn btn_danger btn_xs"><span>Extra small button</span></button>
+								<button type="button" class="btn btn_default btn_xs"><span>Extra small button</span></button>
+							</div>                         
+						</div>
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button type="button" class="btn btn_warning btn_sm"><span>Small button</span></button>
+								<button type="button" class="btn btn_default btn_sm"><span>Small button</span></button>
+							</div>
+						</div>
+
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button type="button" class="btn btn_default"><span>Default button</span></button>
+								<button type="button" class="btn btn_primary"><span>Default button</span></button>
+							</div>
+						</div>
+
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button type="button" class="btn btn_default btn_md"><span>Medium button</span></button>
+								<button type="button" class="btn btn_dark btn_md"><span>Medium button</span></button>
+							</div>
+						</div>
+
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button type="button" class="btn btn_default btn_lg"><span>Medium button</span></button>
+								<button type="button" class="btn btn_link btn_lg"><span>Medium button</span></button>
+							</div>
+						</div>
+
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button type="button" class="btn btn_default btn_lg"><span>Large button</span></button>
+								<button type="button" class="btn btn_btn_dark btn_lg"><span>Large button</span></button>
+							</div>
+						</div>
+
+
+						<!-- EOF HEADING -->  
+					</div>
+
+
+					<div class="guide_area"  id="area2">
+						<h3 class="guide_tit">버튼 그룹</h3>
+						<!-- START HEADING -->
+						<h4 class="guide_tit2">좌측/우측 정렬</h4>
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<button type="button" class="btn btn_default fl"><span>default Left</span></button>
+								<button type="button" class="btn btn_dark fr"><span>primary Right</span></button>
+							</div>
+						</div>						
+
+						<h4 class="guide_tit2">일반 버튼그룹</h4>
+						<div class="btn_group btn_group_lg">
+							<button class="btn btn_default"><span>Large</span></button>
+							<button class="btn btn_default"><span>Size</span></button>
+							<button class="btn btn_default"><span>Buttons</span></button>
+						</div>
+
+						<h4 class="guide_tit2">BLOCK 버튼그룹</h4>
+						<div class="btn_group_block ui_row">
+							<div class="ui_col_4 ">
+								<button class="btn btn_default btn_block"><span>가로기준</span></button>
+							</div>
+							<div class="ui_col_4">
+								<button class="btn btn_default btn_block"><span>자동분할</span></button>
+							</div>
+							<div class="ui_col_4">
+								<button class="btn btn_default btn_block"><span>버튼</span></button>
+							</div>
+						</div>
+
+						<div class="btn_group_block btn_group_lg ui_row">
+							<div class="ui_col_6 ">
+								<button class="btn btn_default btn_block"><span>Large</span></button>
+							</div>
+							<div class="ui_col_6">
+								<button class="btn btn_default btn_block"><span>Size</span></button>
+							</div>
+						</div>
+						
+						<div class="btn_group_block ui_row">
+							<div class="ui_col_12">
+								<button class="btn btn_default btn_block"><span>default size</span></button>
+							</div>
+						</div>
+
+						<div class="ui_row">
+							<div class="ui_col_6" style="background: #cecece;">
+								<div class="ui_row">
+									<div class="ui_col_4">
+										<button class="btn btn_default btn_block"><span>default</span></button>
+									</div>
+									<div class="ui_col_4">
+										<button class="btn btn_default btn_block"><span>Size</span></button>
+									</div>
+									<div class="ui_col_4">
+										<button class="btn btn_default btn_block"><span>Buttons</span></button>
+									</div>
+								</div>
+							</div>
+
+							<div class="ui_col_6" style="background: #fd4802;">
+								<div class="ui_row btn_group_lg">
+									<div class="ui_col_6">
+										<button class="btn btn_block"><span>Large</span></button>
+									</div>
+									<div class="ui_col_6">
+										<button class="btn btn_block"><span>Buttons</span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+
+						<!-- EOF HEADING -->  
+					</div>
+
+					
+
+					<div class="guide_area"  id="area3">
+						<h3 class="guide_tit">아이콘타입</h3>
+						<!-- START HEADING -->
+						<h6 class="t_req">페이지 진행하면서 누적 시킬 것</h6>
+
+						<h4 class="guide_tit2">icon-only</h4>
+						<button class="btn btn-primary"><i class="glyphicon glyphicon-heart">ico</i></button>
+
+						<h4 class="guide_tit2">아이콘 좌측</h4>
+						<button class="btn btn-default"><i class="fa fa-arrow-up"></i> <span>ico_Left</span></button>
+
+						<h4 class="guide_tit2">아이콘 우측</h4>
+						<button class="btn btn-default"><span>ico_Right</span> <i class="fa fa-arrow-up"></i></button>
+
+
+						<!-- EOF HEADING -->  
+					</div>
+
+
+					<div class="guide_area"  id="area4">
+						<h3 class="guide_tit">드롭다운 타입</h3>
+						<!-- START HEADING -->
+						<h4 class="guide_tit2">기본</h4>
+						
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<div class="btn_group">
+								<!-- <div class="btn_group open"> -->
+									<a href="#none" data-toggle="dropdown" class="btn btn_dark tgl_dropdown" aria-expanded="true">Dropdown <span class="caret"></span></a>
+									<ul class="dropdown_menu" role="menu">
+										<li role="presentation" class="dropdown_header">테스트 옵션 선택</li>
+										<li><a href="#none">선택가능한옵션1</a></li>
+										<li><a href="#none">선택가능한옵션2</a></li>
+										<li><a href="#none">선택가능한옵션3</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<!-- EOF HEADING -->  
+					</div>
+
+
+					<div class="guide_area"  id="area5">
+						<h3 class="guide_tit">스위치 타입</h3>
+						<!-- START HEADING -->
+						<h4 class="guide_tit2">있나요?</h4>
+						<button class="btn btn-primary">확인 필요</button>
+						<!-- EOF HEADING -->  
+					</div>
+
+
+				</section>
+			</div>
+		</div>
+		<!-- 본문 end -->
+	</div>
+	<!-- // container -->	
+	<script type="text/javascript">
+        $(document).ready( function() {
+            $("#header").load("guide_head.html");
+        });
+	</script>
+</body>
+</html>
+
+

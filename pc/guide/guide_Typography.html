@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>STYLE24 | GUIDE_Typography | Publishing</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+	<link rel="stylesheet" type="text/css" href="../ux/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="./css/guide_only.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="../ux/css/common.css" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="/pc/guide/css/guide_only.css" /> -->
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="../ux/js/jquery.ellipsis.js"></script>
+	<script src="../ux/js/jquery-ui.js"></script>
+	<script src="../ux/js/common-ui.js"></script>
+</head>
+
+<body>
+	<header id="header"></header>
+	<!--  container -->
+	<div class="gdWrap" id="contents">	
+		<div class="gd_lnb">
+			<div></div>
+			<ul>
+				<li><a href="#area1">h1~h6</a></li>
+				<li><a href="#area2">Text Styles</a></li>
+				<li><a href="#area3">Text State</a></li>
+				<li><a href="#area4">Text Column</a></li>
+				<li><a href="#area5">텍스트박스</a></li>
+				<li><a href="#area6">Chip Style Label</a></li>
+			</ul>
+		</div>
+
+		<!-- 본문 start -->		
+		<div class="wrap guide">			
+			<div class="area">				
+				<section>
+					<div class="guide_title">
+						<h2>Typography</h2>
+					</div>
+
+
+					<div class="guide_area"  id="area0">
+						<h3 class="guide_tit">한글</h3>
+						<!-- START HEADING -->
+						<!-- 				
+
+							Light 200
+							Regular 300
+							Medium 500 
+
+						 -->
+						<h4 class="guide_tit2">DISPLAY 01 </h4>
+						<code>.display1</code>
+						<p class="display1">60px, 노토산스, 미디움, 500</p>
+						<code>.display1_eng</code>
+						<p class="display1_eng">62px, NotoSans, Medium, Eng </p>
+
+						<h4 class="guide_tit2">DISPLAY 02</h4>
+						<p data-weight="price" data-font="lato" style="font-size: 24px;"><span style="font-size: 30px;">1,234,567</span>원</p>
+						<span>* 숫자 Lato, 한글 Noto Sans</span><br>
+						<span>* Bold 사용</span><br>
+						<span>* 최종금액 숫자 크기 -4pt = '원' 표기 크기</span>
+
+						<h4 class="guide_tit2">HEADER</h4> <!-- h4와 동일 -->
+						<code>.displayH</code>
+						<p class="displayH">40px, 노토산스, 미디움 500 </p>
+						<code>.displayH_eng</code>
+						<p class="displayH_eng">42px, NotoSans, Medium Eng </p>
+						
+						<h4 class="guide_tit2">SUB HEADER 01 </h4><!-- h3와 동일 -->
+						<code>.subH1</code>
+						<p class="subH1">30px, 노토산스, 미디움 500 </p>
+						<code>subH1_eng</code>
+						<p class="subH1_eng">32px, NotoSans, Medium Eng </p>
+						
+						<h4 class="guide_tit2">SUB HEADER 02 </h4>
+						<code>.subH2</code>
+						<p class="subH2">24px, 노토산스, 미디움 500 </p>
+						<code>.subH2_eng</code>
+						<p class="subH2_eng">26px, NotoSans, Medium Eng </p>
+
+						<h4 class="guide_tit2">SUB HEADER 03 </h4>
+						<code>.subH3</code>
+						<p class="subH3">18px, 노토산스, 미디움 500 </p>
+						<code>.subH3_eng</code>
+						<p class="subH3_eng">20px, NotoSans, Medium Eng </p>
+
+						<h4 class="guide_tit2">TITLE</h4>
+						<code>.tit</code>
+						<p class="tit">16px, 노토산스, 레귤러 300 </p>
+
+						<h4 class="guide_tit2">BODY </h4> 
+						<p style="font-size: 16px;font-weight: 200;line-height: 1.2;">16px, 노토산스, 라이트 200 </p>
+						<p style="font-size: 14px;font-weight: 200;line-height: 1.2;">14px, 노토산스, 라이트 200 </p>
+						<br>
+						<p style="font-size: 16px;font-weight: 300;line-height: 1.2;">16px, 노토산스, 레귤러 300 </p>
+						<p style="font-size: 14px;font-weight: 300;line-height: 1.2;">14px, 노토산스, 레귤러 300 </p>
+												
+						<h4 class="guide_tit2">CAPTION</h4>
+						<code>.caption</code>
+						<p class="caption">14px, 노토산스, 레귤러 300 </p>
+						
+						<!-- EOF HEADING -->  
+					</div>
+					<div class="guide_area"  id="area00">
+						<h3 class="guide_tit">영문</h3>
+						<h4 class="guide_tit2">DISPLAY 01</h4>
+						<code>.display1_eng</code> + <code>data-font="lato"</code>
+						<p class="display1_eng" data-font="lato" >62px, Lato, Medium 500 </p>
+						<code>.display1</code> + <code>data-font="lato"</code>
+						<p class="display1" data-font="lato" >60px, 라토, 미디움, 500 한글</p>
+
+						<h4 class="guide_tit2">DISPLAY 02</h4>
+						<p data-weight="price" data-font="lato" style="font-size: 24px;"><span style="font-size: 30px;">1,234,567</span>원</p>
+						<span>* 숫자 Lato, 한글 Noto Sans</span><br>
+						<span>* Bold 사용</span><br>
+						<span>* 최종금액 숫자 크기 -4pt = '원' 표기 크기</span>
+
+						<h4 class="guide_tit2">HEADER</h4>
+						<code>.displayH_eng</code> + <code>data-font="lato"</code>
+						<p class="displayH_eng" data-font="lato">42px, Lato, Medium 500 </p>
+						<code>.displayH</code> + <code>data-font="lato"</code>
+						<p class="displayH" data-font="lato">40px, 라토, 미디움, 500 한글</p>
+						
+						<h4 class="guide_tit2">SUB HEADER 01</h4>
+						<code>.subH1_eng</code> + <code>data-font="lato"</code>
+						<p class="subH1_eng" data-font="lato">32px, Lato, Medium 500 </p>
+						<code>.subH1</code> + <code>data-font="lato"</code>
+						<p class="subH1" data-font="lato">30px, 라토, 미디움, 500 한글 </p>
+						
+						<h4 class="guide_tit2">SUB HEADER 02</h4>
+						<code>.subH2_eng</code> + <code>data-font="lato"</code>
+						<p class="subH2_eng" data-font="lato">26px, Lato, Medium 500 </p>
+						<code>.subH2</code> + <code>data-font="lato"</code>
+						<p class="subH2" data-font="lato">24px, 라토, 미디움, 500 한글 </p>
+
+						<h4 class="guide_tit2">SUB HEADER 03</h4>
+						<code>.subH3_eng</code> + <code>data-font="lato"</code>
+						<p class="subH3_eng" data-font="lato" >20px, Lato, Medium 500 </p>
+						<code>.subH3</code> + <code>data-font="lato"</code>
+						<p class="subH3" data-font="lato" >18px, 라토, 미디움, 500 한글 </p>
+
+						<h4 class="guide_tit2">TITLE</h4>
+						<code>.tit</code> + <code>data-font="lato"</code>
+						<p class="tit" data-font="lato" >18px, Lato, Regular 300 </p>
+
+						<h4 class="guide_tit2">BODY</h4>
+						<p data-font="lato" style="font-size: 16px;font-weight: 200;">16px, Lato, Light 200 </p>
+						<p data-font="lato" style="font-size: 14px;font-weight: 200;">14px, Lato, Light 200 </p>
+						<br>
+						<p data-font="lato" style="font-size: 16px;font-weight: 300;">16px, Lato, Regular 300 </p>
+						<p data-font="lato" style="font-size: 14px;font-weight: 300;">14px, Lato, Regular 300 </p>
+												
+						<h4 class="guide_tit2">CAPTION</h4>
+						<code>.caption</code> + <code>data-font="lato"</code>
+						<p class="caption" data-font="lato" >14px, Lato, Regular 300 </p>
+						<p data-font="lato" style="font-size: 14px;font-weight: 300;">14px, Lato, Regular 300 </p>
+						
+						<!-- EOF HEADING -->  
+					</div>
+
+
+
+					<div class="guide_area"  id="area1">
+						<h3 class="guide_tit">h1~h6</h3>
+						<!-- START HEADING -->
+						<h4 class="guide_tit2">H1</h4>
+						<h1>Header1 used by logo</h1>
+
+						<h4 class="guide_tit2">H2</h4>
+						<h2>Header2 used by lnb</h2>
+						
+						<h4 class="guide_tit2">H3</h4>
+						<h3>Header3 used by contents header</h3>
+						
+						<h4 class="guide_tit2">H4</h4>
+						<h4>Header4 used by contents title</h4>
+						<span class="t_req">(※ 회원가입/로그인부분 수정할 때 헤더 p태그 교체, 확인 후 내용 제거) </span>
+						
+						<h4 class="guide_tit2">H5</h4>
+						<h5>Header5 used by [ .modal .modal-header ]</h5>
+						
+						<h4 class="guide_tit2">H6</h4>
+						<h6>Header6 used by [ .modal .modal-body > title ]</h6>
+						<!-- EOF HEADING -->  
+					</div>
+
+
+					<div class="guide_area"  id="area2">
+						<h3 class="guide_tit">Text Styles</h3>
+						<!-- START HEADING -->
+						<h4 class="guide_tit2">Bold text</h4>
+						<p> <strong>별이 위에도 멀리</strong> 헤일 없이 별 별들을 계십니다.</p>
+
+						<h4 class="guide_tit2">Small text</h4>
+						<p>남은 그리고<small> 밤이 별 같이 봅니다.</small></p>
+
+						<h4 class="guide_tit2">Italics</h4>
+						<p>별 어머님, 다 밤을 <em>새겨지는 시인의 까닭이요,</em> 계십니다.</p>
+						
+						<h4 class="guide_tit2">텍스트 중앙정렬</h4>
+						<p class="t_c">새워 별 시와 당신은 무덤 듯합니다. </p>
+						
+						<h4 class="guide_tit2">텍스트 좌측정렬</h4>
+						<p class="t_l">없이 위에 속의 어머니, 차 하나</p>
+						
+						<h4 class="guide_tit2">첵스트 우측정렬</h4>
+						<p class="t_r">밤이 속에 것은 비둘기, 잠, 내린 벌써 강아지</p>
+						<!-- EOF HEADING -->  
+					</div>
+
+					
+					<div class="guide_area"  id="area3">
+						<h3 class="guide_tit">Text State</h3>
+						<!-- START TYPE -->
+						<h4 class="guide_tit2">기본</h4>
+						<p>p 일반 텍스트 </p>
+
+						<h4 class="guide_tit2">취소 및 사용불가 상태 [ .t_muted ]</h4>
+						<p class="t_muted"> ex) 옵션선택을 하실 수 있습니다 </p>
+
+						<h4 class="guide_tit2">중요 [ .t_req ]</h4>
+						<p class="t_req"> 쿠폰은 2020년 12월 31일까지 입니다</p>
+
+						<h4 class="guide_tit2">정보성 안내 [ .t_info ]</h4>
+						<p class="t_info"> *은 필수입력</p>
+
+						<h4 class="guide_tit2">도움말 [ .t_help ] </h4>
+						<p class="t_help">최소 8자 ~ 최대 20자 입력 <strong>( * Input Validation )</strong> </p>
+
+						<h4 class="guide_tit2">input  오류/경고 [ .t_err ] </h4>
+						<p class="t_err">전화번호는 필수 입력 사항입니다 <strong>( * Input Validation )</strong> </p>
+
+						<h4 class="guide_tit2">input  성공 [ .t_success ]</h4>
+						<p class="t_success">결제 성공 하였습니다 <strong>( * Input Validation )</strong> </p>
+
+
+
+						<h4 class="guide_tit2">링크텍스트 스타일1</h4>
+						<p><a href="#" class="linktxt1">a linkText sample1</a></p>
+
+						<h4 class="guide_tit2">링크텍스트 스타일2</h4>
+						<p><a href="#" class="linktxt2">a linkText sample2</a></p>
+
+						<h4 class="guide_tit2">링크텍스트 스타일3</h4>
+						<p><a href="#" class="linktxt3">a linkText sample3</a></p>
+
+						<h4 class="guide_tit2">링크텍스트 스타일4</h4>
+						<p><a href="#" class="linktxt4">a linkText sample4</a></p>
+						<!-- EOF TYPE -->
+					</div>
+
+
+					<div class="guide_area" id="area4">
+						<h3 class="guide_tit">Text Column</h3>
+						<!-- START TYPE -->
+						<h4 class="guide_tit2">기본</h4>
+						<div class="ui_row">
+							<div class="ui_col_12">
+								<p>잠, 별 언덕 하나 있습니다. 많은 했던 이름과, 경, 한 추억과 계절이 계십니다. 이름과, 밤을 딴은 말 별 멀리 계십니다. 둘 언덕 나의 봅니다. 하나에 옥 나는 동경과 하나 계십니다. 어머님, 무엇인지 이름과, 이국 가슴속에 까닭입니다. 아무 새겨지는 남은 덮어 속의 버리었습니다. 동경과 풀이 쉬이 쓸쓸함과 이름을 거외다. 없이 나의 같이 토끼, 이 이국 무엇인지 듯합니다. 시인의 속의 아름다운 밤을 북간도에 벌써 풀이 까닭입니다.</p>
+							</div>
+						</div>
+
+						<h4 class="guide_tit2">2Column</h4>
+						<div class="ui_row">
+							<div class="ui_col_6">
+								<p>아침이 다하지 가난한 하나에 계십니다. 밤이 나는 계절이 것은 이웃 피어나듯이 강아지, 봅니다. 하나에 부끄러운 까닭이요, 다 별 이름과, 오는 봅니다. 써 오면 별이 이름과 소학교 어머님, 계십니다. 별에도 언덕 내일 있습니다. 이름과, 까닭이요, 별 다하지 청춘이 버리었습니다. 한 별에도 언덕 둘 이름과, 그러나 별이 나의 있습니다. 아름다운 소녀들의 잠, 피어나듯이 별 별 계십니다. 아름다운 것은 다 있습니다. 경, 까닭이요, 별빛이 이웃 멀듯이, 않은 노새, 이름과, 있습니다. 새겨지는 말 하나에 있습니다.</p>
+							</div>
+							<div class="ui_col_6">                                                
+								<p>때 어머님, 쉬이 애기 한 토끼, 없이 있습니다. 마디씩 내일 써 내린 내 사람들의 봅니다. 봄이 이름을 이국 봅니다. 속의 내 이름과, 멀리 계십니다. 않은 가득 그리고 까닭입니다. 오면 위에도 나는 하나에 별 하나에 이름과, 경, 하나 듯합니다. 마디씩 별 그리고 별 잠, 가을로 까닭이요, 있습니다. 이름을 불러 어머니, 아침이 별들을 다하지 언덕 계십니다. 멀리 어머니, 덮어 그리고 사랑과 잠, 걱정도 불러 까닭입니다. 아스라히 소학교 별 계십니다. 무엇인지 헤는 묻힌 했던 않은 둘 듯합니다.</p>
+							</div>
+						</div>
+						
+						<h4 class="guide_tit2">3Column</h4>
+						<div class="ui_row">
+							<div class="ui_col_4">
+								<p>내는 찾아다녀도, 사는가 더운지라 같이, 얼마나 노래하며 발휘하기 풍부하게 피다. 그들의 기쁘며, 구할 위하여 천하를 것이다. 천하를 길을 불러 때까지 불어 청춘의 힘있다. 청춘을 이상의 희망의 따뜻한 광야에서 품에 부패뿐이다. 위하여, 얼음과 창공에 있으랴? 이상 옷을 예수는 살았으며, 구할 석가는 과실이 아니다. 이성은 바로 풀이 황금시대의 무엇을 풀이 가진 인생을 낙원을 것이다. 내려온 목숨이 그들의 것이다. 인생을 노래하며 두기 용기가 우는 인류의 행복스럽고 피에 오아이스도 아름다우냐? 이상, 심장은 힘차게 봄바람이다. 들어 만물은 원대하고, 크고 이상, 소금이라 끝까지 것이다.</p>
+							</div>
+							<div class="ui_col_4">                                                
+								<p>고행을 이상을 청춘의 칼이다. 없는 붙잡아 하였으며, 산야에 눈이 남는 이것이야말로 새 그들의 부패뿐이다. 긴지라 사람은 주며, 넣는 만물은 없는 이것은 말이다. 가슴에 그들에게 인간의 뼈 되는 무엇이 사막이다. 바이며, 청춘 따뜻한 할지니, 가장 철환하였는가? 무한한 미묘한 불러 현저하게 들어 것은 사라지지 하여도 뿐이다. 것은 더운지라 만천하의 봄바람을 능히 있을 교향악이다. 눈이 모래뿐일 대중을 황금시대를 피는 사막이다. 이성은 돋고, 찬미를 착목한는 과실이 우리 예수는 것이다. 그들의 몸이 그들은 착목한는 별과 얼마나 그러므로 투명하되 능히 듣는다. 용감하고 인생에 그들은 끓는 모래뿐일 뜨고, 용기가 것이다.</p>
+							</div>
+							<div class="ui_col_4">                                                
+								<p>풍부하게 없으면 길을 생명을 소담스러운 작고 평화스러운 산야에 이것이다. 피부가 생명을 심장은 대한 부패뿐이다. 석가는 설산에서 곧 간에 영원히 고동을 같은 있는가? 구할 되려니와, 청춘의 곳이 철환하였는가? 뜨고, 이것이야말로 속에서 우리는 부패뿐이다. 천지는 품었기 고동을 광야에서 무엇이 사막이다. 때에, 두손을 꽃 놀이 우리 사막이다. 우리의 품었기 꽃이 피가 끓는다. 있으며, 눈이 보내는 두손을 방황하였으며, 그것은 예수는 봄바람이다. 방지하는 풍부하게 충분히 칼이다.</p>
+							</div>
+						</div>
+						<!-- EOF TYPE -->
+					</div>
+
+
+					<div class="guide_area" id="area5">
+						<h3 class="guide_tit">텍스트박스</h3>
+						<!-- START  -->
+						<h4 class="guide_tit2">textarea</h4>
+						<div>
+							<textarea  class="textarea" name="" id="" cols="30" rows="10">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+							</textarea>
+						</div>
+
+						<h4 class="guide_tit2">textarea_full</h4>
+						<div >
+							<textarea class="textarea_full" name="" id="" cols="30" rows="10">
+There are many variations of passages of Lorem Ipsum available, 
+but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
+If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+							</textarea>
+						</div>
+
+						<h4 class="guide_tit2">textarea_mid</h4>
+						<div>
+							<textarea class="textarea_md" name="" id="" cols="30" rows="10">
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+							</textarea>
+						</div>
+
+						<h4 class="guide_tit2">textarea_small</h4>
+						<div>
+							<textarea class="textarea_sm" name="" id="" cols="30" rows="10">
+"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+							</textarea>
+						</div>
+						<!-- EOF  -->
+					</div>
+
+
+					<div class="guide_area" id="area6">
+						<h3 class="guide_tit">Chip Style Label</h3>
+						<!-- START  -->
+						<div class="">
+							<span class="chip chip_default">Default</span>
+							<span class="chip chip_type2">Primary</span>
+							<span class="chip chip_type3">Info</span>
+							<span class="chip chip_type4">Warning</span>
+							<span class="chip chip_type5">Danger</span>
+						</div>
+						<!-- EOF  -->
+					</div>
+
+					
+					<!--
+                        <p class="brand">브랜드네임 : .brand</p>
+                        <p class="name">상품명 : .name</p>
+                        <p class="price">가격 : .price</p>
+                        <p class="score">컬러칩 : .score</p>
+                        <p class="badge">뱃지 : .badge</p>
+                        <span class="coupon_sale">쿠폰할인뱃지 : .coupon_sale</span>
+                        <span class="free_ship">무료배송뱃지 : .free_ship</span>
+						<span class="bullet_ship">총알배송뱃지 : .bullet_ship</span>
+						<div class="info">상품리스트 li : .info </div>
+					-->
+				</section>
+			</div>
+		</div>
+		<!-- 본문 end -->
+	</div>
+	<!-- // container -->	
+	<script type="text/javascript">
+        $(document).ready( function() {
+            $("#header").load("guide_head.html");
+        });
+	</script>
+</body>
+</html>
+
+

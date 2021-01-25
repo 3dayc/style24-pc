@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>iSTYLE24 | default | Publishing</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+
+<!-- <link rel="stylesheet" type="text/css" href="css/test-common.css" /> -->
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/common-ui.js"></script>
+</head>
+
+<body>
+
+	<div class="skipComment">
+		<a href="#content">본문 바로가기</a>
+		<a href="#gnb">주메뉴 바로가기</a>
+		<a href="#footer">하단메뉴 바로가기</a>
+	</div>
+
+	<header id="header"></header>
+	<!--  container -->
+	<div id="container" class="container mb">
+		<div class="wrap">
+			<div class="content join3"> <!-- 페이지특정 클래스 = join3 -->
+				<div class="cont_head">
+					<div>
+						<h3>style24</h3>
+					</div>
+				</div>
+				<div class="cont_body">
+					<form class="form_wrap form_col_c" role="form">
+						<div>
+							<h4>회원 로그인</h4>
+						</div> 
+						<div>
+							<p>이미 가입된 아이디가 있습니다.</p>
+							<p>아래의 아이디로 로그인 하시거나 잊으신 경우 다시 찾기를 통해 이용 가능합니다.</p>
+						</div> 
+						<div>
+							<p>ID***24</p>
+						</div>
+						<div class="btn_group_block btn_group_md ui_row">
+							<div class="ui_col_6 ">
+								<button class="btn btn_dark btn_block"><span>로그인</span></button>
+							</div>
+							<div class="ui_col_6">
+								<button class="btn btn_default btn_block"><span>아이디 찾기</span></button>
+							</div>
+						</div>
+					</form>
+                </div>
+                
+                <div class="modal fade dp_coupon_pop" id="coupon_modal_01">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">이용약관</h5>
+                            </div>
+                            <div class="modal-body">
+                                <textarea name="" id="" cols="30" rows="10">dummydummydummydummydummydummydummydummydummydummydummydummydummydummydummy
+                                    dummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummy
+                                    dummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummy
+                                    dummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummy
+                                    dummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummy
+                                    dummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummy
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+			</div>
+		</div>
+    </div>
+    <style>
+        .modal {    
+			display: block;
+			position: fixed;
+			margin: 0 auto;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+    </style>
+	<!-- // container -->	
+	<footer id="footer"></footer>
+
+	<script type="text/javascript">
+	// 컨텐츠 호출
+        $(document).ready( function() {
+            $("#header").load("head.html");
+            // $("#container").load("indexx.html");
+            $("#footer").load("foot.html");
+        });
+	</script>
+	<script>
+		// header scroll
+		$(function(){
+			$(window).scroll(function(){
+				var scroll = $(this).scrollTop();
+				var headerH = $(".header").height();
+				if ($(window).scrollTop() > headerH){
+					$(".header").addClass("minify");
+					return false;
+				}
+				else {
+					$(".header").removeClass("minify");
+					return false;
+				}
+			});
+		});
+	</script>
+
+
+</body>
+</html>
+
+

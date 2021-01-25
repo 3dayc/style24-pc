@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+/* Reset */
+body,div,dl,dt,dd,ul,ol,li,p,
+h1,h2,h3,h4,h5,h6,
+form,fieldset,legend,input,label,button,textarea,select,
+table,caption,thead,tfoot,tbody,tr,th,td,
+address,img,span,em,strong,pre {margin:0; padding:0;}
+
+html,body {/*width:100%; height:100%;*/}
+html * {outline: none !important;}
+body {line-height:20px; background-color:#fff; word-break:break-all;text-rendering: optimizeLegibility;-webkit-font-smoothing: antialiased;}
+::selection {background-color:#efe7e5;}
+.blocker::-webkit-scrollbar{display:none;}
+br{visibility: hidden;font-family: sans-serif; height:0px;}
+body,input,textarea,select,button {font-size:14px; font-family:'Noto Sans CJK kr','Noto Sans kr', 'LATO', sans-serif; color:#222222; letter-spacing:0em; *letter-spacing:0px}
+h1,h2,h3,h4,h5,h6 {font-family:'Noto Sans CJK kr','Noto Sans kr', 'LATO', sans-serif; color:#666666; letter-spacing:0px;}
+table {border-collapse:collapse; border-spacing:0; width:100%;}
+
+/* legend {*width:0;} */
+legend,hr,caption {visibility:hidden; overflow:hidden; width:0; height:0; font-size:0; line-height:0;}
+legend,hr {overflow: hidden; position:absolute; top:0; left:0;}
+
+img,fieldset,iframe {border:0 none;}
+select {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    cursor: default;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    border-radius: 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+select:not(:-internal-list-box) {overflow: visible !important;}
+ul,ol,li {list-style: none;}
+i,em,address {font-style: normal;}
+hr{display:none;}
+img {vertical-align:top}
+
+a {color:#666666; text-decoration:none; vertical-align:top;}
+a:link,a:visited {/* color:#333;  */text-decoration:none;}
+a:hover {text-decoration:none;}
+a:active {text-decoration:none;}
+
+/* form style */
+label { vertical-align: middle;} /*cursor:pointer;*/
+button {background-color:transparent; cursor:pointer; border:0;}
+
+.show{display:block}
+.hide{display:none}
+.blind,
+.ico > em {position:absolute; top:-5000px; width:1px; height:1px; font-size:0; line-height:0; overflow:hidden;}
+.ellipsis {text-overflow:ellipsis; white-space:nowrap; overflow:hidden; display:inline-block;}
+
+div.skipComment{position:absolute; top:0; display:block; font-size:12px; width:100%; height:0; line-height:1em; overflow:visible; visibility: visible; z-index:2000; }
+div.skipComment a{position:absolute; top:-9999px; display:block; width:100%; padding:10px 0; font-weight:bold; text-align:center; background-color:#f5f5f5;}
+div.skipComment a:hover, div.skipComment a:active, div.skipComment a:focus{position:absolute; top:0; left:0; color:#666666; }
+
+

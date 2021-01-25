@@ -1,0 +1,246 @@
+
+@font-face {
+    font-family: 'Noto Sans CJK kr';
+    src: 
+    url("../fonts/NotoSansCJKkr-Thin.otf") format('otf'),
+    url("../fonts/NotoSansCJKkr-Thin.woff") format('woff'),
+    url("../fonts/NotoSansCJKkr-Thin.ttf") format('ttf');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans CJK kr';
+    src: 
+    url("../fonts/NotoSansCJKkr-Light.otf") format('otf'),
+    url("../fonts/NotoSansCJKkr-Light.woff") format('woff'),
+    url("../fonts/NotoSansCJKkr-Light.ttf") format('ttf');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans CJK kr';
+    src: 
+    url("../fonts/NotoSansCJKkr-Regular.otf") format('otf'),
+    url("../fonts/NotoSansCJKkr-Regular.woff") format('woff'),
+    url("../fonts/NotoSansCJKkr-Regular.ttf") format('ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans CJK kr';
+    src: 
+    url("../fonts/NotoSansCJKkr-DemiLight.otf") format('otf'),
+    url("../fonts/NotoSansCJKkr-DemiLight.woff") format('woff'),
+    url("../fonts/NotoSansCJKkr-DemiLight.ttf") format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans CJK kr';
+    src: 
+    url("../fonts/NotoSansCJKkr-Medium.otf") format('otf'),
+    url("../fonts/NotoSansCJKkr-Medium.woff") format('woff'),
+    url("../fonts/NotoSansCJKkr-Medium.ttf") format('ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans CJK kr';
+    src: 
+    url("../fonts/NotoSansCJKkr-Bold.otf") format('otf'),
+    url("../fonts/NotoSansCJKkr-Bold.woff") format('woff'),
+    url("../fonts/NotoSansCJKkr-Bold.ttf") format('ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans CJK kr';
+    src: 
+    url("../fonts/NotoSansCJKkr-Black.otf") format('otf'),
+    url("../fonts/NotoSansCJKkr-Black.woff") format('woff'),
+    url("../fonts/NotoSansCJKkr-Black.ttf") format('ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+    src: url("../fonts/NotoSansKR-Thin.otf") format('opentype');
+  }
+  @font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 200;
+    src: url("../fonts/NotoSansKR-Light.otf") format('opentype');
+  }
+  @font-face {
+     font-family: 'Noto Sans KR';
+     font-style: normal;
+     font-weight: 300;
+     src: url("../fonts/NotoSansKR-Regular.otf") format('opentype');
+   }
+  @font-face {
+     font-family: 'Noto Sans KR';
+     font-style: normal;
+     font-weight: 500;
+     src: url("../fonts/NotoSansKR-Medium.otf") format('opentype');
+   }
+  @font-face {
+     font-family: 'Noto Sans KR';
+     font-style: normal;
+     font-weight: 600;
+     src:  url("../fonts/NotoSansKR-Bold.otf") format('opentype');
+   }
+  @font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/NotoSansKR-Black.otf") format('opentype');
+  } 
+ 
+/* lato */
+@font-face {
+    font-family: 'LATO';
+    src: 
+    url("../fonts/Lato-Light.eot") format('eot'),
+    url("../fonts/Lato-Light.woff") format('woff'),
+    url("../fonts/Lato-Light.ttf") format('ttf');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LATO';
+    src: 
+    url("../fonts/Lato-Regular.eot") format('eot'),
+    url("../fonts/Lato-Regular.woff") format('woff'),
+    url("../fonts/Lato-Regular.ttf") format('ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LATO';
+    src: 
+    url("../fonts/Lato-Medium.eot") format('eot'),
+    url("../fonts/Lato-Medium.woff") format('woff'),
+    url("../fonts/Lato-Medium.ttf") format('ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LATO';
+    src: 
+    url("../fonts/Lato-Semibold.eot") format('eot'),
+    url("../fonts/Lato-Semibold.woff") format('woff'),
+    url("../fonts/Lato-Semibold.ttf") format('ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Unicode, Number */
+/* 
+전체 : U+0020-007E
+특수문자 : U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E
+영문 : U+0041-005A(대문자), U+0061-007A(소문자)
+숫자 : U+0030-0039
+*/
+
+/* 전체 : U+0020-007E */
+@font-face {
+    font-family: 'Noto Sans CJK kr';
+    font-style: normal;
+    src: 
+    url("../fonts/Lato-Regular.eot") format('eot'),
+    url("../fonts/Lato-Regular.woff") format('woff'),
+    url("../fonts/Lato-Regular.ttf") format('ttf');
+    unicode-range: U+0020-007E;
+}
+@font-face {
+    font-family: 'Noto Sans kr';
+    font-style: normal;
+    src: 
+    url("../fonts/Lato-Regular.eot") format('eot'),
+    url("../fonts/Lato-Regular.woff") format('woff'),
+    url("../fonts/Lato-Regular.ttf") format('ttf');
+    unicode-range: U+0020-007E;
+}
+
+/* 특수문자 : U+0020-002F */
+@font-face {
+    font-family: 'Noto Sans CJK kr';
+    font-style: normal;
+    src: 
+    url("../fonts/Lato-Regular.eot") format('eot'),
+    url("../fonts/Lato-Regular.woff") format('woff'),
+    url("../fonts/Lato-Regular.ttf") format('ttf');
+    unicode-range: U+0020-002F;
+}
+@font-face {
+    font-family: 'Noto Sans kr';
+    font-style: normal;
+    src: 
+    url("../fonts/Lato-Regular.eot") format('eot'),
+    url("../fonts/Lato-Regular.woff") format('woff'),
+    url("../fonts/Lato-Regular.ttf") format('ttf');
+    unicode-range: U+0020-002F;
+}
+
+/* 영문 : U+0041-005A(대문자) */
+@font-face {
+    font-family: 'Noto Sans CJK kr';
+    font-style: normal;
+    src: 
+    url("../fonts/Lato-Regular.eot") format('eot'),
+    url("../fonts/Lato-Regular.woff") format('woff'),
+    url("../fonts/Lato-Regular.ttf") format('ttf');
+    unicode-range: U+0041-005A;
+}
+@font-face {
+    font-family: 'Noto Sans kr';
+    font-style: normal;
+    src: 
+    url("../fonts/Lato-Regular.eot") format('eot'),
+    url("../fonts/Lato-Regular.woff") format('woff'),
+    url("../fonts/Lato-Regular.ttf") format('ttf');
+    unicode-range: U+0041-005A;
+}
+
+/* U+0061-007A(소문자) */
+@font-face {
+    font-family: 'Noto Sans CJK kr';
+    font-style: normal;
+    src: 
+    url("../fonts/Lato-Regular.eot") format('eot'),
+    url("../fonts/Lato-Regular.woff") format('woff'),
+    url("../fonts/Lato-Regular.ttf") format('ttf');
+    unicode-range: U+0061-007A;
+}
+@font-face {
+    font-family: 'Noto Sans kr';
+    font-style: normal;
+    src: 
+    url("../fonts/Lato-Regular.eot") format('eot'),
+    url("../fonts/Lato-Regular.woff") format('woff'),
+    url("../fonts/Lato-Regular.ttf") format('ttf');
+    unicode-range: U+0061-007A;
+}
+
+/* 숫자 : U+0030-0039 */
+@font-face {
+    font-family: 'Noto Sans CJK kr';
+    font-style: normal;
+    src: 
+    url("../fonts/Lato-Regular.eot") format('eot'),
+    url("../fonts/Lato-Regular.woff") format('woff'),
+    url("../fonts/Lato-Regular.ttf") format('ttf');
+    unicode-range: U+0030-0039;
+}
+@font-face {
+    font-family: 'Noto Sans kr';
+    font-style: normal;
+    src: 
+    url("../fonts/Lato-Regular.eot") format('eot'),
+    url("../fonts/Lato-Regular.woff") format('woff'),
+    url("../fonts/Lato-Regular.ttf") format('ttf');
+    unicode-range: U+0030-0039;
+}

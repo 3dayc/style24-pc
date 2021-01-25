@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>STYLE24 | default | Publishing</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+
+<!-- <link rel="stylesheet" type="text/css" href="css/test-common.css" /> -->
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/common-ui.js"></script>
+</head>
+
+<body>
+
+	<div class="skipComment">
+		<a href="#content">본문 바로가기</a>
+		<a href="#gnb">주메뉴 바로가기</a>
+		<a href="#footer">하단메뉴 바로가기</a>
+	</div>
+
+	<header id="header"></header>
+	<!--  container -->
+	<div id="container" class="container mb">
+		<div class="wrap">
+			<div class="content security_pw"> <!-- 페이지특정 클래스 = security_pw -->
+				<div class="cont_head">
+                    <div>
+                        <h3>style24</h3>
+                    </div>
+				</div>
+				<div class="cont_body">
+                    <form class="form_wrap form_col_c form_full" role="form">
+						<div class="form_head">
+							<h4>아이디&#47;비밀번호 찾기</h4>
+						</div> 
+                        <div class="form_info">
+                            <span class="ico_content_security"></span>
+                            <!-- <p>비밀번호를 다시 설정 해주세요.</p> -->
+                            <p>안전을 위해 비밀번호를 변경하신 후 이용이 가능합니다.</p>
+                        </div>
+                        <div class="form_field mt40">
+                            <label class="input_label sr-only">신규 비밀번호</label>
+                            <div class="ui_col_12">
+                                <input type="password" name="userPassword" placeholder="새 비밀번호 8자 ~ 20자 입력" id="txtPassword">
+                                <!-- case (비밀번호 틀렸을경우,사용가능한 비밀번호일경우) -->
+                                <div class="help_block">
+                                    <!-- 아닐경우 -->
+                                    <p class="t_err">영문(대/소문자)/숫자/특수문자 중 2가지 이상 조합(8~20자)</p>
+                                    <p class="t_info">- 4개이상 연속되거나 동일한 문자/숫자 제외</p>
+                                    <p>- 아이디 제외</p>
+                                    <!-- //아닐경우 -->
+                                    <!-- 맞을경우 -->
+                                    <p class="t_help">사용 가능한 비밀번호입니다</p>
+                                    <!-- //맞을경우 -->
+                                </div>
+                                <!-- //case (비밀번호 틀렸을경우,사용가능한 비밀번호일경우) -->
+                            </div>
+                        </div>
+                        <div class="form_field">
+                            <label class="input_label sr-only">비밀번호 확인</label>
+                            <div class="ui_col_12">
+                                <input type="password" name="userConfirm" placeholder="비밀번호 확인" id="txtConfirm">
+                                <!-- case (비밀번호확인 틀렸을경우,비밀번호 일치할경우) -->
+                                <div class="help_block">
+                                    <!-- 아닐경우 -->
+                                    <p class="t_err">새 비밀번호가 일치하지 않습니다.</p>
+                                    <!-- //아닐경우 -->
+                                    <!-- 맞을경우 -->
+                                    <p class="t_help">새 비밀번호가 일치합니다.</p>
+                                    <!-- //맞을경우 -->
+                                </div>
+                                <!-- //case (비밀번호확인 틀렸을경우,비밀번호 일치할경우) -->
+                            </div>
+                        </div>
+                        <div class="btn_group_block btn_group_md ui_row">
+                            <div class="ui_col_12">
+                                <button class="btn btn_dark btn_block"><span>변경 후 다시 로그인</span></button>
+                            </div>
+                        </div>
+                    </form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->	
+	<footer id="footer"></footer>
+
+	<script type="text/javascript">
+	// 컨텐츠 호출
+        $(document).ready( function() {
+            $("#header").load("head.html");
+            // $("#container").load("indexx.html");
+            $("#footer").load("foot.html");
+        });
+	</script>
+	<script>
+		// header scroll
+		$(function(){
+			$(window).scroll(function(){
+				var scroll = $(this).scrollTop();
+				var headerH = $(".header").height();
+				if ($(window).scrollTop() > headerH){
+					$(".header").addClass("minify");
+					return false;
+				}
+				else {
+					$(".header").removeClass("minify");
+					return false;
+				}
+			});
+		});
+    </script>
+
+</body>
+</html>
+
+

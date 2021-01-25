@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>STYLE24 | default | Publishing</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+
+<!-- <link rel="stylesheet" type="text/css" href="css/test-common.css" /> -->
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="js/jquery.ellipsis.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/common-ui.js"></script>
+</head>
+
+<body>
+
+	<div class="skipComment">
+		<a href="#content">본문 바로가기</a>
+		<a href="#gnb">주메뉴 바로가기</a>
+		<a href="#footer">하단메뉴 바로가기</a>
+	</div>
+
+	<header id="header"></header>
+	<style>
+		.container {background:#333;color: #fff;padding: 100px 0;}
+		.container .breadcrumb{background: #11c06e; color: #fff;}
+		.container .wrap{background: #cacaca;padding: 30px 0;height: 100%;margin-bottom:50px;}
+		.container .wrap:last-child{margin-bottom:0px;}
+		.container .wrap .content{background:#f0e914; padding: 30px 0 !important;}
+		.container .wrap .content.wide{background:#f0145b; padding: 30px 0 !important;}
+		.container .wrap .content .cont_head{background:#0b596b; padding: 30px 0;}
+		.container .wrap .content .cont_body{background:#399fb7; padding: 30px 0;}
+		.container .wrap .content .cont_body section{background:#acacac; padding: 30px 0;}
+		.container .wrap .content .cont_body section .sec_head{background:#999999; padding: 30px 0;text-align: center;}
+		.container .wrap .content .cont_body section .sec_body{background:#6e6e6e; padding: 30px 0;text-align: center;}
+		.container .wrap .content .cont_body section .sec_foot{background: #999999; padding: 30px 0;text-align: center;}
+		.container .wrap .content .cont_foot{background:#0b596b; padding: 30px 0;}
+	</style>
+	<!--  container -->
+	<div id="container" class="container">
+		<div class="breadcrumb"> (breadcrumb) </div>
+		<div class="wrap">
+			<div class="content">
+				<div class="cont_head" style="display: none;">
+					CONT-HEAD
+					<style>
+						.tit {text-align: center;}
+						.my_tit{margin: 0 auto;text-align: center;padding-left: 50px;}
+						/* height 잡기 */
+						.my_lnb  {float: left;width: 25%;}
+						.my_lnb::after  {content: ''; display: block; clear: both;}
+						.my_lnb .lnb_tit {font-size: 20px;}
+						.my_lnb .lnb_list {font-size: 15px;}
+						.my_cont  {float: left;width: 75%;}
+					</style>
+					<div class="tit">my_center</div>
+					<div class="tit my_tit">my_tit</div>
+				</div>
+				<div class="cont_body">
+					<!-- CONT-BODY -->
+					<div class="my_lnb" style="height: 100%; background: lightcoral;">
+						<div class="lnb_tit">
+							마이 페이지 (배송조회)
+						</div>
+						<div class="lnb_list">
+							<ul>
+								<li><a href="" class="on">주문확인/배송조회</a></li>
+								<li><a href="">취소/반품/환불내역</a></li>
+								<li><a href="">재입고 알림 내역</a></li>
+								<li><a href="">리뷰</a></li>
+								<li><a href="">배송지 관리</a></li>
+								<li><a href="">위시리스트</a></li>
+								<li><a href="">내정보 관리</a></li>
+								<li><a href="">회원 탈퇴</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="my_cont" style="height: 100%; background-color: lightgreen;">
+						<section>
+							<div class="sec_head">
+								<div class="mem_name">
+									<p><span>홍길동</span>님</p>
+								</div>
+								<div class="mem_rank">
+									<div class="rank_icon vip">V</div>
+									<div class="rank_txt">
+										<a href="">등급혜택 보기</a>
+										<a href="">등급쿠폰 다운</a>
+									</div>
+								</div>
+								<div class="mem_coupon">
+									<span class="coupon_txt01">123장</span>/<span class="coupon_txt02">456장</span>
+								</div>
+								<div class="point_coun">
+									<p>STYLE24 포인트</p>
+									<a href=""><span>123,456</span>p</a>
+								</div>
+								<div class="gift_count">
+									<p>상품권</p>
+									<a href=""><span>123,456</span>원</a>
+								</div>
+							</div>
+							<div class="sec_body">
+								<div class="order_tit">
+									<div class="order_num">
+										주문상세/주문번호 : <span>ABCD1234566778</span>
+									</div>
+									<a href="" class="del_btn">주문내역삭제</a>
+								</div>
+								<div class="order_list">
+									<!-- 1개주문 -->
+									<div class="order_row">
+										<div class="order_left">
+											<div class="top">
+												<span class="start_t">주문일</span>
+												<!-- 선물일 -->
+												<!-- <span class="gift_t">선물일</span> -->
+												<span class="order_date">2020.10.25</span>
+												<a href="" class="detail_btn">주문상세보기</a>
+											</div>
+											<div class="order_list_con">
+												<div class="order_box">
+													<div class="thumb"><img src="" alt=""></div>
+													<div class="product">
+														<p class="brand">브랜드</p>
+														<p class="pr_name">남성 라그란 소매배색 싸이로 티셔츠 / F67M-TS927A</p>
+														<p class="option"><span>옵션</span>WH/105</p>
+													</div>
+													<div class="pr_count">수량 1개</div>
+													<div class="price">
+														<p class="pr_t"><span>4,900</span>원</p>
+														<p class="point_t"><span>149</span>P</p>
+													</div>
+												</div>
+												<div class="confirm_btn">
+													<a href="" class="case01">구매확정 (<span>YYYY.MM.DD HH:MM:SS</span>)</a>
+													<!-- <a href="" class="case02">구매확정 하기 >> (<span>X</span>일 후 자동으로 구매확정)</a> 구매확정 대기-->
+													<!-- <a href="" class="case03">주소입력 대기 : 남은일자 <span>3</span>일 (<span>YYYY.MM.DD HH:MM:SS</span>까지)</a>  주소입력 대기-->
+												</div>
+											</div>
+										</div>
+										<div class="order_right">
+											<div class="txt case01">
+												<p class="staus">배송 중</p>
+												<p class="s_desc">10/26일 도착 예정</p>
+												<ul>
+													<li><a href="">교환</a></li>
+													<li><a href="">반품/취소</a></li>
+													<li><a href="">리뷰 작성</a></li>
+												</ul>
+											</div>
+											<!-- <div class="txt case02">
+												<p class="staus">상태값 출력</p>
+												<a href="">sms<br />전송</a>
+											</div> sms 전송-->
+										</div>
+									</div>
+									<!-- //1개주문 -->
+									<!-- n개 주문 -->
+									<div class="order_row">
+										<div class="order_left">
+											<div class="top">
+												<span class="start_t">주문일</span>
+												<!-- <span class="gift_t">선물일</span> 선물일-->
+												<span class="order_date">2020.10.25</span>
+												<span class="deli_txt del01">업체직배송</span>
+												<!-- <span class="deli_txt del02">총알 배송</span> 총알배송-->
+												<a href="" class="detail_btn">주문 전체 취소 >></a>
+											</div>
+											<div class="order_list_con">
+												<div class="order_box">
+													<div class="thumb"><img src="" alt=""></div>
+													<div class="product">
+														<p class="brand">브랜드</p>
+														<p class="pr_name">남성 라그란 소매배색 싸이로 티셔츠 / F67M-TS927A</p>
+														<p class="option"><span>옵션</span>WH/105</p>
+													</div>
+													<div class="pr_count">수량 1개</div>
+													<div class="price">
+														<p class="pr_t"><span>4,900</span>원</p>
+														<p class="point_t"><span>149</span>P</p>
+													</div>
+												</div>
+												<div class="order_box">
+													<div class="thumb"><img src="" alt=""></div>
+													<div class="product">
+														<p class="brand">브랜드</p>
+														<p class="pr_name">남성 라그란 소매배색 싸이로 티셔츠 / F67M-TS927A</p>
+														<p class="option"><span>옵션</span>WH/105</p>
+													</div>
+													<div class="pr_count">수량 1개</div>
+													<div class="price">
+														<p class="pr_t"><span>4,900</span>원</p>
+														<p class="point_t"><span>149</span>P</p>
+													</div>
+												</div>
+												<div class="confirm_btn">
+													<a href="" class="case01">구매확정 (<span>YYYY.MM.DD HH:MM:SS</span>)</a>
+													<!-- <a href="" class="case02">구매확정 하기 >> (<span>X</span>일 후 자동으로 구매확정)</a> 구매확정 대기-->
+													<!-- <a href="" class="case03">주소입력 대기 : 남은일자 <span>3</span>일 (<span>YYYY.MM.DD HH:MM:SS</span>까지)</a>  주소입력 대기-->
+												</div>
+											</div>
+										</div>
+										<div class="order_right">
+											<div class="txt case01">
+												<p class="staus">배송 중</p>
+												<p class="s_desc">10/26일 도착 예정</p>
+												<ul>
+													<li><a href="">교환</a></li>
+													<li><a href="">반품/취소</a></li>
+													<li><a href="">리뷰 작성</a></li>
+												</ul>
+											</div>
+											<!-- <div class="txt case02">
+												<p class="staus">상태값 출력</p>
+												<a href="">sms<br />전송</a>
+											</div> sms 전송-->
+										</div>
+									</div>
+									<!-- //n개 주문 -->
+								</div>
+								<div class="od_del_info">
+									<h3>배송정보</h3>
+									<div class="od_del_table01">
+										<table>
+											<caption>보내는 사람 배송정보 표</caption>
+											<tr>
+												<th scope="row">보내는 사람</th>
+												<td>
+													<span>성춘향</span> / <span>010-1234-5678</span>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">제품정보</th>
+												<td>[브랜드] 남성 라그란 소매배색 싸이로 티셔츠</td>
+											</tr>
+											<tr>
+												<th scope="row">송장번호</th>
+												<td>611892401033</td>
+											</tr>
+											<tr>
+												<th scope="row">배송주소</th>
+												<td>경기도 시흥시 서울대학2로, 1120동 2204호</td>
+											</tr>
+										</table>
+									</div>
+									<div class="od_del_table02">
+										<caption>배송현황 표</caption>
+										<table>
+											<thead>
+												<tr>
+													<th scope="col">시간</th>
+													<th scope="col">장소</th>
+													<th scope="col">유형</th>
+													<th scope="col">전화번호</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>YYYY.MM.DD HH:MM:SS</td>
+													<td>시흥대리점</td>
+													<td>배달완료</td>
+													<td>010-1234-5678</td>
+												</tr>
+												<tr>
+													<td>YYYY.MM.DD HH:MM:SS</td>
+													<td>시흥대리점</td>
+													<td>배달완료</td>
+													<td>010-1234-5678</td>
+												</tr>
+												<tr>
+													<td>YYYY.MM.DD HH:MM:SS</td>
+													<td>시흥대리점</td>
+													<td>배달완료</td>
+													<td>010-1234-5678</td>
+												</tr>
+												<tr>
+													<td>YYYY.MM.DD HH:MM:SS</td>
+													<td>시흥대리점</td>
+													<td>배달완료</td>
+													<td>010-1234-5678</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="sec_foot">
+								<div class="paing">페이징부분</div>
+							</div>
+						</section>
+					</div>
+					<!-- // CONT-BODY -->					
+				</div>
+				<div class="cont_foot">
+					CONT-FOOT
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->	
+	<footer id="footer"></footer>
+
+	<script type="text/javascript">
+	// 컨텐츠 호출
+        $(document).ready( function() {
+            $("#header").load("head.html");
+            // $("#container").load("indexx.html");
+            $("#footer").load("foot.html");
+        });
+	</script>
+	<script>
+		// header scroll
+		$(function(){
+			$(window).scroll(function(){
+				var scroll = $(this).scrollTop();
+				var headerH = $(".header").height();
+				if ($(window).scrollTop() > headerH){
+					$(".header").addClass("minify");
+					return false;
+				}
+				else {
+					$(".header").removeClass("minify");
+					return false;
+				}
+			});
+		});
+	</script>
+
+
+</body>
+</html>
+
+

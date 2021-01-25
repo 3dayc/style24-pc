@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>iSTYLE24 | default | Publishing</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+
+<!-- <link rel="stylesheet" type="text/css" href="css/test-common.css" /> -->
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/common-ui.js"></script>
+</head>
+
+<body>
+
+	<div class="skipComment">
+		<a href="#content">본문 바로가기</a>
+		<a href="#gnb">주메뉴 바로가기</a>
+		<a href="#footer">하단메뉴 바로가기</a>
+	</div>
+
+	<header id="header"></header>
+	<!--  container -->
+	<div id="container" class="container dp">
+		<div class="breadcrumb"> 
+			<ul>
+				<li class="bread_home"><a href="index.html">홈</a></li>
+				<li class="bread_2depth">기획전</li>
+			</ul> 
+		</div>
+		<div class="wrap">
+			<div class="content dp_Exhibition"> <!-- 페이지특정 클래스 = dp_hotdeal -->
+				<div class="cont_head">
+					<div>
+                        <h3>기획전</h3>
+                    </div>
+				</div>
+				<div class="cont_body">
+                    <div class="best_nav">
+                        <ul>
+                            <li><button>전체</button></li>
+                            <li><button>여성</button></li>
+                            <li><button>남성</button></li>
+                            <li><button>유아동</button></li>
+                            <li><button>골프</button></li>
+                            <li><button>라이프</button></li>
+                        </ul>
+                    </div>
+                    <div class="ui_row">
+                        <div class="ui_col_12">
+                            <div class="form_count">
+                                <p><span>9999</span>개의 기획전</p>
+                            </div>
+                            <div class="btn_group">
+                            <!-- <div class="btn_group open"> -->
+                                <a href="#none" data-toggle="dropdown" class="btn btn_default tgl_dropdown" aria-expanded="true">브랜드 선택<span class="caret"></span></a>
+                                <div class="dropdown_menu">
+                                    <ul>
+                                        <li>
+                                            <label class="brand_btn" onclick="filterSel();">
+                                                <input type="checkbox" group="filterValue" id="chkFilterBrand01" data-name="chkFilterBrand01" name="filterBrandCds" value=""><span>모이몰른</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="brand_btn" onclick="filterSel();">
+                                                <input type="checkbox" group="filterValue" id="chkFilterBrand01" data-name="chkFilterBrand01" name="filterBrandCds" value=""><span>밀크마일</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="brand_btn" onclick="filterSel();">
+                                                <input type="checkbox" group="filterValue" id="chkFilterBrand01" data-name="chkFilterBrand01" name="filterBrandCds" value=""><span>몰리멜리</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="brand_btn" onclick="filterSel();">
+                                                <input type="checkbox" group="filterValue" id="chkFilterBrand01" data-name="chkFilterBrand01" name="filterBrandCds" value=""><span>컬리수</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="brand_btn" onclick="filterSel();">
+                                                <input type="checkbox" group="filterValue" id="chkFilterBrand01" data-name="chkFilterBrand01" name="filterBrandCds" value=""><span>ANDEW</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="brand_btn" onclick="filterSel();">
+                                                <input type="checkbox" group="filterValue" id="chkFilterBrand01" data-name="chkFilterBrand01" name="filterBrandCds" value=""><span>ab.plus</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="brand_btn" onclick="filterSel();">
+                                                <input type="checkbox" group="filterValue" id="chkFilterBrand01" data-name="chkFilterBrand01" name="filterBrandCds" value=""><span>NBA</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="brand_btn" onclick="filterSel();">
+                                                <input type="checkbox" group="filterValue" id="chkFilterBrand01" data-name="chkFilterBrand01" name="filterBrandCds" value=""><span>nba Kid's</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="brand_btn" onclick="filterSel();">
+                                                <input type="checkbox" group="filterValue" id="chkFilterBrand01" data-name="chkFilterBrand01" name="filterBrandCds" value=""><span>milkmile</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="brand_btn" onclick="filterSel();">
+                                                <input type="checkbox" group="filterValue" id="chkFilterBrand01" data-name="chkFilterBrand01" name="filterBrandCds" value=""><span>버커루</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="brand_btn" onclick="filterSel();">
+                                                <input type="checkbox" group="filterValue" id="chkFilterBrand01" data-name="chkFilterBrand01" name="filterBrandCds" value=""><span>올리비에스클로젯</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="brand_btn" onclick="filterSel();">
+                                                <input type="checkbox" group="filterValue" id="chkFilterBrand01" data-name="chkFilterBrand01" name="filterBrandCds" value=""><span>지오지아</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="brand_btn" onclick="filterSel();">
+                                                <input type="checkbox" group="filterValue" id="chkFilterBrand01" data-name="chkFilterBrand01" name="filterBrandCds" value=""><span>BUCKAROO</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="brand_btn" onclick="filterSel();">
+                                                <input type="checkbox" group="filterValue" id="chkFilterBrand01" data-name="chkFilterBrand01" name="filterBrandCds" value=""><span>FRJ</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="brand_btn" onclick="filterSel();">
+                                                <input type="checkbox" group="filterValue" id="chkFilterBrand01" data-name="chkFilterBrand01" name="filterBrandCds" value=""><span>LPGA</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="brand_btn" onclick="filterSel();">
+                                                <input type="checkbox" group="filterValue" id="chkFilterBrand01" data-name="chkFilterBrand01" name="filterBrandCds" value=""><span>sellys</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="brand_btn" onclick="filterSel();">
+                                                <input type="checkbox" group="filterValue" id="chkFilterBrand01" data-name="chkFilterBrand01" name="filterBrandCds" value=""><span>Olivier's CLOSET</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="brand_btn" onclick="filterSel();">
+                                                <input type="checkbox" group="filterValue" id="chkFilterBrand01" data-name="chkFilterBrand01" name="filterBrandCds" value=""><span>TRUZEN</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <div class="ui_row">
+                                        <button type="button" class="fillter_reset"><span>초기화</span></button>
+                                        <button type="button" class="fillter_apply"><span>적용</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list_content"> <!-- 데이터 없을시 클래스 nodata 추가 -->
+                        <div class="list_defult">
+                            <div>
+                                <p>등록된 기획전이 없습니다.</p>
+                            </div>
+                            <div class="ui_row">
+                                <button type="button" class="btn btn_default btn_md"><span>메인으로 가기</span></button>
+                            </div>
+                        </div>
+                        <div class="itemsGrp"> <!-- itemsGrp rank hot deal -->
+                            <div class=" item_prod"> <!-- item_prod ranker d_detail -->
+                                <div class="item_state"> <!-- item_state AD soldout -->
+                                    <a href="#none" class="itemLink">
+                                        <div class=" itemPic">
+                                            <img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod1.jpg">
+                                            <button type="button" class="itemLike active">관심상품 추가</button>
+                                        </div>
+                                        <p class="itemBrand">BRAND NAME</p>
+
+                                        <div class=" itemName">남성 헤링본 기모 팬츠 헤링본 기모 팬츠</div>
+                                        <p class="itemPrice">488,000<!-- -->원</p>
+                                        <p class="itemBadge">
+                                            <span class="badge13">베스트 </span>
+                                        </p>
+                                        <div class="itemcolorchip">
+                                            <span class="chip_color35" value="ABM">BEIGE</span>
+                                            <span class="chip_color54" value="BDS">BLACK</span>
+                                            <span class="chip_color40" value="YBR">WHITE</span>
+                                        </div>
+                                        <div class="itemComment">#주문 폭주 상품</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class=" item_prod">
+                                <div class="item_state">
+                                    <a href="#none" class="itemLink">
+                                        <div class=" itemPic">
+                                            <img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod1.jpg">
+                                            <button type="button" class="itemLike active">관심상품 추가</button>
+                                        </div>
+                                        <p class="itemBrand">BRAND NAME</p>
+
+                                        <div class=" itemName">남성 헤링본 기모 팬츠 헤링본 기모 팬츠</div>
+                                        <p class="itemPrice">488,000<!-- -->원</p>
+                                        <p class="itemBadge">
+                                            <span class="badge13">베스트 </span>
+                                        </p>
+                                        <div class="itemcolorchip">
+                                            <span class="chip_color35" value="ABM">BEIGE</span>
+                                            <span class="chip_color54" value="BDS">BLACK</span>
+                                            <span class="chip_color40" value="YBR">WHITE</span>
+                                        </div>
+                                        <div class="itemComment">#주문 폭주 상품</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class=" item_prod">
+                                <div class="item_state">
+                                    <a href="#none" class="itemLink">
+                                        <div class=" itemPic">
+                                            <img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod1.jpg">
+                                            <button type="button" class="itemLike active">관심상품 추가</button>
+                                        </div>
+                                        <p class="itemBrand">BRAND NAME</p>
+
+                                        <div class=" itemName">남성 헤링본 기모 팬츠 헤링본 기모 팬츠</div>
+                                        <p class="itemPrice">488,000<!-- -->원</p>
+                                        <p class="itemBadge">
+                                            <span class="badge13">베스트 </span>
+                                        </p>
+                                        <div class="itemcolorchip">
+                                            <span class="chip_color35" value="ABM">BEIGE</span>
+                                            <span class="chip_color54" value="BDS">BLACK</span>
+                                            <span class="chip_color40" value="YBR">WHITE</span>
+                                        </div>
+                                        <div class="itemComment">#주문 폭주 상품</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class=" item_prod">
+                                <div class="item_state">
+                                    <a href="#none" class="itemLink">
+                                        <div class=" itemPic">
+                                            <img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod1.jpg">
+                                            <button type="button" class="itemLike active">관심상품 추가</button>
+                                        </div>
+                                        <p class="itemBrand">BRAND NAME</p>
+
+                                        <div class=" itemName">남성 헤링본 기모 팬츠 헤링본 기모 팬츠</div>
+                                        <p class="itemPrice">488,000<!-- -->원</p>
+                                        <p class="itemBadge">
+                                            <span class="badge13">베스트 </span>
+                                        </p>
+                                        <div class="itemcolorchip">
+                                            <span class="chip_color35" value="ABM">BEIGE</span>
+                                            <span class="chip_color54" value="BDS">BLACK</span>
+                                            <span class="chip_color40" value="YBR">WHITE</span>
+                                        </div>
+                                        <div class="itemComment">#주문 폭주 상품</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class=" item_prod">
+                                <div class="item_state">
+                                    <a href="#none" class="itemLink">
+                                        <div class=" itemPic">
+                                            <img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod1.jpg">
+                                            <button type="button" class="itemLike active">관심상품 추가</button>
+                                        </div>
+                                        <p class="itemBrand">BRAND NAME</p>
+
+                                        <div class=" itemName">남성 헤링본 기모 팬츠 헤링본 기모 팬츠</div>
+                                        <p class="itemPrice">488,000<!-- -->원</p>
+                                        <p class="itemBadge">
+                                            <span class="badge13">베스트 </span>
+                                        </p>
+                                        <div class="itemcolorchip">
+                                            <span class="chip_color35" value="ABM">BEIGE</span>
+                                            <span class="chip_color54" value="BDS">BLACK</span>
+                                            <span class="chip_color40" value="YBR">WHITE</span>
+                                        </div>
+                                        <div class="itemComment">#주문 폭주 상품</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class=" item_prod">
+                                <div class="item_state">
+                                    <a href="#none" class="itemLink">
+                                        <div class=" itemPic">
+                                            <img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod1.jpg">
+                                            <button type="button" class="itemLike active">관심상품 추가</button>
+                                        </div>
+                                        <p class="itemBrand">BRAND NAME</p>
+
+                                        <div class=" itemName">남성 헤링본 기모 팬츠 헤링본 기모 팬츠</div>
+                                        <p class="itemPrice">488,000<!-- -->원</p>
+                                        <p class="itemBadge">
+                                            <span class="badge13">베스트 </span>
+                                        </p>
+                                        <div class="itemcolorchip">
+                                            <span class="chip_color35" value="ABM">BEIGE</span>
+                                            <span class="chip_color54" value="BDS">BLACK</span>
+                                            <span class="chip_color40" value="YBR">WHITE</span>
+                                        </div>
+                                        <div class="itemComment">#주문 폭주 상품</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class=" item_prod">
+                                <div class="item_state">
+                                    <a href="#none" class="itemLink">
+                                        <div class=" itemPic">
+                                            <img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod1.jpg">
+                                            <button type="button" class="itemLike active">관심상품 추가</button>
+                                        </div>
+                                        <p class="itemBrand">BRAND NAME</p>
+
+                                        <div class=" itemName">남성 헤링본 기모 팬츠 헤링본 기모 팬츠</div>
+                                        <p class="itemPrice">488,000<!-- -->원</p>
+                                        <p class="itemBadge">
+                                            <span class="badge13">베스트 </span>
+                                        </p>
+                                        <div class="itemcolorchip">
+                                            <span class="chip_color35" value="ABM">BEIGE</span>
+                                            <span class="chip_color54" value="BDS">BLACK</span>
+                                            <span class="chip_color40" value="YBR">WHITE</span>
+                                        </div>
+                                        <div class="itemComment">#주문 폭주 상품</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class=" item_prod">
+                                <div class="item_state">
+                                    <a href="#none" class="itemLink">
+                                        <div class=" itemPic">
+                                            <img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod1.jpg">
+                                            <button type="button" class="itemLike active">관심상품 추가</button>
+                                        </div>
+                                        <p class="itemBrand">BRAND NAME</p>
+
+                                        <div class=" itemName">남성 헤링본 기모 팬츠 헤링본 기모 팬츠</div>
+                                        <p class="itemPrice">488,000<!-- -->원</p>
+                                        <p class="itemBadge">
+                                            <span class="badge13">베스트 </span>
+                                        </p>
+                                        <div class="itemcolorchip">
+                                            <span class="chip_color35" value="ABM">BEIGE</span>
+                                            <span class="chip_color54" value="BDS">BLACK</span>
+                                            <span class="chip_color40" value="YBR">WHITE</span>
+                                        </div>
+                                        <div class="itemComment">#주문 폭주 상품</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class=" item_prod">
+                                <div class="item_state">
+                                    <a href="#none" class="itemLink">
+                                        <div class=" itemPic">
+                                            <img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod1.jpg">
+                                            <button type="button" class="itemLike active">관심상품 추가</button>
+                                        </div>
+                                        <p class="itemBrand">BRAND NAME</p>
+
+                                        <div class=" itemName">남성 헤링본 기모 팬츠 헤링본 기모 팬츠</div>
+                                        <p class="itemPrice">488,000<!-- -->원</p>
+                                        <p class="itemBadge">
+                                            <span class="badge13">베스트 </span>
+                                        </p>
+                                        <div class="itemcolorchip">
+                                            <span class="chip_color35" value="ABM">BEIGE</span>
+                                            <span class="chip_color54" value="BDS">BLACK</span>
+                                            <span class="chip_color40" value="YBR">WHITE</span>
+                                        </div>
+                                        <div class="itemComment">#주문 폭주 상품</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class=" item_prod">
+                                <div class="item_state">
+                                    <a href="#none" class="itemLink">
+                                        <div class=" itemPic">
+                                            <img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod1.jpg">
+                                            <button type="button" class="itemLike active">관심상품 추가</button>
+                                        </div>
+                                        <p class="itemBrand">BRAND NAME</p>
+
+                                        <div class=" itemName">남성 헤링본 기모 팬츠 헤링본 기모 팬츠</div>
+                                        <p class="itemPrice">488,000<!-- -->원</p>
+                                        <p class="itemBadge">
+                                            <span class="badge13">베스트 </span>
+                                        </p>
+                                        <div class="itemcolorchip">
+                                            <span class="chip_color35" value="ABM">BEIGE</span>
+                                            <span class="chip_color54" value="BDS">BLACK</span>
+                                            <span class="chip_color40" value="YBR">WHITE</span>
+                                        </div>
+                                        <div class="itemComment">#주문 폭주 상품</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class=" item_prod">
+                                <div class="item_state">
+                                    <a href="#none" class="itemLink">
+                                        <div class=" itemPic">
+                                            <img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod1.jpg">
+                                            <button type="button" class="itemLike active">관심상품 추가</button>
+                                        </div>
+                                        <p class="itemBrand">BRAND NAME</p>
+
+                                        <div class=" itemName">남성 헤링본 기모 팬츠 헤링본 기모 팬츠</div>
+                                        <p class="itemPrice">488,000<!-- -->원</p>
+                                        <p class="itemBadge">
+                                            <span class="badge13">베스트 </span>
+                                        </p>
+                                        <div class="itemcolorchip">
+                                            <span class="chip_color35" value="ABM">BEIGE</span>
+                                            <span class="chip_color54" value="BDS">BLACK</span>
+                                            <span class="chip_color40" value="YBR">WHITE</span>
+                                        </div>
+                                        <div class="itemComment">#주문 폭주 상품</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class=" item_prod">
+                                <div class="item_state">
+                                    <a href="#none" class="itemLink">
+                                        <div class=" itemPic">
+                                            <img alt="BLUE-a" class=" vLHTC pd_img" src="../ux/images/thumb/prod1.jpg">
+                                            <button type="button" class="itemLike active">관심상품 추가</button>
+                                        </div>
+                                        <p class="itemBrand">BRAND NAME</p>
+
+                                        <div class=" itemName">남성 헤링본 기모 팬츠 헤링본 기모 팬츠</div>
+                                        <p class="itemPrice">488,000<!-- -->원</p>
+                                        <p class="itemBadge">
+                                            <span class="badge13">베스트 </span>
+                                        </p>
+                                        <div class="itemcolorchip">
+                                            <span class="chip_color35" value="ABM">BEIGE</span>
+                                            <span class="chip_color54" value="BDS">BLACK</span>
+                                            <span class="chip_color40" value="YBR">WHITE</span>
+                                        </div>
+                                        <div class="itemComment">#주문 폭주 상품</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+		    </div>
+        </div>
+    </div>
+	<!-- // container -->	
+	<footer id="footer"></footer>
+
+	<script type="text/javascript">
+	// 컨텐츠 호출
+        $(document).ready( function() {
+            $("#header").load("head.html");
+            // $("#container").load("indexx.html");
+            $("#footer").load("foot.html");
+        });
+	</script>
+	<script>
+		// header scroll
+		$(function(){
+			$(window).scroll(function(){
+				var scroll = $(this).scrollTop();
+				var headerH = $(".header").height();
+				if ($(window).scrollTop() > headerH){
+					$(".header").addClass("minify");
+					return false;
+				}
+				else {
+					$(".header").removeClass("minify");
+					return false;
+				}
+			});
+		});
+    </script>
+   
+
+</body>
+</html>
+
+

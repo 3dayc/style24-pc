@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>STYLE24 | default | Publishing</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+
+<!-- <link rel="stylesheet" type="text/css" href="css/test-common.css" /> -->
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="js/jquery.ellipsis.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/common-ui.js"></script>
+</head>
+
+<body>
+
+	<div class="skipComment">
+		<a href="#content">본문 바로가기</a>
+		<a href="#gnb">주메뉴 바로가기</a>
+		<a href="#footer">하단메뉴 바로가기</a>
+	</div>
+
+	<header id="header"></header>
+	<style>
+		.container {background:#333;color: #fff;padding: 100px 0;}
+		.container .breadcrumb{background: #11c06e; color: #fff;}
+		.container .wrap{background: #cacaca;padding: 30px 0;height: 100%;margin-bottom:50px;}
+		.container .wrap:last-child{margin-bottom:0px;}
+		.container .wrap .content{background:#eeeeee; padding: 30px 0 !important;}
+		.container .wrap .content.wide{background:#ffffff; padding: 30px 0 !important;}
+		.container .wrap .content .cont_head{background:#67b75d; padding: 30px 0;}
+		.container .wrap .content .cont_body{background:#0b6b48; padding: 30px 0;}
+		.container .wrap .content .cont_body section{background:#acacac; padding: 30px 0;}
+		.container .wrap .content .cont_body section .sec_head{background:#999999; padding: 30px 0;text-align: center;}
+		.container .wrap .content .cont_body section .sec_body{background:#6e6e6e; padding: 30px 0;text-align: center;}
+		.container .wrap .content .cont_body section .sec_foot{background: #999999; padding: 30px 0;text-align: center;}
+		.container .wrap .content .cont_foot{background:#0b502d; padding: 30px 0;}
+	</style>
+	<!--  container -->
+	<div id="container" class="container">
+		<div class="breadcrumb"> (breadcrumb) </div>
+
+		<div class="wrap">
+			<div class="content">
+				<div class="cont_head">
+					CONT-HEAD
+				</div>
+				<div class="cont_body">					
+					CONT-BODY
+					<section>
+						<div class="sec_head">SECTION-HEAD</div>
+						<div class="sec_body">SECTION-BODY</div>
+						<div class="sec_foot">SECTION-FOOT</div>
+					</section>
+				</div>
+				<div class="cont_foot">
+					CONT-FOOT
+				</div>
+			</div>
+		</div>
+
+		<div class="wrap ">
+
+			<div class="content wide">
+				<div class="cont_head">
+					CONT-HEAD
+
+					<style>
+						.navi {position: relative;background: #303030;}
+						.navi::after, .navi .nav-dep1::after {content: '';clear: both;display: table;}
+						.navi ul{width: 100%;height: auto;position: relative;display: inline-block;}
+						.navi>ul>li{background: #e4e4e4;width: 200px; float: left;}
+						.navi li{}
+						.navi .nav-dep1{
+							background: #8bc73c;
+						    width: 100%;
+							position: absolute;
+							left: 0px;
+							top: 20px;
+							z-index: 1;
+						}
+						.navi .nav-dep1 ul li a {
+							width: 200px;
+							box-sizing: border-box;
+							display: inline-block;
+							position: relative;
+							z-index: 10;
+						}
+						.navi .nav-dep2{
+							background: #bf6767;
+							width: 200px;
+							width: 0px;
+							width: 100%;
+							position: absolute;
+							left: 200px;
+							top: 0px;
+						}
+						.navi .nav-dep3{
+							background: #678abf;
+							width: 200px;
+							width: 0px;
+							width: 100%;
+							position: absolute;
+							left: 200px;
+							top: 0px;
+						}
+					</style>
+					<div class="navi">
+						<ul>
+							<li><a href="#none">menu1</a>
+								<div class="nav-dep1">
+									<ul>
+										<li>
+											<a href="#none">depth1-1</a>
+											<div class="nav-dep2">
+												<ul>
+													<li>
+														<a href="#none">depth2-1</a>
+														<div class="nav-dep3">
+															<ul>
+																<li><a href="#none">depth3-1-1</a></li>
+																<li><a href="#none">depth3-1-2</a></li>
+																<li><a href="#none">depth3-1-3</a></li>
+															</ul>
+														</div>
+													</li>
+													<li>
+														<a href="#none">depth2-2</a>
+														<div>
+															<ul>
+																<li><a href="#none">depth3-2-1</a></li>
+																<li><a href="#none">depth3-2-2</a></li>
+																<li><a href="#none">depth3-2-3</a></li>
+															</ul>
+														</div>
+													</li>
+													<li><a href="#none">depth2-3</a></li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<a href="#none">depth1-2</a>
+											<div>
+												<ul>
+													<li><a href="#none">depth2-1</a></li>
+													<li><a href="#none">depth2-2</a></li>
+													<li><a href="#none">depth2-3</a></li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<a href="#none">depth1-3</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#none">menu2</a></li>
+							<li><a href="#none">menu3</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="cont_body">
+					CONT-BODY
+					<section>
+						<div class="sec_head">SECTION-HEAD</div>
+						<div class="sec_body">SECTION-BODY</div>
+						<div class="sec_foot">SECTION-FOOT</div>
+					</section>
+				</div>
+				<div class="cont_foot">
+					CONT-FOOT
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- // container -->	
+	<footer id="footer"></footer>
+
+	<script type="text/javascript">
+	// 컨텐츠 호출
+        $(document).ready( function() {
+            $("#header").load("head.html");
+            // $("#container").load("indexx.html");
+            $("#footer").load("foot.html");
+        });
+	</script>
+	<script>
+		// header scroll
+		$(function(){
+			$(window).scroll(function(){
+				var scroll = $(this).scrollTop();
+				var headerH = $(".header").height();
+				if ($(window).scrollTop() > headerH){
+					$(".header").addClass("minify");
+					return false;
+				}
+				else {
+					$(".header").removeClass("minify");
+					return false;
+				}
+			});
+		});
+	</script>
+
+
+</body>
+</html>
+
+
